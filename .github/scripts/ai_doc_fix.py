@@ -1,55 +1,46 @@
-import os, glob, pathlib, time, openai
+import os, time, glob, pathlib, openai, subprocess
 
 GLOSSARY_PATH = "1.3 Full/13. Dictionary (w_ Q&A + Links).md"
 MODEL = "gpt-4o-mini"
 TEMPERATURE = 0.2
-DELAY_SEC = 1        # <- simple throttle
+SLEEP_SEC = 2  # wait after every call to stay under 200k TPM
 
 openai.api_key = os.environ["OPENAI_API_KEY"]
 
-def load_glossary():
-    with open(GLOSSARY_PATH, encoding="utf-8") as f:
+def load(path):
+    with open(path, encoding="utf-8") as f:
         return f.read()
 
-def rewrite_file(p, glossary):
+def rewrite(p, glossary):
     try:
-        with open(p, encoding="utf-8") as f:
-            original = f.read()
+        src = load(p)
     except UnicodeDecodeError:
         print("skip ▶", p)
         return
-
-    prompt = f"""You are the FPA style bot.
-Glossary below lists approved terms. Enforce them exactly.
-
+    prompt = f"""You are FPA style bot…
 --- BEGIN GLOSSARY ---
 {glossary}
 --- END GLOSSARY ---
-
 --- BEGIN FILE ---
-{original}
+{src}
 --- END FILE ---
 """
-
-    resp = openai.ChatCompletion.create(
-        model=MODEL,
-        messages=[{"role": "user", "content": prompt}],
-        temperature=TEMPERATURE,
+    rsp = openai.ChatCompletion.create(
+        model=MODEL, messages=[{"role":"user","content":prompt}], temperature=TEMPERATURE
     )
-    cleaned = resp.choices[0].message.content.strip()
-    if cleaned != original:
+    out = rsp.choices[0].message.content.strip()
+    if out != src:
         print("updated ▶", p)
         with open(p, "w", encoding="utf-8") as f:
-            f.write(cleaned)
-
-    time.sleep(DELAY_SEC)        # <- wait before next file
+            f.write(out)
+    time.sleep(SLEEP_SEC)
 
 def main():
-    gloss = load_glossary()
-    for p in glob.glob("**/*.md", recursive=True):
-        if pathlib.Path(p).as_posix() == GLOSSARY_PATH:
+    glossary = load(GLOSSARY_PATH)
+    for md in glob.glob("**/*.md", recursive=True):
+        if pathlib.Path(md).as_posix() == GLOSSARY_PATH:
             continue
-        rewrite_file(p, gloss)
+        rewrite(md, glossary)
 
 if __name__ == "__main__":
     main()
