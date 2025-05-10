@@ -1,5 +1,5 @@
-▼▼▼ COPY FROM HERE ▼▼▼
 name: AI Documentation Fixer
+
 on:
   push:
     branches: [main]
@@ -28,4 +28,3 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python .github/scripts/ai_doc_fix.py
-▲▲▲ STOP COPYING ▲▲▲
