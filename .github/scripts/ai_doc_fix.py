@@ -13,7 +13,12 @@ def load_glossary():
         return f.read()
 
 def rewrite_file(md_path, glossary):
+    try:
     with open(md_path, "r", encoding="utf-8") as f:
+        original = f.read()
+except UnicodeDecodeError:
+    print("skip ▶", md_path)
+    return
         original = f.read()
 
     prompt = f"""
