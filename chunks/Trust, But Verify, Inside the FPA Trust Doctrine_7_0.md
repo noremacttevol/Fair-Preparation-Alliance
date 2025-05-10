@@ -1,0 +1,4 @@
+- **Quarterly Trust-Failure Simulation** – scripted scenario to test Vote-to-Zero.  
+- **AI Audit log review** – align with CAQ guidance every 90 days.  
+- **Member feedback loop** – likes + comments feed into backlog; highest-liked suggestion wins sprint slot.  
+---

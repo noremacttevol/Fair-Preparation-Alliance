@@ -1,0 +1,3 @@
+|CAQ warns Gen-AI outputs must carry citations + confidence to stay audit-ready.|([The Center for Audit Quality](https://www.thecaq.org/wp-content/uploads/2024/04/caq_auditing-in-the-age-of-generative-ai__2024-04.pdf?utm_source=chatgpt.com "[PDF] Auditing in the Age of Generative AI"))|“AI Oversight Loop”|
+|Donor retention rises 16 % when audited statements are public.|([AFP Global](https://afpglobal.org/FundraisingEffectivenessProject?utm_source=chatgpt.com "The Fundraising Effectiveness Project"))|“Public Ledger”|  
+---

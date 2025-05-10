@@ -1,0 +1,7 @@
+Each enlisted rank milestone is explicitly supported and validated through FPA’s core readiness scaffolding tools: [[TERM:OpCheck]], [[TERM:Skill Delta]], [[TERM:Gear Pool]], and the [[TERM:Squad Wheel]]. These tools are embedded across the E-1 to E-10 progression and function as both developmental benchmarks and evaluation instruments.  
+- **OpCheck** becomes mandatory from **E-3 onward**, providing structured review and validation of readiness, especially in comms (E-3–E-5) and scenario execution (E-6+).
+- **Skill Delta** tracking is continuous across all ranks, highlighting member-to-role alignment gaps. Progression through higher E-levels requires not only task completion but also a low Delta relative to peer averages.
+- **Gear Pool** thresholds gate rank-specific field scenarios; for instance, **E-6 blackout simulation** requires validated backup gear from the shared pool.
+- **Squad Wheel** helps align team formation and leadership drills, becoming central at **E-7 and beyond** where small-team leadership is validated.  
+Every promotion checkpoint is cross-referenced on the Sync Dashboard under TMP protocols, ensuring version-locked integrity. Readiness reports auto-sync with Squad Leads for members E-5 and higher. This system-wide coupling guarantees that ranks are not symbolic—they reflect lived, demonstrated capability.  
+> Note: All matrix modifications must route through patch-class edits, retaining structural stability across the FPA Mk1Mod3 governance model.

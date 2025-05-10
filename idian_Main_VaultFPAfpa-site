@@ -1,0 +1,2652 @@
+[33mcommit 570227c7a728ff2b26889947e6f9b3bc8f2f70d8[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: noremacttevol <noremacttevol@gmail.com>
+Date:   Sat May 10 02:28:17 2025 -0400
+
+    Add nav menu and rebuild site
+
+ fpa-site/docs/0. Start Here - Index_0_0.md         |  1 [32m+[m
+ fpa-site/docs/0. Start Here - Index_1_0.md         |  4 [32m++[m
+ fpa-site/docs/0. Start Here - Index_2_0.md         |  5 [32m+++[m
+ fpa-site/docs/0. Start Here - Index_3_0.md         |  2 [32m+[m
+ fpa-site/docs/0. Start Here - Index_4_0.md         |  3 [32m++[m
+ fpa-site/docs/0. Start Here - Index_5_0.md         |  4 [32m++[m
+ fpa-site/docs/0. Start Here - Index_6_0.md         |  3 [32m++[m
+ fpa-site/docs/0. Start Here - Index_7_0.md         |  6 [32m+++[m
+ fpa-site/docs/0. Start Here - Index_7_1.md         |  2 [32m+[m
+ .../docs/00. Start Here and Index  Short_0_0.md    |  4 [32m++[m
+ .../docs/00. Start Here and Index  Short_10_0.md   |  4 [32m++[m
+ .../docs/00. Start Here and Index  Short_11_0.md   |  3 [32m++[m
+ .../docs/00. Start Here and Index  Short_1_0.md    |  4 [32m++[m
+ .../docs/00. Start Here and Index  Short_2_0.md    |  8 [32m++++[m
+ .../docs/00. Start Here and Index  Short_3_0.md    |  6 [32m+++[m
+ .../docs/00. Start Here and Index  Short_4_0.md    |  6 [32m+++[m
+ .../docs/00. Start Here and Index  Short_5_0.md    |  5 [32m+++[m
+ .../docs/00. Start Here and Index  Short_6_0.md    |  5 [32m+++[m
+ .../docs/00. Start Here and Index  Short_7_0.md    |  6 [32m+++[m
+ .../docs/00. Start Here and Index  Short_8_0.md    |  4 [32m++[m
+ .../docs/00. Start Here and Index  Short_9_0.md    |  4 [32m++[m
+ .... Start Here \342\200\224 FPA Mk1 Mod 3_0_0.md" |  1 [32m+[m
+ ... Start Here \342\200\224 FPA Mk1 Mod 3_10_0.md" |  2 [32m+[m
+ ... Start Here \342\200\224 FPA Mk1 Mod 3_11_0.md" |  3 [32m++[m
+ ... Start Here \342\200\224 FPA Mk1 Mod 3_12_0.md" |  4 [32m++[m
+ ... Start Here \342\200\224 FPA Mk1 Mod 3_13_0.md" |  3 [32m++[m
+ ... Start Here \342\200\224 FPA Mk1 Mod 3_14_0.md" |  6 [32m+++[m
+ ... Start Here \342\200\224 FPA Mk1 Mod 3_14_1.md" |  6 [32m+++[m
+ ... Start Here \342\200\224 FPA Mk1 Mod 3_14_2.md" |  1 [32m+[m
+ .... Start Here \342\200\224 FPA Mk1 Mod 3_1_0.md" |  4 [32m++[m
+ .... Start Here \342\200\224 FPA Mk1 Mod 3_2_0.md" |  5 [32m+++[m
+ .... Start Here \342\200\224 FPA Mk1 Mod 3_3_0.md" |  2 [32m+[m
+ .... Start Here \342\200\224 FPA Mk1 Mod 3_4_0.md" |  3 [32m++[m
+ .... Start Here \342\200\224 FPA Mk1 Mod 3_5_0.md" |  4 [32m++[m
+ .... Start Here \342\200\224 FPA Mk1 Mod 3_6_0.md" |  3 [32m++[m
+ .... Start Here \342\200\224 FPA Mk1 Mod 3_7_0.md" |  6 [32m+++[m
+ .... Start Here \342\200\224 FPA Mk1 Mod 3_7_1.md" |  2 [32m+[m
+ .... Start Here \342\200\224 FPA Mk1 Mod 3_8_0.md" |  4 [32m++[m
+ .... Start Here \342\200\224 FPA Mk1 Mod 3_9_0.md" |  5 [32m+++[m
+ fpa-site/docs/01. FPA Combined Notes_0_0.md        | 34 [32m++++++++++++++++[m
+ fpa-site/docs/01. FPA Combined Notes_0_1.md        | 33 [32m+++++++++++++++[m
+ fpa-site/docs/01. FPA Combined Notes_0_2.md        | 35 [32m++++++++++++++++[m
+ fpa-site/docs/01. FPA Combined Notes_0_3.md        | 32 [32m+++++++++++++++[m
+ fpa-site/docs/01. FPA Combined Notes_0_4.md        | 37 [32m+++++++++++++++++[m
+ fpa-site/docs/01. FPA Combined Notes_0_5.md        | 10 [32m+++++[m
+ .../docs/01. FPA Master Overview  Short_0_0.md     |  5 [32m+++[m
+ .../docs/01. FPA Master Overview  Short_1_0.md     |  3 [32m++[m
+ .../docs/01. FPA Master Overview  Short_2_0.md     |  7 [32m++++[m
+ .../docs/01. FPA Master Overview  Short_3_0.md     |  8 [32m++++[m
+ .../docs/01. FPA Master Overview  Short_4_0.md     |  5 [32m+++[m
+ .../docs/01. FPA Master Overview  Short_5_0.md     | 10 [32m+++++[m
+ .../docs/01. FPA Master Overview  Short_6_0.md     | 12 [32m++++++[m
+ .../docs/01. FPA Master Overview  Short_7_0.md     |  5 [32m+++[m
+ .../docs/01. FPA Master Overview  Short_8_0.md     |  5 [32m+++[m
+ .../docs/01. FPA Master Overview  Short_9_0.md     |  3 [32m++[m
+ fpa-site/docs/01. FPA Master Overview_0_0.md       |  3 [32m++[m
+ fpa-site/docs/01. FPA Master Overview_0_1.md       |  3 [32m++[m
+ fpa-site/docs/01. FPA Master Overview_0_10.md      |  2 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_11.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_12.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_13.md      |  3 [32m++[m
+ fpa-site/docs/01. FPA Master Overview_0_14.md      |  3 [32m++[m
+ fpa-site/docs/01. FPA Master Overview_0_15.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_16.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_17.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_18.md      |  3 [32m++[m
+ fpa-site/docs/01. FPA Master Overview_0_19.md      |  3 [32m++[m
+ fpa-site/docs/01. FPA Master Overview_0_2.md       |  2 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_20.md      |  2 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_21.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_22.md      |  3 [32m++[m
+ fpa-site/docs/01. FPA Master Overview_0_23.md      |  2 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_24.md      |  3 [32m++[m
+ fpa-site/docs/01. FPA Master Overview_0_25.md      |  2 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_26.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_27.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_28.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_29.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_3.md       |  2 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_30.md      |  3 [32m++[m
+ fpa-site/docs/01. FPA Master Overview_0_31.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_32.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_33.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_34.md      |  2 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_35.md      |  3 [32m++[m
+ fpa-site/docs/01. FPA Master Overview_0_36.md      |  2 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_37.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_38.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_39.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_4.md       |  3 [32m++[m
+ fpa-site/docs/01. FPA Master Overview_0_40.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_41.md      |  5 [32m+++[m
+ fpa-site/docs/01. FPA Master Overview_0_42.md      |  2 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_43.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_44.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_45.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_46.md      |  3 [32m++[m
+ fpa-site/docs/01. FPA Master Overview_0_47.md      |  2 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_48.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_49.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_5.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_50.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_51.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_52.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_53.md      |  3 [32m++[m
+ fpa-site/docs/01. FPA Master Overview_0_54.md      |  2 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_55.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_56.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_57.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_58.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_59.md      |  2 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_6.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_60.md      |  6 [32m+++[m
+ fpa-site/docs/01. FPA Master Overview_0_61.md      |  7 [32m++++[m
+ fpa-site/docs/01. FPA Master Overview_0_7.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_8.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_0_9.md       |  3 [32m++[m
+ fpa-site/docs/01. FPA Master Overview_10_0.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_10_1.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_10_2.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_10_3.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_10_4.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_10_5.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_10_6.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_10_7.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_10_8.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_10_9.md      |  2 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_11_0.md      |  2 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_11_1.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_11_10.md     |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_11_2.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_11_3.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_11_4.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_11_5.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_11_6.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_11_7.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_11_8.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_11_9.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_12_0.md      |  5 [32m+++[m
+ fpa-site/docs/01. FPA Master Overview_13_0.md      |  6 [32m+++[m
+ fpa-site/docs/01. FPA Master Overview_14_0.md      |  2 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_15_0.md      | 10 [32m+++++[m
+ fpa-site/docs/01. FPA Master Overview_16_0.md      | 23 [32m+++++++++++[m
+ fpa-site/docs/01. FPA Master Overview_1_0.md       |  3 [32m++[m
+ fpa-site/docs/01. FPA Master Overview_2_0.md       |  3 [32m++[m
+ fpa-site/docs/01. FPA Master Overview_2_1.md       |  2 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_2_2.md       |  2 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_2_3.md       |  2 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_3_0.md       |  2 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_3_1.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_3_2.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_3_3.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_3_4.md       |  2 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_3_5.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_3_6.md       |  2 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_4_0.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_4_1.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_4_2.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_4_3.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_4_4.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_4_5.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_4_6.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_4_7.md       |  2 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_5_0.md       |  2 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_5_1.md       |  2 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_5_2.md       |  2 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_5_3.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_5_4.md       |  4 [32m++[m
+ fpa-site/docs/01. FPA Master Overview_5_5.md       |  4 [32m++[m
+ fpa-site/docs/01. FPA Master Overview_5_6.md       |  2 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_6_0.md       |  2 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_6_1.md       |  2 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_6_10.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_6_2.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_6_3.md       |  3 [32m++[m
+ fpa-site/docs/01. FPA Master Overview_6_4.md       |  2 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_6_5.md       |  3 [32m++[m
+ fpa-site/docs/01. FPA Master Overview_6_6.md       |  2 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_6_7.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_6_8.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_6_9.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_7_0.md       |  2 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_7_1.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_7_2.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_7_3.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_7_4.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_7_5.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_7_6.md       |  2 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_7_7.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_7_8.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_8_0.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_8_1.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_8_2.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_8_3.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_8_4.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_8_5.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_8_6.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_8_7.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_8_8.md       |  2 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_8_9.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_9_0.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_9_1.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_9_10.md      |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_9_2.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_9_3.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_9_4.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_9_5.md       |  5 [32m+++[m
+ fpa-site/docs/01. FPA Master Overview_9_6.md       |  2 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_9_7.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_9_8.md       |  1 [32m+[m
+ fpa-site/docs/01. FPA Master Overview_9_9.md       |  2 [32m+[m
+ ...trategy & Implementation Blueprint Short_0_0.md |  5 [32m+++[m
+ ...trategy & Implementation Blueprint Short_1_0.md |  2 [32m+[m
+ ...trategy & Implementation Blueprint Short_2_0.md |  8 [32m++++[m
+ ...trategy & Implementation Blueprint Short_3_0.md |  8 [32m++++[m
+ ...trategy & Implementation Blueprint Short_4_0.md |  7 [32m++++[m
+ ...trategy & Implementation Blueprint Short_5_0.md |  6 [32m+++[m
+ ...trategy & Implementation Blueprint Short_6_0.md | 12 [32m++++++[m
+ ...trategy & Implementation Blueprint Short_7_0.md |  5 [32m+++[m
+ ...trategy & Implementation Blueprint Short_8_0.md |  5 [32m+++[m
+ ...trategy & Implementation Blueprint Short_9_0.md |  6 [32m+++[m
+ .../02. Strategy & Implementation Blueprint_0_0.md | 19 [32m+++++++++[m
+ .../02. Strategy & Implementation Blueprint_0_1.md | 15 [32m+++++++[m
+ .../02. Strategy & Implementation Blueprint_0_2.md | 16 [32m++++++++[m
+ .../02. Strategy & Implementation Blueprint_0_3.md | 19 [32m+++++++++[m
+ .../02. Strategy & Implementation Blueprint_0_4.md | 17 [32m++++++++[m
+ .../02. Strategy & Implementation Blueprint_0_5.md | 13 [32m++++++[m
+ ...02. Strategy & Implementation Blueprint_10_0.md |  5 [32m+++[m
+ ...02. Strategy & Implementation Blueprint_10_1.md |  3 [32m++[m
+ ...02. Strategy & Implementation Blueprint_11_0.md |  4 [32m++[m
+ ...02. Strategy & Implementation Blueprint_11_1.md |  4 [32m++[m
+ ...02. Strategy & Implementation Blueprint_12_0.md |  4 [32m++[m
+ ...02. Strategy & Implementation Blueprint_12_1.md |  3 [32m++[m
+ ...02. Strategy & Implementation Blueprint_12_2.md |  7 [32m++++[m
+ ...02. Strategy & Implementation Blueprint_12_3.md |  4 [32m++[m
+ ...02. Strategy & Implementation Blueprint_13_0.md |  1 [32m+[m
+ ...02. Strategy & Implementation Blueprint_14_0.md |  3 [32m++[m
+ ...02. Strategy & Implementation Blueprint_14_1.md |  2 [32m+[m
+ ...02. Strategy & Implementation Blueprint_14_2.md |  2 [32m+[m
+ ...02. Strategy & Implementation Blueprint_14_3.md |  1 [32m+[m
+ ...02. Strategy & Implementation Blueprint_15_0.md |  6 [32m+++[m
+ ...02. Strategy & Implementation Blueprint_15_1.md |  4 [32m++[m
+ ...02. Strategy & Implementation Blueprint_15_2.md |  2 [32m+[m
+ ...02. Strategy & Implementation Blueprint_16_0.md |  7 [32m++++[m
+ ...02. Strategy & Implementation Blueprint_16_1.md |  1 [32m+[m
+ ...02. Strategy & Implementation Blueprint_16_2.md |  2 [32m+[m
+ ...02. Strategy & Implementation Blueprint_16_3.md |  2 [32m+[m
+ ...02. Strategy & Implementation Blueprint_17_0.md |  1 [32m+[m
+ ...02. Strategy & Implementation Blueprint_18_0.md |  4 [32m++[m
+ ...02. Strategy & Implementation Blueprint_19_0.md |  4 [32m++[m
+ ...02. Strategy & Implementation Blueprint_19_1.md |  1 [32m+[m
+ .../02. Strategy & Implementation Blueprint_1_0.md |  1 [32m+[m
+ ...02. Strategy & Implementation Blueprint_20_0.md |  3 [32m++[m
+ ...02. Strategy & Implementation Blueprint_20_1.md |  1 [32m+[m
+ ...02. Strategy & Implementation Blueprint_21_0.md |  4 [32m++[m
+ ...02. Strategy & Implementation Blueprint_21_1.md |  1 [32m+[m
+ ...02. Strategy & Implementation Blueprint_22_0.md |  3 [32m++[m
+ ...02. Strategy & Implementation Blueprint_22_1.md |  9 [32m+++++[m
+ ...02. Strategy & Implementation Blueprint_22_2.md |  6 [32m+++[m
+ ...02. Strategy & Implementation Blueprint_23_0.md |  1 [32m+[m
+ ...02. Strategy & Implementation Blueprint_24_0.md |  4 [32m++[m
+ ...02. Strategy & Implementation Blueprint_24_1.md |  2 [32m+[m
+ ...02. Strategy & Implementation Blueprint_24_2.md |  2 [32m+[m
+ ...02. Strategy & Implementation Blueprint_25_0.md |  4 [32m++[m
+ ...02. Strategy & Implementation Blueprint_25_1.md |  3 [32m++[m
+ ...02. Strategy & Implementation Blueprint_25_2.md |  2 [32m+[m
+ ...02. Strategy & Implementation Blueprint_25_3.md |  2 [32m+[m
+ ...02. Strategy & Implementation Blueprint_26_0.md |  5 [32m+++[m
+ ...02. Strategy & Implementation Blueprint_26_1.md |  3 [32m++[m
+ ...02. Strategy & Implementation Blueprint_26_2.md |  2 [32m+[m
+ ...02. Strategy & Implementation Blueprint_26_3.md |  1 [32m+[m
+ ...02. Strategy & Implementation Blueprint_27_0.md |  8 [32m++++[m
+ ...02. Strategy & Implementation Blueprint_27_1.md |  2 [32m+[m
+ ...02. Strategy & Implementation Blueprint_27_2.md |  2 [32m+[m
+ ...02. Strategy & Implementation Blueprint_27_3.md |  1 [32m+[m
+ ...02. Strategy & Implementation Blueprint_28_0.md |  3 [32m++[m
+ ...02. Strategy & Implementation Blueprint_28_1.md |  2 [32m+[m
+ ...02. Strategy & Implementation Blueprint_28_2.md |  1 [32m+[m
+ ...02. Strategy & Implementation Blueprint_29_0.md |  1 [32m+[m
+ .../02. Strategy & Implementation Blueprint_2_0.md |  5 [32m+++[m
+ .../02. Strategy & Implementation Blueprint_2_1.md |  4 [32m++[m
+ .../02. Strategy & Implementation Blueprint_2_2.md |  1 [32m+[m
+ ...02. Strategy & Implementation Blueprint_30_0.md |  3 [32m++[m
+ ...02. Strategy & Implementation Blueprint_30_1.md |  1 [32m+[m
+ ...02. Strategy & Implementation Blueprint_31_0.md |  3 [32m++[m
+ ...02. Strategy & Implementation Blueprint_31_1.md |  2 [32m+[m
+ ...02. Strategy & Implementation Blueprint_32_0.md |  3 [32m++[m
+ ...02. Strategy & Implementation Blueprint_32_1.md |  2 [32m+[m
+ ...02. Strategy & Implementation Blueprint_33_0.md |  4 [32m++[m
+ ...02. Strategy & Implementation Blueprint_33_1.md |  2 [32m+[m
+ ...02. Strategy & Implementation Blueprint_34_0.md |  4 [32m++[m
+ ...02. Strategy & Implementation Blueprint_34_1.md |  5 [32m+++[m
+ ...02. Strategy & Implementation Blueprint_35_0.md |  6 [32m+++[m
+ ...02. Strategy & Implementation Blueprint_36_0.md |  3 [32m++[m
+ ...02. Strategy & Implementation Blueprint_37_0.md |  6 [32m+++[m
+ .../02. Strategy & Implementation Blueprint_3_0.md |  1 [32m+[m
+ .../02. Strategy & Implementation Blueprint_4_0.md |  4 [32m++[m
+ .../02. Strategy & Implementation Blueprint_4_1.md |  2 [32m+[m
+ .../02. Strategy & Implementation Blueprint_5_0.md |  3 [32m++[m
+ .../02. Strategy & Implementation Blueprint_5_1.md |  3 [32m++[m
+ .../02. Strategy & Implementation Blueprint_5_2.md |  1 [32m+[m
+ .../02. Strategy & Implementation Blueprint_6_0.md |  4 [32m++[m
+ .../02. Strategy & Implementation Blueprint_6_1.md |  3 [32m++[m
+ .../02. Strategy & Implementation Blueprint_6_2.md |  3 [32m++[m
+ .../02. Strategy & Implementation Blueprint_6_3.md |  2 [32m+[m
+ .../02. Strategy & Implementation Blueprint_6_4.md |  2 [32m+[m
+ .../02. Strategy & Implementation Blueprint_6_5.md |  1 [32m+[m
+ .../02. Strategy & Implementation Blueprint_7_0.md |  3 [32m++[m
+ .../02. Strategy & Implementation Blueprint_7_1.md |  7 [32m++++[m
+ .../02. Strategy & Implementation Blueprint_7_2.md |  6 [32m+++[m
+ .../02. Strategy & Implementation Blueprint_7_3.md |  3 [32m++[m
+ .../02. Strategy & Implementation Blueprint_8_0.md |  1 [32m+[m
+ .../02. Strategy & Implementation Blueprint_9_0.md |  5 [32m+++[m
+ .../02. Strategy & Implementation Blueprint_9_1.md |  2 [32m+[m
+ fpa-site/docs/03. Critical Analysis Short_0_0.md   |  5 [32m+++[m
+ fpa-site/docs/03. Critical Analysis Short_1_0.md   |  2 [32m+[m
+ fpa-site/docs/03. Critical Analysis Short_2_0.md   | 10 [32m+++++[m
+ fpa-site/docs/03. Critical Analysis Short_3_0.md   |  6 [32m+++[m
+ fpa-site/docs/03. Critical Analysis Short_4_0.md   |  7 [32m++++[m
+ fpa-site/docs/03. Critical Analysis Short_5_0.md   |  5 [32m+++[m
+ fpa-site/docs/03. Critical Analysis Short_6_0.md   | 11 [32m+++++[m
+ fpa-site/docs/03. Critical Analysis Short_7_0.md   |  5 [32m+++[m
+ fpa-site/docs/03. Critical Analysis Short_8_0.md   |  4 [32m++[m
+ fpa-site/docs/03. Critical Analysis Short_9_0.md   |  6 [32m+++[m
+ fpa-site/docs/03. Critical Analysis_0_0.md         | 19 [32m+++++++++[m
+ fpa-site/docs/03. Critical Analysis_0_1.md         |  6 [32m+++[m
+ fpa-site/docs/03. Critical Analysis_0_10.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_11.md        |  3 [32m++[m
+ fpa-site/docs/03. Critical Analysis_0_12.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_13.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_14.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_15.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_16.md        |  2 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_17.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_18.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_19.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_2.md         |  2 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_20.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_21.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_22.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_23.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_24.md        |  3 [32m++[m
+ fpa-site/docs/03. Critical Analysis_0_25.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_26.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_27.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_28.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_29.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_3.md         |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_30.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_31.md        |  3 [32m++[m
+ fpa-site/docs/03. Critical Analysis_0_32.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_33.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_34.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_35.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_36.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_37.md        |  2 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_38.md        |  3 [32m++[m
+ fpa-site/docs/03. Critical Analysis_0_39.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_4.md         |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_40.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_41.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_42.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_43.md        |  4 [32m++[m
+ fpa-site/docs/03. Critical Analysis_0_44.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_45.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_46.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_47.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_48.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_49.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_5.md         |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_50.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_51.md        |  3 [32m++[m
+ fpa-site/docs/03. Critical Analysis_0_52.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_53.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_54.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_55.md        |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_56.md        |  3 [32m++[m
+ fpa-site/docs/03. Critical Analysis_0_57.md        |  3 [32m++[m
+ fpa-site/docs/03. Critical Analysis_0_58.md        |  2 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_59.md        | 11 [32m+++++[m
+ fpa-site/docs/03. Critical Analysis_0_6.md         |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_60.md        | 15 [32m+++++++[m
+ fpa-site/docs/03. Critical Analysis_0_61.md        | 15 [32m+++++++[m
+ fpa-site/docs/03. Critical Analysis_0_62.md        | 17 [32m++++++++[m
+ fpa-site/docs/03. Critical Analysis_0_63.md        |  5 [32m+++[m
+ fpa-site/docs/03. Critical Analysis_0_7.md         |  5 [32m+++[m
+ fpa-site/docs/03. Critical Analysis_0_8.md         |  1 [32m+[m
+ fpa-site/docs/03. Critical Analysis_0_9.md         |  1 [32m+[m
+ .... FPAi System & Chatbot Framework  Short_0_0.md |  5 [32m+++[m
+ .... FPAi System & Chatbot Framework  Short_1_0.md |  3 [32m++[m
+ .... FPAi System & Chatbot Framework  Short_2_0.md |  9 [32m+++++[m
+ .... FPAi System & Chatbot Framework  Short_3_0.md |  5 [32m+++[m
+ .... FPAi System & Chatbot Framework  Short_4_0.md |  5 [32m+++[m
+ .... FPAi System & Chatbot Framework  Short_5_0.md | 11 [32m+++++[m
+ .... FPAi System & Chatbot Framework  Short_6_0.md |  6 [32m+++[m
+ .... FPAi System & Chatbot Framework  Short_7_0.md |  5 [32m+++[m
+ .... FPAi System & Chatbot Framework  Short_8_0.md |  5 [32m+++[m
+ .... FPAi System & Chatbot Framework  Short_9_0.md |  3 [32m++[m
+ .../04. FPAi System & Chatbot Framework_0_0.md     | 18 [32m+++++++++[m
+ .../04. FPAi System & Chatbot Framework_0_1.md     |  4 [32m++[m
+ .../04. FPAi System & Chatbot Framework_1_0.md     |  2 [32m+[m
+ .../04. FPAi System & Chatbot Framework_1_1.md     |  1 [32m+[m
+ .../04. FPAi System & Chatbot Framework_1_2.md     |  1 [32m+[m
+ .../04. FPAi System & Chatbot Framework_1_3.md     |  1 [32m+[m
+ .../04. FPAi System & Chatbot Framework_1_4.md     |  1 [32m+[m
+ .../04. FPAi System & Chatbot Framework_1_5.md     |  1 [32m+[m
+ .../04. FPAi System & Chatbot Framework_1_6.md     |  1 [32m+[m
+ .../04. FPAi System & Chatbot Framework_1_7.md     |  1 [32m+[m
+ .../04. FPAi System & Chatbot Framework_2_0.md     |  2 [32m+[m
+ .../04. FPAi System & Chatbot Framework_2_1.md     |  1 [32m+[m
+ .../04. FPAi System & Chatbot Framework_2_2.md     |  1 [32m+[m
+ .../04. FPAi System & Chatbot Framework_2_3.md     |  1 [32m+[m
+ .../04. FPAi System & Chatbot Framework_2_4.md     |  1 [32m+[m
+ .../04. FPAi System & Chatbot Framework_2_5.md     |  1 [32m+[m
+ .../04. FPAi System & Chatbot Framework_3_0.md     |  1 [32m+[m
+ .../04. FPAi System & Chatbot Framework_3_1.md     |  1 [32m+[m
+ .../04. FPAi System & Chatbot Framework_3_2.md     |  1 [32m+[m
+ .../04. FPAi System & Chatbot Framework_3_3.md     |  1 [32m+[m
+ .../04. FPAi System & Chatbot Framework_3_4.md     |  1 [32m+[m
+ .../04. FPAi System & Chatbot Framework_3_5.md     |  1 [32m+[m
+ .../04. FPAi System & Chatbot Framework_4_0.md     |  1 [32m+[m
+ .../04. FPAi System & Chatbot Framework_4_1.md     |  1 [32m+[m
+ .../04. FPAi System & Chatbot Framework_4_10.md    |  1 [32m+[m
+ .../04. FPAi System & Chatbot Framework_4_2.md     |  1 [32m+[m
+ .../04. FPAi System & Chatbot Framework_4_3.md     |  1 [32m+[m
+ .../04. FPAi System & Chatbot Framework_4_4.md     |  1 [32m+[m
+ .../04. FPAi System & Chatbot Framework_4_5.md     |  1 [32m+[m
+ .../04. FPAi System & Chatbot Framework_4_6.md     |  1 [32m+[m
+ .../04. FPAi System & Chatbot Framework_4_7.md     |  1 [32m+[m
+ .../04. FPAi System & Chatbot Framework_4_8.md     |  1 [32m+[m
+ .../04. FPAi System & Chatbot Framework_4_9.md     |  1 [32m+[m
+ .../04. FPAi System & Chatbot Framework_5_0.md     |  2 [32m+[m
+ .../04. FPAi System & Chatbot Framework_5_1.md     |  1 [32m+[m
+ .../04. FPAi System & Chatbot Framework_5_2.md     |  1 [32m+[m
+ .../04. FPAi System & Chatbot Framework_5_3.md     |  2 [32m+[m
+ .../04. FPAi System & Chatbot Framework_6_0.md     |  2 [32m+[m
+ .../04. FPAi System & Chatbot Framework_6_1.md     |  2 [32m+[m
+ .../04. FPAi System & Chatbot Framework_6_2.md     |  1 [32m+[m
+ .../04. FPAi System & Chatbot Framework_6_3.md     |  3 [32m++[m
+ .../04. FPAi System & Chatbot Framework_7_0.md     |  8 [32m++++[m
+ .../04. FPAi System & Chatbot Framework_8_0.md     |  4 [32m++[m
+ .../04. FPAi System & Chatbot Framework_9_0.md     |  7 [32m++++[m
+ ...nd FPA Knowledge Management FPAKM  Short_0_0.md |  5 [32m+++[m
+ ...nd FPA Knowledge Management FPAKM  Short_1_0.md |  2 [32m+[m
+ ...nd FPA Knowledge Management FPAKM  Short_2_0.md | 11 [32m+++++[m
+ ...nd FPA Knowledge Management FPAKM  Short_3_0.md | 10 [32m+++++[m
+ ...nd FPA Knowledge Management FPAKM  Short_4_0.md |  7 [32m++++[m
+ ...nd FPA Knowledge Management FPAKM  Short_5_0.md |  6 [32m+++[m
+ ...nd FPA Knowledge Management FPAKM  Short_6_0.md |  4 [32m++[m
+ ...nd FPA Knowledge Management FPAKM  Short_7_0.md |  4 [32m++[m
+ ...nd FPA Knowledge Management FPAKM  Short_8_0.md |  5 [32m+++[m
+ ...nd FPA Knowledge Management FPAKM  Short_9_0.md |  7 [32m++++[m
+ ...Wheel and FPA Knowledge Management FPAKM_0_0.md |  4 [32m++[m
+ ...Wheel and FPA Knowledge Management FPAKM_0_1.md |  5 [32m+++[m
+ ...heel and FPA Knowledge Management FPAKM_10_0.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_10_1.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_11_0.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_12_0.md |  5 [32m+++[m
+ ...heel and FPA Knowledge Management FPAKM_12_1.md |  3 [32m++[m
+ ...heel and FPA Knowledge Management FPAKM_12_2.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_13_0.md |  2 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_13_1.md |  2 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_14_0.md |  5 [32m+++[m
+ ...heel and FPA Knowledge Management FPAKM_14_1.md |  3 [32m++[m
+ ...heel and FPA Knowledge Management FPAKM_14_2.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_15_0.md |  4 [32m++[m
+ ...heel and FPA Knowledge Management FPAKM_15_1.md |  2 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_15_2.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_16_0.md |  3 [32m++[m
+ ...heel and FPA Knowledge Management FPAKM_16_1.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_17_0.md |  3 [32m++[m
+ ...heel and FPA Knowledge Management FPAKM_17_1.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_17_2.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_18_0.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_19_0.md |  4 [32m++[m
+ ...heel and FPA Knowledge Management FPAKM_19_1.md |  2 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_19_2.md |  1 [32m+[m
+ ...Wheel and FPA Knowledge Management FPAKM_1_0.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_20_0.md |  3 [32m++[m
+ ...heel and FPA Knowledge Management FPAKM_20_1.md |  2 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_20_2.md |  2 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_20_3.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_21_0.md |  2 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_21_1.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_21_2.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_21_3.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_21_4.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_21_5.md |  2 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_21_6.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_22_0.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_22_1.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_22_2.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_22_3.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_22_4.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_22_5.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_22_6.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_22_7.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_23_0.md |  2 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_23_1.md |  4 [32m++[m
+ ...heel and FPA Knowledge Management FPAKM_23_2.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_23_3.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_23_4.md |  2 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_23_5.md |  2 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_23_6.md |  2 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_23_7.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_24_0.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_24_1.md |  1 [32m+[m
+ ...eel and FPA Knowledge Management FPAKM_24_10.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_24_2.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_24_3.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_24_4.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_24_5.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_24_6.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_24_7.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_24_8.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_24_9.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_25_0.md |  2 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_25_1.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_25_2.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_25_3.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_25_4.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_25_5.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_25_6.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_25_7.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_25_8.md |  2 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_25_9.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_26_0.md |  2 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_26_1.md |  1 [32m+[m
+ ...eel and FPA Knowledge Management FPAKM_26_10.md |  1 [32m+[m
+ ...eel and FPA Knowledge Management FPAKM_26_11.md |  1 [32m+[m
+ ...eel and FPA Knowledge Management FPAKM_26_12.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_26_2.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_26_3.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_26_4.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_26_5.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_26_6.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_26_7.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_26_8.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_26_9.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_27_0.md |  2 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_27_1.md |  1 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_27_2.md |  2 [32m+[m
+ ...heel and FPA Knowledge Management FPAKM_27_3.md |  2 [32m+[m
+ ...Wheel and FPA Knowledge Management FPAKM_2_0.md |  7 [32m++++[m
+ ...Wheel and FPA Knowledge Management FPAKM_3_0.md |  1 [32m+[m
+ ...Wheel and FPA Knowledge Management FPAKM_3_1.md |  1 [32m+[m
+ ...Wheel and FPA Knowledge Management FPAKM_3_2.md |  2 [32m+[m
+ ...Wheel and FPA Knowledge Management FPAKM_3_3.md |  1 [32m+[m
+ ...Wheel and FPA Knowledge Management FPAKM_4_0.md |  1 [32m+[m
+ ...Wheel and FPA Knowledge Management FPAKM_4_1.md |  1 [32m+[m
+ ...Wheel and FPA Knowledge Management FPAKM_4_2.md |  1 [32m+[m
+ ...Wheel and FPA Knowledge Management FPAKM_4_3.md |  1 [32m+[m
+ ...Wheel and FPA Knowledge Management FPAKM_5_0.md |  2 [32m+[m
+ ...Wheel and FPA Knowledge Management FPAKM_5_1.md |  1 [32m+[m
+ ...Wheel and FPA Knowledge Management FPAKM_5_2.md |  1 [32m+[m
+ ...Wheel and FPA Knowledge Management FPAKM_5_3.md |  1 [32m+[m
+ ...Wheel and FPA Knowledge Management FPAKM_5_4.md |  1 [32m+[m
+ ...Wheel and FPA Knowledge Management FPAKM_5_5.md |  1 [32m+[m
+ ...Wheel and FPA Knowledge Management FPAKM_5_6.md |  1 [32m+[m
+ ...Wheel and FPA Knowledge Management FPAKM_6_0.md |  1 [32m+[m
+ ...Wheel and FPA Knowledge Management FPAKM_7_0.md |  1 [32m+[m
+ ...Wheel and FPA Knowledge Management FPAKM_7_1.md |  1 [32m+[m
+ ...Wheel and FPA Knowledge Management FPAKM_7_2.md |  2 [32m+[m
+ ...Wheel and FPA Knowledge Management FPAKM_7_3.md |  1 [32m+[m
+ ...Wheel and FPA Knowledge Management FPAKM_8_0.md |  2 [32m+[m
+ ...Wheel and FPA Knowledge Management FPAKM_8_1.md |  1 [32m+[m
+ ...Wheel and FPA Knowledge Management FPAKM_9_0.md |  1 [32m+[m
+ ...Wheel and FPA Knowledge Management FPAKM_9_1.md |  1 [32m+[m
+ .../06. FPA Governance & Structure  Short_0_0.md   |  5 [32m+++[m
+ .../06. FPA Governance & Structure  Short_1_0.md   |  7 [32m++++[m
+ .../06. FPA Governance & Structure  Short_2_0.md   |  7 [32m++++[m
+ .../06. FPA Governance & Structure  Short_3_0.md   |  7 [32m++++[m
+ .../06. FPA Governance & Structure  Short_4_0.md   |  8 [32m++++[m
+ .../06. FPA Governance & Structure  Short_5_0.md   |  8 [32m++++[m
+ .../06. FPA Governance & Structure  Short_6_0.md   | 12 [32m++++++[m
+ .../06. FPA Governance & Structure  Short_7_0.md   |  4 [32m++[m
+ .../06. FPA Governance & Structure  Short_8_0.md   |  5 [32m+++[m
+ .../06. FPA Governance & Structure  Short_9_0.md   |  3 [32m++[m
+ .../docs/06. FPA Governance & Structure_0_0.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_1_0.md     |  2 [32m+[m
+ .../docs/06. FPA Governance & Structure_1_1.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_1_2.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_1_3.md     |  2 [32m+[m
+ .../docs/06. FPA Governance & Structure_2_0.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_2_1.md     |  2 [32m+[m
+ .../docs/06. FPA Governance & Structure_2_2.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_2_3.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_2_4.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_2_5.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_3_0.md     |  2 [32m+[m
+ .../docs/06. FPA Governance & Structure_3_1.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_3_2.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_3_3.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_3_4.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_3_5.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_4_0.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_4_1.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_4_2.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_4_3.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_4_4.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_4_5.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_4_6.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_5_0.md     |  2 [32m+[m
+ .../docs/06. FPA Governance & Structure_5_1.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_5_2.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_5_3.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_5_4.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_6_0.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_6_1.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_6_10.md    |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_6_11.md    |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_6_12.md    |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_6_2.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_6_3.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_6_4.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_6_5.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_6_6.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_6_7.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_6_8.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_6_9.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_7_0.md     |  2 [32m+[m
+ .../docs/06. FPA Governance & Structure_7_1.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_7_2.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_7_3.md     |  1 [32m+[m
+ .../docs/06. FPA Governance & Structure_8_0.md     |  3 [32m++[m
+ .../docs/06. FPA Governance & Structure_8_1.md     |  1 [32m+[m
+ .../docs/07. Operational Readiness  Short_0_0.md   |  5 [32m+++[m
+ .../docs/07. Operational Readiness  Short_1_0.md   |  2 [32m+[m
+ .../docs/07. Operational Readiness  Short_2_0.md   | 12 [32m++++++[m
+ .../docs/07. Operational Readiness  Short_3_0.md   |  7 [32m++++[m
+ .../docs/07. Operational Readiness  Short_4_0.md   |  7 [32m++++[m
+ .../docs/07. Operational Readiness  Short_5_0.md   |  6 [32m+++[m
+ .../docs/07. Operational Readiness  Short_6_0.md   |  7 [32m++++[m
+ .../docs/07. Operational Readiness  Short_7_0.md   |  4 [32m++[m
+ .../docs/07. Operational Readiness  Short_8_0.md   |  5 [32m+++[m
+ .../docs/07. Operational Readiness  Short_9_0.md   |  7 [32m++++[m
+ fpa-site/docs/07. Operational Readiness_0_0.md     |  1 [32m+[m
+ fpa-site/docs/07. Operational Readiness_10_0.md    |  7 [32m++++[m
+ fpa-site/docs/07. Operational Readiness_11_0.md    | 11 [32m+++++[m
+ fpa-site/docs/07. Operational Readiness_11_1.md    |  1 [32m+[m
+ fpa-site/docs/07. Operational Readiness_12_0.md    |  4 [32m++[m
+ fpa-site/docs/07. Operational Readiness_12_1.md    |  3 [32m++[m
+ fpa-site/docs/07. Operational Readiness_13_0.md    |  9 [32m+++++[m
+ fpa-site/docs/07. Operational Readiness_14_0.md    |  4 [32m++[m
+ fpa-site/docs/07. Operational Readiness_15_0.md    |  8 [32m++++[m
+ fpa-site/docs/07. Operational Readiness_1_0.md     |  1 [32m+[m
+ fpa-site/docs/07. Operational Readiness_2_0.md     |  4 [32m++[m
+ fpa-site/docs/07. Operational Readiness_2_1.md     |  1 [32m+[m
+ fpa-site/docs/07. Operational Readiness_3_0.md     |  8 [32m++++[m
+ fpa-site/docs/07. Operational Readiness_3_1.md     |  1 [32m+[m
+ fpa-site/docs/07. Operational Readiness_4_0.md     | 13 [32m++++++[m
+ fpa-site/docs/07. Operational Readiness_4_1.md     |  4 [32m++[m
+ fpa-site/docs/07. Operational Readiness_5_0.md     | 12 [32m++++++[m
+ fpa-site/docs/07. Operational Readiness_5_1.md     |  2 [32m+[m
+ fpa-site/docs/07. Operational Readiness_6_0.md     |  7 [32m++++[m
+ fpa-site/docs/07. Operational Readiness_7_0.md     |  8 [32m++++[m
+ fpa-site/docs/07. Operational Readiness_7_1.md     |  5 [32m+++[m
+ fpa-site/docs/07. Operational Readiness_8_0.md     |  8 [32m++++[m
+ fpa-site/docs/07. Operational Readiness_9_0.md     |  5 [32m+++[m
+ ...hort User Application & Journey Strategy_0_0.md |  5 [32m+++[m
+ ...ort User Application & Journey Strategy_10_0.md |  3 [32m++[m
+ ...ort User Application & Journey Strategy_11_0.md |  4 [32m++[m
+ ...ort User Application & Journey Strategy_12_0.md |  8 [32m++++[m
+ ...ort User Application & Journey Strategy_13_0.md |  6 [32m+++[m
+ ...ort User Application & Journey Strategy_14_0.md |  7 [32m++++[m
+ ...ort User Application & Journey Strategy_15_0.md |  4 [32m++[m
+ ...hort User Application & Journey Strategy_1_0.md |  1 [32m+[m
+ ...hort User Application & Journey Strategy_2_0.md |  6 [32m+++[m
+ ...hort User Application & Journey Strategy_3_0.md |  6 [32m+++[m
+ ...hort User Application & Journey Strategy_4_0.md |  3 [32m++[m
+ ...hort User Application & Journey Strategy_5_0.md |  7 [32m++++[m
+ ...hort User Application & Journey Strategy_6_0.md |  6 [32m+++[m
+ ...hort User Application & Journey Strategy_7_0.md |  7 [32m++++[m
+ ...hort User Application & Journey Strategy_8_0.md |  6 [32m+++[m
+ ...hort User Application & Journey Strategy_9_0.md |  3 [32m++[m
+ .../08. User Application & Journey Strategy_0_0.md |  6 [32m+++[m
+ .../08. User Application & Journey Strategy_1_0.md |  1 [32m+[m
+ .../08. User Application & Journey Strategy_2_0.md |  2 [32m+[m
+ .../08. User Application & Journey Strategy_2_1.md |  2 [32m+[m
+ .../08. User Application & Journey Strategy_2_2.md |  6 [32m+++[m
+ .../08. User Application & Journey Strategy_2_3.md |  4 [32m++[m
+ .../08. User Application & Journey Strategy_2_4.md |  2 [32m+[m
+ .../08. User Application & Journey Strategy_2_5.md |  1 [32m+[m
+ .../08. User Application & Journey Strategy_3_0.md |  6 [32m+++[m
+ .../08. User Application & Journey Strategy_3_1.md |  4 [32m++[m
+ ...08. User Application & Journey Strategy_3_10.md |  1 [32m+[m
+ ...08. User Application & Journey Strategy_3_11.md |  1 [32m+[m
+ ...08. User Application & Journey Strategy_3_12.md |  3 [32m++[m
+ ...08. User Application & Journey Strategy_3_13.md |  1 [32m+[m
+ ...08. User Application & Journey Strategy_3_14.md |  1 [32m+[m
+ ...08. User Application & Journey Strategy_3_15.md |  1 [32m+[m
+ .../08. User Application & Journey Strategy_3_2.md |  2 [32m+[m
+ .../08. User Application & Journey Strategy_3_3.md |  1 [32m+[m
+ .../08. User Application & Journey Strategy_3_4.md |  2 [32m+[m
+ .../08. User Application & Journey Strategy_3_5.md |  3 [32m++[m
+ .../08. User Application & Journey Strategy_3_6.md |  2 [32m+[m
+ .../08. User Application & Journey Strategy_3_7.md |  2 [32m+[m
+ .../08. User Application & Journey Strategy_3_8.md |  2 [32m+[m
+ .../08. User Application & Journey Strategy_3_9.md |  1 [32m+[m
+ .../08. User Application & Journey Strategy_4_0.md |  3 [32m++[m
+ .../08. User Application & Journey Strategy_4_1.md |  1 [32m+[m
+ ...08. User Application & Journey Strategy_4_10.md |  1 [32m+[m
+ .../08. User Application & Journey Strategy_4_2.md |  2 [32m+[m
+ .../08. User Application & Journey Strategy_4_3.md |  2 [32m+[m
+ .../08. User Application & Journey Strategy_4_4.md |  2 [32m+[m
+ .../08. User Application & Journey Strategy_4_5.md |  4 [32m++[m
+ .../08. User Application & Journey Strategy_4_6.md |  3 [32m++[m
+ .../08. User Application & Journey Strategy_4_7.md |  3 [32m++[m
+ .../08. User Application & Journey Strategy_4_8.md |  1 [32m+[m
+ .../08. User Application & Journey Strategy_4_9.md |  1 [32m+[m
+ .../08. User Application & Journey Strategy_5_0.md |  2 [32m+[m
+ .../08. User Application & Journey Strategy_5_1.md |  1 [32m+[m
+ .../08. User Application & Journey Strategy_5_2.md |  1 [32m+[m
+ .../08. User Application & Journey Strategy_5_3.md |  1 [32m+[m
+ .../08. User Application & Journey Strategy_5_4.md |  1 [32m+[m
+ .../08. User Application & Journey Strategy_5_5.md |  1 [32m+[m
+ .../08. User Application & Journey Strategy_6_0.md |  1 [32m+[m
+ .../08. User Application & Journey Strategy_6_1.md |  1 [32m+[m
+ .../08. User Application & Journey Strategy_6_2.md |  3 [32m++[m
+ .../08. User Application & Journey Strategy_6_3.md |  3 [32m++[m
+ .../08. User Application & Journey Strategy_6_4.md |  1 [32m+[m
+ .../08. User Application & Journey Strategy_6_5.md |  2 [32m+[m
+ .../08. User Application & Journey Strategy_6_6.md |  3 [32m++[m
+ .../08. User Application & Journey Strategy_6_7.md |  3 [32m++[m
+ .../08. User Application & Journey Strategy_6_8.md |  3 [32m++[m
+ .../08. User Application & Journey Strategy_7_0.md |  9 [32m+++++[m
+ ... Compass Guide \342\200\223 SOPs  Short_0_0.md" |  5 [32m+++[m
+ ... Compass Guide \342\200\223 SOPs  Short_1_0.md" |  2 [32m+[m
+ ... Compass Guide \342\200\223 SOPs  Short_2_0.md" |  3 [32m++[m
+ ... Compass Guide \342\200\223 SOPs  Short_3_0.md" |  9 [32m+++++[m
+ ... Compass Guide \342\200\223 SOPs  Short_4_0.md" |  7 [32m++++[m
+ ... Compass Guide \342\200\223 SOPs  Short_5_0.md" | 47 [32m++++++++++++++++++++++[m
+ ... Compass Guide \342\200\223 SOPs  Short_5_1.md" | 25 [32m++++++++++++[m
+ .../09. Compass Guide \342\200\223 SOPs_0_0.md"    | 18 [32m+++++++++[m
+ .../09. Compass Guide \342\200\223 SOPs_10_0.md"   |  2 [32m+[m
+ .../09. Compass Guide \342\200\223 SOPs_11_0.md"   |  6 [32m+++[m
+ .../09. Compass Guide \342\200\223 SOPs_12_0.md"   |  6 [32m+++[m
+ .../09. Compass Guide \342\200\223 SOPs_13_0.md"   | 16 [32m++++++++[m
+ .../09. Compass Guide \342\200\223 SOPs_13_1.md"   |  7 [32m++++[m
+ .../09. Compass Guide \342\200\223 SOPs_1_0.md"    |  9 [32m+++++[m
+ .../09. Compass Guide \342\200\223 SOPs_2_0.md"    |  2 [32m+[m
+ .../09. Compass Guide \342\200\223 SOPs_3_0.md"    |  1 [32m+[m
+ .../09. Compass Guide \342\200\223 SOPs_3_1.md"    |  1 [32m+[m
+ .../09. Compass Guide \342\200\223 SOPs_4_0.md"    |  4 [32m++[m
+ .../09. Compass Guide \342\200\223 SOPs_4_1.md"    |  3 [32m++[m
+ .../09. Compass Guide \342\200\223 SOPs_4_2.md"    |  1 [32m+[m
+ .../09. Compass Guide \342\200\223 SOPs_5_0.md"    |  2 [32m+[m
+ .../09. Compass Guide \342\200\223 SOPs_5_1.md"    |  1 [32m+[m
+ .../09. Compass Guide \342\200\223 SOPs_5_2.md"    |  2 [32m+[m
+ .../09. Compass Guide \342\200\223 SOPs_5_3.md"    |  2 [32m+[m
+ .../09. Compass Guide \342\200\223 SOPs_6_0.md"    |  2 [32m+[m
+ .../09. Compass Guide \342\200\223 SOPs_6_1.md"    |  1 [32m+[m
+ .../09. Compass Guide \342\200\223 SOPs_6_10.md"   |  1 [32m+[m
+ .../09. Compass Guide \342\200\223 SOPs_6_2.md"    |  1 [32m+[m
+ .../09. Compass Guide \342\200\223 SOPs_6_3.md"    |  1 [32m+[m
+ .../09. Compass Guide \342\200\223 SOPs_6_4.md"    |  1 [32m+[m
+ .../09. Compass Guide \342\200\223 SOPs_6_5.md"    |  1 [32m+[m
+ .../09. Compass Guide \342\200\223 SOPs_6_6.md"    |  1 [32m+[m
+ .../09. Compass Guide \342\200\223 SOPs_6_7.md"    |  1 [32m+[m
+ .../09. Compass Guide \342\200\223 SOPs_6_8.md"    |  1 [32m+[m
+ .../09. Compass Guide \342\200\223 SOPs_6_9.md"    |  1 [32m+[m
+ .../09. Compass Guide \342\200\223 SOPs_7_0.md"    |  2 [32m+[m
+ .../09. Compass Guide \342\200\223 SOPs_7_1.md"    |  1 [32m+[m
+ .../09. Compass Guide \342\200\223 SOPs_7_2.md"    |  1 [32m+[m
+ .../09. Compass Guide \342\200\223 SOPs_7_3.md"    |  1 [32m+[m
+ .../09. Compass Guide \342\200\223 SOPs_7_4.md"    |  1 [32m+[m
+ .../09. Compass Guide \342\200\223 SOPs_7_5.md"    |  3 [32m++[m
+ .../09. Compass Guide \342\200\223 SOPs_8_0.md"    |  3 [32m++[m
+ .../09. Compass Guide \342\200\223 SOPs_8_1.md"    |  4 [32m++[m
+ .../09. Compass Guide \342\200\223 SOPs_9_0.md"    |  4 [32m++[m
+ fpa-site/docs/1.1 FPA Mission and Goals_0_0.md     |  1 [32m+[m
+ .../1.10 Accountability and Transparency_0_0.md    |  1 [32m+[m
+ .../1.10 Accountability and Transparency_0_1.md    |  1 [32m+[m
+ .../1.11 Member Privacy and Data Security_0_0.md   |  1 [32m+[m
+ .../1.11 Member Privacy and Data Security_0_1.md   |  1 [32m+[m
+ .../1.11 Member Privacy and Data Security_0_2.md   |  1 [32m+[m
+ .../1.12 Conflict Resolution and Discipline_0_0.md |  1 [32m+[m
+ .../1.12 Conflict Resolution and Discipline_0_1.md |  1 [32m+[m
+ .../1.12 Conflict Resolution and Discipline_0_2.md |  1 [32m+[m
+ ...xternal Partnerships and Outreach Policy_0_0.md |  1 [32m+[m
+ ...xternal Partnerships and Outreach Policy_0_1.md |  1 [32m+[m
+ ...xternal Partnerships and Outreach Policy_0_2.md |  1 [32m+[m
+ .../1.14 Founding and Historical Background_0_0.md |  1 [32m+[m
+ .../1.14 Founding and Historical Background_0_1.md |  1 [32m+[m
+ .../1.14 Founding and Historical Background_0_2.md |  1 [32m+[m
+ fpa-site/docs/1.15 Continuity of Leadership_0_0.md |  1 [32m+[m
+ fpa-site/docs/1.15 Continuity of Leadership_0_1.md |  1 [32m+[m
+ fpa-site/docs/1.15 Continuity of Leadership_0_2.md |  1 [32m+[m
+ .../1.16 Member Participation in Governance_0_0.md |  1 [32m+[m
+ .../1.16 Member Participation in Governance_0_1.md |  1 [32m+[m
+ .../1.16 Member Participation in Governance_0_2.md |  1 [32m+[m
+ ...7 Public Image and Perception Management_0_0.md |  1 [32m+[m
+ ...7 Public Image and Perception Management_0_1.md |  1 [32m+[m
+ ...7 Public Image and Perception Management_0_2.md |  1 [32m+[m
+ .../docs/1.2 Core Values and Principles_0_0.md     |  1 [32m+[m
+ fpa-site/docs/1.3 Organizational Structure_0_0.md  |  1 [32m+[m
+ fpa-site/docs/1.3 Organizational Structure_0_1.md  |  1 [32m+[m
+ .../docs/1.4 National Leadership Structure_0_0.md  |  1 [32m+[m
+ .../docs/1.4 National Leadership Structure_0_1.md  |  1 [32m+[m
+ fpa-site/docs/1.5 Local Chapter Leadership_0_0.md  |  1 [32m+[m
+ fpa-site/docs/1.5 Local Chapter Leadership_0_1.md  |  1 [32m+[m
+ fpa-site/docs/1.6 Decision-Making Process_0_0.md   |  1 [32m+[m
+ fpa-site/docs/1.6 Decision-Making Process_0_1.md   |  1 [32m+[m
+ .../1.7 Trust Doctrine and Trust Building_0_0.md   |  1 [32m+[m
+ .../1.7 Trust Doctrine and Trust Building_0_1.md   |  1 [32m+[m
+ .../docs/1.8 Code of Conduct and Ethics_0_0.md     |  1 [32m+[m
+ .../docs/1.8 Code of Conduct and Ethics_0_1.md     |  1 [32m+[m
+ .../docs/1.9 Legal and Ethical Compliance_0_0.md   |  1 [32m+[m
+ .../docs/1.9 Legal and Ethical Compliance_0_1.md   |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations  Short_0_0.md   | 14 [32m+++++++[m
+ fpa-site/docs/10. Core Innovations  Short_0_1.md   | 22 [32m++++++++++[m
+ fpa-site/docs/10. Core Innovations  Short_0_2.md   | 22 [32m++++++++++[m
+ fpa-site/docs/10. Core Innovations  Short_0_3.md   | 33 [32m+++++++++++++++[m
+ fpa-site/docs/10. Core Innovations  Short_0_4.md   | 29 [32m+++++++++++++[m
+ fpa-site/docs/10. Core Innovations  Short_0_5.md   | 38 [32m+++++++++++++++++[m
+ fpa-site/docs/10. Core Innovations_0_0.md          | 18 [32m+++++++++[m
+ fpa-site/docs/10. Core Innovations_0_1.md          |  7 [32m++++[m
+ fpa-site/docs/10. Core Innovations_0_10.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_11.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_12.md         |  3 [32m++[m
+ fpa-site/docs/10. Core Innovations_0_13.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_14.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_15.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_16.md         |  2 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_17.md         |  2 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_18.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_19.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_2.md          |  6 [32m+++[m
+ fpa-site/docs/10. Core Innovations_0_20.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_21.md         |  2 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_22.md         |  2 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_23.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_24.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_25.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_26.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_27.md         |  2 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_28.md         |  2 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_29.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_3.md          |  3 [32m++[m
+ fpa-site/docs/10. Core Innovations_0_30.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_31.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_32.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_33.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_34.md         |  2 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_35.md         |  2 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_36.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_37.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_38.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_39.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_4.md          |  2 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_40.md         |  2 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_41.md         |  2 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_42.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_43.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_44.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_45.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_46.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_47.md         |  2 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_48.md         |  2 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_49.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_5.md          |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_50.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_51.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_52.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_53.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_54.md         |  2 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_55.md         |  2 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_56.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_57.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_58.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_59.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_6.md          |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_60.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_61.md         |  2 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_62.md         |  2 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_63.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_64.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_65.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_66.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_67.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_68.md         |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_7.md          |  3 [32m++[m
+ fpa-site/docs/10. Core Innovations_0_8.md          |  2 [32m+[m
+ fpa-site/docs/10. Core Innovations_0_9.md          |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_1_0.md          |  3 [32m++[m
+ fpa-site/docs/10. Core Innovations_1_1.md          |  1 [32m+[m
+ fpa-site/docs/10. Core Innovations_1_2.md          |  2 [32m+[m
+ fpa-site/docs/10. Core Innovations_1_3.md          |  3 [32m++[m
+ fpa-site/docs/10. Core Innovations_1_4.md          |  3 [32m++[m
+ fpa-site/docs/10. Core Innovations_2_0.md          |  5 [32m+++[m
+ fpa-site/docs/10. Core Innovations_3_0.md          |  4 [32m++[m
+ fpa-site/docs/10. Core Innovations_4_0.md          |  7 [32m++++[m
+ fpa-site/docs/11. White Paper  Short_0_0.md        |  5 [32m+++[m
+ fpa-site/docs/11. White Paper  Short_10_0.md       |  6 [32m+++[m
+ fpa-site/docs/11. White Paper  Short_1_0.md        |  2 [32m+[m
+ fpa-site/docs/11. White Paper  Short_2_0.md        |  6 [32m+++[m
+ fpa-site/docs/11. White Paper  Short_3_0.md        |  6 [32m+++[m
+ fpa-site/docs/11. White Paper  Short_4_0.md        | 10 [32m+++++[m
+ fpa-site/docs/11. White Paper  Short_5_0.md        | 11 [32m+++++[m
+ fpa-site/docs/11. White Paper  Short_6_0.md        | 11 [32m+++++[m
+ fpa-site/docs/11. White Paper  Short_7_0.md        | 10 [32m+++++[m
+ fpa-site/docs/11. White Paper  Short_8_0.md        |  5 [32m+++[m
+ fpa-site/docs/11. White Paper  Short_9_0.md        |  4 [32m++[m
+ fpa-site/docs/11. White Paper_0_0.md               | 18 [32m+++++++++[m
+ fpa-site/docs/11. White Paper_10_0.md              |  6 [32m+++[m
+ fpa-site/docs/11. White Paper_10_1.md              |  9 [32m+++++[m
+ fpa-site/docs/11. White Paper_11_0.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_11_1.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_11_2.md              |  6 [32m+++[m
+ fpa-site/docs/11. White Paper_11_3.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_12_0.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_12_1.md              |  8 [32m++++[m
+ fpa-site/docs/11. White Paper_12_2.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_13_0.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_13_1.md              |  5 [32m+++[m
+ fpa-site/docs/11. White Paper_13_2.md              |  5 [32m+++[m
+ fpa-site/docs/11. White Paper_13_3.md              |  1 [32m+[m
+ fpa-site/docs/11. White Paper_14_0.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_14_1.md              |  6 [32m+++[m
+ fpa-site/docs/11. White Paper_14_2.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_15_0.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_15_1.md              |  5 [32m+++[m
+ fpa-site/docs/11. White Paper_15_2.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_15_3.md              |  1 [32m+[m
+ fpa-site/docs/11. White Paper_16_0.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_16_1.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_16_2.md              |  5 [32m+++[m
+ fpa-site/docs/11. White Paper_16_3.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_17_0.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_17_1.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_17_2.md              |  5 [32m+++[m
+ fpa-site/docs/11. White Paper_17_3.md              |  1 [32m+[m
+ fpa-site/docs/11. White Paper_17_4.md              |  1 [32m+[m
+ fpa-site/docs/11. White Paper_18_0.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_18_1.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_18_2.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_18_3.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_18_4.md              |  1 [32m+[m
+ fpa-site/docs/11. White Paper_19_0.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_19_1.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_19_2.md              |  5 [32m+++[m
+ fpa-site/docs/11. White Paper_19_3.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_19_4.md              |  1 [32m+[m
+ fpa-site/docs/11. White Paper_19_5.md              |  1 [32m+[m
+ fpa-site/docs/11. White Paper_1_0.md               |  1 [32m+[m
+ fpa-site/docs/11. White Paper_1_1.md               |  1 [32m+[m
+ fpa-site/docs/11. White Paper_1_2.md               |  1 [32m+[m
+ fpa-site/docs/11. White Paper_1_3.md               |  1 [32m+[m
+ fpa-site/docs/11. White Paper_1_4.md               |  1 [32m+[m
+ fpa-site/docs/11. White Paper_1_5.md               |  2 [32m+[m
+ fpa-site/docs/11. White Paper_20_0.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_20_1.md              |  6 [32m+++[m
+ fpa-site/docs/11. White Paper_20_2.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_20_3.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_21_0.md              |  1 [32m+[m
+ fpa-site/docs/11. White Paper_21_1.md              |  1 [32m+[m
+ fpa-site/docs/11. White Paper_21_2.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_21_3.md              |  5 [32m+++[m
+ fpa-site/docs/11. White Paper_21_4.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_22_0.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_22_1.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_22_2.md              |  5 [32m+++[m
+ fpa-site/docs/11. White Paper_22_3.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_23_0.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_23_1.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_23_2.md              |  5 [32m+++[m
+ fpa-site/docs/11. White Paper_23_3.md              |  1 [32m+[m
+ fpa-site/docs/11. White Paper_24_0.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_24_1.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_24_2.md              |  5 [32m+++[m
+ fpa-site/docs/11. White Paper_24_3.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_24_4.md              |  1 [32m+[m
+ fpa-site/docs/11. White Paper_25_0.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_25_1.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_25_2.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_25_3.md              |  1 [32m+[m
+ fpa-site/docs/11. White Paper_25_4.md              |  1 [32m+[m
+ fpa-site/docs/11. White Paper_26_0.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_26_1.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_26_2.md              |  5 [32m+++[m
+ fpa-site/docs/11. White Paper_26_3.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_27_0.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_27_1.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_27_2.md              |  5 [32m+++[m
+ fpa-site/docs/11. White Paper_27_3.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_28_0.md              |  1 [32m+[m
+ fpa-site/docs/11. White Paper_28_1.md              |  1 [32m+[m
+ fpa-site/docs/11. White Paper_28_2.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_28_3.md              |  5 [32m+++[m
+ fpa-site/docs/11. White Paper_28_4.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_29_0.md              |  1 [32m+[m
+ fpa-site/docs/11. White Paper_29_1.md              |  1 [32m+[m
+ fpa-site/docs/11. White Paper_29_2.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_29_3.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_29_4.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_29_5.md              |  1 [32m+[m
+ fpa-site/docs/11. White Paper_29_6.md              |  1 [32m+[m
+ fpa-site/docs/11. White Paper_2_0.md               |  1 [32m+[m
+ fpa-site/docs/11. White Paper_2_1.md               |  1 [32m+[m
+ fpa-site/docs/11. White Paper_2_2.md               |  1 [32m+[m
+ fpa-site/docs/11. White Paper_30_0.md              |  9 [32m+++++[m
+ fpa-site/docs/11. White Paper_30_1.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_31_0.md              |  7 [32m++++[m
+ fpa-site/docs/11. White Paper_31_1.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_32_0.md              |  6 [32m+++[m
+ fpa-site/docs/11. White Paper_32_1.md              |  5 [32m+++[m
+ fpa-site/docs/11. White Paper_33_0.md              |  5 [32m+++[m
+ fpa-site/docs/11. White Paper_33_1.md              |  6 [32m+++[m
+ fpa-site/docs/11. White Paper_33_2.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_34_0.md              |  5 [32m+++[m
+ fpa-site/docs/11. White Paper_34_1.md              |  6 [32m+++[m
+ fpa-site/docs/11. White Paper_34_2.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_35_0.md              | 16 [32m++++++++[m
+ fpa-site/docs/11. White Paper_36_0.md              |  8 [32m++++[m
+ fpa-site/docs/11. White Paper_37_0.md              |  9 [32m+++++[m
+ fpa-site/docs/11. White Paper_3_0.md               |  2 [32m+[m
+ fpa-site/docs/11. White Paper_3_1.md               |  2 [32m+[m
+ fpa-site/docs/11. White Paper_3_10.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_3_11.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_3_12.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_3_13.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_3_14.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_3_15.md              |  1 [32m+[m
+ fpa-site/docs/11. White Paper_3_16.md              |  1 [32m+[m
+ fpa-site/docs/11. White Paper_3_17.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_3_18.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_3_19.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_3_2.md               |  5 [32m+++[m
+ fpa-site/docs/11. White Paper_3_20.md              |  1 [32m+[m
+ fpa-site/docs/11. White Paper_3_21.md              |  1 [32m+[m
+ fpa-site/docs/11. White Paper_3_22.md              |  1 [32m+[m
+ fpa-site/docs/11. White Paper_3_23.md              |  1 [32m+[m
+ fpa-site/docs/11. White Paper_3_24.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_3_25.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_3_26.md              |  1 [32m+[m
+ fpa-site/docs/11. White Paper_3_27.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_3_28.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_3_29.md              |  1 [32m+[m
+ fpa-site/docs/11. White Paper_3_3.md               |  3 [32m++[m
+ fpa-site/docs/11. White Paper_3_30.md              |  1 [32m+[m
+ fpa-site/docs/11. White Paper_3_31.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_3_32.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_3_33.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_3_4.md               |  2 [32m+[m
+ fpa-site/docs/11. White Paper_3_5.md               |  2 [32m+[m
+ fpa-site/docs/11. White Paper_3_6.md               |  4 [32m++[m
+ fpa-site/docs/11. White Paper_3_7.md               |  4 [32m++[m
+ fpa-site/docs/11. White Paper_3_8.md               |  2 [32m+[m
+ fpa-site/docs/11. White Paper_3_9.md               |  1 [32m+[m
+ fpa-site/docs/11. White Paper_4_0.md               |  2 [32m+[m
+ fpa-site/docs/11. White Paper_4_1.md               |  1 [32m+[m
+ fpa-site/docs/11. White Paper_4_2.md               |  1 [32m+[m
+ fpa-site/docs/11. White Paper_4_3.md               |  1 [32m+[m
+ fpa-site/docs/11. White Paper_4_4.md               |  1 [32m+[m
+ fpa-site/docs/11. White Paper_4_5.md               |  1 [32m+[m
+ fpa-site/docs/11. White Paper_4_6.md               |  2 [32m+[m
+ fpa-site/docs/11. White Paper_5_0.md               |  1 [32m+[m
+ fpa-site/docs/11. White Paper_6_0.md               |  6 [32m+++[m
+ fpa-site/docs/11. White Paper_6_1.md               |  6 [32m+++[m
+ fpa-site/docs/11. White Paper_6_10.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_6_11.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_6_12.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_6_13.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_6_14.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_6_15.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_6_16.md              |  5 [32m+++[m
+ fpa-site/docs/11. White Paper_6_17.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_6_18.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_6_19.md              |  6 [32m+++[m
+ fpa-site/docs/11. White Paper_6_2.md               |  7 [32m++++[m
+ fpa-site/docs/11. White Paper_6_20.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_6_21.md              |  5 [32m+++[m
+ fpa-site/docs/11. White Paper_6_22.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_6_23.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_6_24.md              |  5 [32m+++[m
+ fpa-site/docs/11. White Paper_6_25.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_6_26.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_6_27.md              |  5 [32m+++[m
+ fpa-site/docs/11. White Paper_6_28.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_6_29.md              |  5 [32m+++[m
+ fpa-site/docs/11. White Paper_6_3.md               |  5 [32m+++[m
+ fpa-site/docs/11. White Paper_6_30.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_6_31.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_6_32.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_6_33.md              |  6 [32m+++[m
+ fpa-site/docs/11. White Paper_6_34.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_6_35.md              |  5 [32m+++[m
+ fpa-site/docs/11. White Paper_6_36.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_6_37.md              |  5 [32m+++[m
+ fpa-site/docs/11. White Paper_6_38.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_6_39.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_6_4.md               |  6 [32m+++[m
+ fpa-site/docs/11. White Paper_6_40.md              |  5 [32m+++[m
+ fpa-site/docs/11. White Paper_6_41.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_6_42.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_6_43.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_6_44.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_6_45.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_6_46.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_6_47.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_6_48.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_6_49.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_6_5.md               |  5 [32m+++[m
+ fpa-site/docs/11. White Paper_6_50.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_6_51.md              |  6 [32m+++[m
+ fpa-site/docs/11. White Paper_6_52.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_6_53.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_6_54.md              |  5 [32m+++[m
+ fpa-site/docs/11. White Paper_6_55.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_6_56.md              |  1 [32m+[m
+ fpa-site/docs/11. White Paper_6_57.md              |  1 [32m+[m
+ fpa-site/docs/11. White Paper_6_58.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_6_59.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_6_6.md               |  5 [32m+++[m
+ fpa-site/docs/11. White Paper_6_60.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_6_61.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_6_62.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_6_63.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_6_64.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_6_65.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_6_66.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_6_67.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_6_68.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_6_69.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_6_7.md               |  6 [32m+++[m
+ fpa-site/docs/11. White Paper_6_70.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_6_71.md              |  5 [32m+++[m
+ fpa-site/docs/11. White Paper_6_72.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_6_73.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_6_74.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_6_75.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_6_76.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_6_77.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_6_78.md              |  5 [32m+++[m
+ fpa-site/docs/11. White Paper_6_79.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_6_8.md               |  4 [32m++[m
+ fpa-site/docs/11. White Paper_6_80.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_6_81.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_6_82.md              |  5 [32m+++[m
+ fpa-site/docs/11. White Paper_6_83.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_6_84.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_6_85.md              |  4 [32m++[m
+ fpa-site/docs/11. White Paper_6_86.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_6_87.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_6_88.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_6_89.md              |  5 [32m+++[m
+ fpa-site/docs/11. White Paper_6_9.md               |  5 [32m+++[m
+ fpa-site/docs/11. White Paper_6_90.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_6_91.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_7_0.md               |  2 [32m+[m
+ fpa-site/docs/11. White Paper_7_1.md               |  1 [32m+[m
+ fpa-site/docs/11. White Paper_7_10.md              |  1 [32m+[m
+ fpa-site/docs/11. White Paper_7_11.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_7_12.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_7_13.md              |  1 [32m+[m
+ fpa-site/docs/11. White Paper_7_14.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_7_15.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_7_16.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_7_17.md              |  1 [32m+[m
+ fpa-site/docs/11. White Paper_7_18.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_7_19.md              |  3 [32m++[m
+ fpa-site/docs/11. White Paper_7_2.md               |  1 [32m+[m
+ fpa-site/docs/11. White Paper_7_20.md              |  2 [32m+[m
+ fpa-site/docs/11. White Paper_7_3.md               |  1 [32m+[m
+ fpa-site/docs/11. White Paper_7_4.md               |  1 [32m+[m
+ fpa-site/docs/11. White Paper_7_5.md               |  1 [32m+[m
+ fpa-site/docs/11. White Paper_7_6.md               |  1 [32m+[m
+ fpa-site/docs/11. White Paper_7_7.md               |  1 [32m+[m
+ fpa-site/docs/11. White Paper_7_8.md               |  1 [32m+[m
+ fpa-site/docs/11. White Paper_7_9.md               |  1 [32m+[m
+ fpa-site/docs/11. White Paper_8_0.md               |  1 [32m+[m
+ fpa-site/docs/11. White Paper_9_0.md               |  2 [32m+[m
+ .../12. Developer MVP & App Content  Short_0_0.md  |  8 [32m++++[m
+ .../12. Developer MVP & App Content  Short_10_0.md |  6 [32m+++[m
+ .../12. Developer MVP & App Content  Short_11_0.md |  7 [32m++++[m
+ .../12. Developer MVP & App Content  Short_12_0.md |  5 [32m+++[m
+ .../12. Developer MVP & App Content  Short_1_0.md  | 10 [32m+++++[m
+ .../12. Developer MVP & App Content  Short_2_0.md  |  8 [32m++++[m
+ .../12. Developer MVP & App Content  Short_3_0.md  | 11 [32m+++++[m
+ .../12. Developer MVP & App Content  Short_4_0.md  | 13 [32m++++++[m
+ .../12. Developer MVP & App Content  Short_5_0.md  | 10 [32m+++++[m
+ .../12. Developer MVP & App Content  Short_6_0.md  |  5 [32m+++[m
+ .../12. Developer MVP & App Content  Short_7_0.md  |  7 [32m++++[m
+ .../12. Developer MVP & App Content  Short_8_0.md  |  5 [32m+++[m
+ .../12. Developer MVP & App Content  Short_9_0.md  |  7 [32m++++[m
+ .../docs/12. Developer MVP & App Content_0_0.md    | 23 [32m+++++++++++[m
+ .../docs/12. Developer MVP & App Content_10_0.md   |  6 [32m+++[m
+ .../docs/12. Developer MVP & App Content_11_0.md   |  1 [32m+[m
+ .../docs/12. Developer MVP & App Content_1_0.md    |  9 [32m+++++[m
+ .../docs/12. Developer MVP & App Content_2_0.md    |  8 [32m++++[m
+ .../docs/12. Developer MVP & App Content_3_0.md    | 10 [32m+++++[m
+ .../docs/12. Developer MVP & App Content_3_1.md    |  4 [32m++[m
+ .../docs/12. Developer MVP & App Content_4_0.md    | 22 [32m++++++++++[m
+ .../docs/12. Developer MVP & App Content_5_0.md    |  9 [32m+++++[m
+ .../docs/12. Developer MVP & App Content_6_0.md    |  5 [32m+++[m
+ .../docs/12. Developer MVP & App Content_7_0.md    |  7 [32m++++[m
+ .../docs/12. Developer MVP & App Content_8_0.md    |  5 [32m+++[m
+ .../docs/12. Developer MVP & App Content_9_0.md    |  7 [32m++++[m
+ .../13. Dictionary (w_ Q&A + Links)  Short_0_0.md  |  5 [32m+++[m
+ .../13. Dictionary (w_ Q&A + Links)  Short_1_0.md  |  2 [32m+[m
+ .../13. Dictionary (w_ Q&A + Links)  Short_2_0.md  |  2 [32m+[m
+ .../13. Dictionary (w_ Q&A + Links)  Short_3_0.md  | 13 [32m++++++[m
+ .../13. Dictionary (w_ Q&A + Links)  Short_3_1.md  | 14 [32m+++++++[m
+ .../13. Dictionary (w_ Q&A + Links)  Short_3_2.md  | 14 [32m+++++++[m
+ .../13. Dictionary (w_ Q&A + Links)  Short_3_3.md  | 13 [32m++++++[m
+ .../13. Dictionary (w_ Q&A + Links)  Short_4_0.md  | 19 [32m+++++++++[m
+ .../13. Dictionary (w_ Q&A + Links)  Short_4_1.md  | 19 [32m+++++++++[m
+ .../13. Dictionary (w_ Q&A + Links)  Short_4_2.md  | 18 [32m+++++++++[m
+ .../13. Dictionary (w_ Q&A + Links)  Short_5_0.md  | 19 [32m+++++++++[m
+ .../13. Dictionary (w_ Q&A + Links)  Short_5_1.md  | 18 [32m+++++++++[m
+ .../13. Dictionary (w_ Q&A + Links)  Short_5_2.md  | 19 [32m+++++++++[m
+ .../13. Dictionary (w_ Q&A + Links)  Short_6_0.md  |  3 [32m++[m
+ .../13. Dictionary (w_ Q&A + Links)  Short_7_0.md  |  6 [32m+++[m
+ .../13. Dictionary (w_ Q&A + Links)  Short_8_0.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_0_0.md    | 19 [32m+++++++++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_10_0.md   |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_11_0.md   |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_12_0.md   |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_13_0.md   |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_14_0.md   |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_15_0.md   |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_16_0.md   |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_17_0.md   |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_18_0.md   |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_19_0.md   |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_1_0.md    |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_20_0.md   |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_21_0.md   |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_22_0.md   |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_23_0.md   |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_24_0.md   |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_25_0.md   |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_26_0.md   |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_27_0.md   |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_28_0.md   |  8 [32m++++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_0.md   | 25 [32m++++++++++++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_1.md   | 26 [32m++++++++++++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_10.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_11.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_12.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_13.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_14.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_15.md  |  7 [32m++++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_16.md  |  6 [32m+++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_17.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_18.md  |  7 [32m++++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_19.md  |  6 [32m+++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_2.md   |  7 [32m++++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_20.md  |  8 [32m++++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_21.md  |  4 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_22.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_23.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_24.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_25.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_26.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_27.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_28.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_29.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_3.md   |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_30.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_31.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_32.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_33.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_34.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_35.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_36.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_37.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_38.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_39.md  |  5 [32m+++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_4.md   |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_40.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_41.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_42.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_43.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_44.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_45.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_46.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_47.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_5.md   |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_6.md   |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_7.md   |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_8.md   |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_29_9.md   |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_2_0.md    |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_0.md   | 24 [32m+++++++++++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_1.md   | 23 [32m+++++++++++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_10.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_100.md |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_101.md |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_102.md |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_103.md |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_104.md |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_105.md |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_106.md |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_107.md |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_108.md |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_109.md |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_11.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_110.md |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_111.md |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_112.md |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_113.md |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_114.md |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_115.md |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_116.md |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_117.md |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_118.md |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_119.md |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_12.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_120.md |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_121.md |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_13.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_14.md  |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_15.md  |  2 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_16.md  |  2 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_17.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_18.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_19.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_2.md   | 10 [32m+++++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_20.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_21.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_22.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_23.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_24.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_25.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_26.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_27.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_28.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_29.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_3.md   |  5 [32m+++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_30.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_31.md  |  2 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_32.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_33.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_34.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_35.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_36.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_37.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_38.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_39.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_4.md   |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_40.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_41.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_42.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_43.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_44.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_45.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_46.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_47.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_48.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_49.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_5.md   |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_50.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_51.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_52.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_53.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_54.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_55.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_56.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_57.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_58.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_59.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_6.md   |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_60.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_61.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_62.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_63.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_64.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_65.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_66.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_67.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_68.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_69.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_7.md   |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_70.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_71.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_72.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_73.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_74.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_75.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_76.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_77.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_78.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_79.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_8.md   |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_80.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_81.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_82.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_83.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_84.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_85.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_86.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_87.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_88.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_89.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_9.md   |  3 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_90.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_91.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_92.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_93.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_94.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_95.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_96.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_97.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_98.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_30_99.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_31_0.md   | 21 [32m++++++++++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_31_1.md   | 20 [32m+++++++++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_31_10.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_31_11.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_31_12.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_31_13.md  |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_31_14.md  |  4 [32m++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_31_2.md   | 15 [32m+++++++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_31_3.md   |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_31_4.md   |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_31_5.md   |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_31_6.md   |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_31_7.md   |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_31_8.md   |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_31_9.md   |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_32_0.md   |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_33_0.md   |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_34_0.md   |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_35_0.md   |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_36_0.md   |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_37_0.md   |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_38_0.md   |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_39_0.md   |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_3_0.md    |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_40_0.md   |  2 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_41_0.md   |  7 [32m++++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_42_0.md   | 16 [32m++++++++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_42_1.md   |  7 [32m++++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_43_0.md   | 19 [32m+++++++++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_44_0.md   | 19 [32m+++++++++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_45_0.md   | 19 [32m+++++++++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_46_0.md   | 24 [32m+++++++++++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_47_0.md   | 19 [32m+++++++++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_48_0.md   |  7 [32m++++[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_4_0.md    |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_5_0.md    |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_6_0.md    |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_7_0.md    |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_8_0.md    |  1 [32m+[m
+ .../docs/13. Dictionary (w_ Q&A + Links)_9_0.md    |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook  Short_0_0.md |  5 [32m+++[m
+ fpa-site/docs/14. Framework Handbook  Short_1_0.md |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook  Short_2_0.md | 17 [32m++++++++[m
+ fpa-site/docs/14. Framework Handbook  Short_2_1.md |  5 [32m+++[m
+ fpa-site/docs/14. Framework Handbook  Short_3_0.md |  6 [32m+++[m
+ fpa-site/docs/14. Framework Handbook  Short_4_0.md | 11 [32m+++++[m
+ fpa-site/docs/14. Framework Handbook  Short_5_0.md |  7 [32m++++[m
+ fpa-site/docs/14. Framework Handbook  Short_6_0.md |  6 [32m+++[m
+ fpa-site/docs/14. Framework Handbook  Short_7_0.md |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_0_0.md        | 18 [32m+++++++++[m
+ fpa-site/docs/14. Framework Handbook_100_0.md      |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_100_1.md      |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_100_2.md      |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_100_3.md      |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_101_0.md      |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_102_0.md      |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_103_0.md      |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_104_0.md      |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_104_1.md      |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_105_0.md      |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_105_1.md      |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_106_0.md      |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_106_1.md      |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_107_0.md      |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_107_1.md      |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_108_0.md      |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_109_0.md      |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_109_1.md      |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_10_0.md       |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_10_1.md       |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_110_0.md      |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_110_1.md      |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_110_2.md      |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_110_3.md      |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_110_4.md      |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_111_0.md      |  6 [32m+++[m
+ fpa-site/docs/14. Framework Handbook_111_1.md      |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_111_2.md      |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_111_3.md      |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_112_0.md      |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_112_1.md      |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_112_2.md      |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_113_0.md      |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_114_0.md      |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_114_1.md      |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_114_2.md      |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_115_0.md      |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_115_1.md      |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_115_2.md      |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_116_0.md      |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_116_1.md      |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_116_2.md      |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_116_3.md      |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_117_0.md      |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_117_1.md      |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_117_2.md      |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_118_0.md      |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_118_1.md      |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_118_2.md      |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_118_3.md      |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_118_4.md      |  6 [32m+++[m
+ fpa-site/docs/14. Framework Handbook_119_0.md      |  9 [32m+++++[m
+ fpa-site/docs/14. Framework Handbook_11_0.md       |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_11_1.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_120_0.md      |  9 [32m+++++[m
+ fpa-site/docs/14. Framework Handbook_121_0.md      | 13 [32m++++++[m
+ fpa-site/docs/14. Framework Handbook_12_0.md       |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_13_0.md       |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_13_1.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_14_0.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_15_0.md       |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_15_1.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_16_0.md       |  5 [32m+++[m
+ fpa-site/docs/14. Framework Handbook_16_1.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_16_2.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_16_3.md       |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_17_0.md       |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_17_1.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_17_2.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_17_3.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_18_0.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_19_0.md       |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_1_0.md        | 15 [32m+++++++[m
+ fpa-site/docs/14. Framework Handbook_20_0.md       |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_20_1.md       |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_20_2.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_21_0.md       |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_21_1.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_22_0.md       |  5 [32m+++[m
+ fpa-site/docs/14. Framework Handbook_23_0.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_24_0.md       |  8 [32m++++[m
+ fpa-site/docs/14. Framework Handbook_25_0.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_26_0.md       |  6 [32m+++[m
+ fpa-site/docs/14. Framework Handbook_27_0.md       |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_27_1.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_27_2.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_27_3.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_27_4.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_27_5.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_27_6.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_28_0.md       |  7 [32m++++[m
+ fpa-site/docs/14. Framework Handbook_28_1.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_29_0.md       |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_2_0.md        |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_30_0.md       |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_31_0.md       |  5 [32m+++[m
+ fpa-site/docs/14. Framework Handbook_31_1.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_32_0.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_33_0.md       |  5 [32m+++[m
+ fpa-site/docs/14. Framework Handbook_33_1.md       |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_33_2.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_34_0.md       |  6 [32m+++[m
+ fpa-site/docs/14. Framework Handbook_34_1.md       |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_35_0.md       |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_35_1.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_36_0.md       |  5 [32m+++[m
+ fpa-site/docs/14. Framework Handbook_36_1.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_37_0.md       |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_38_0.md       |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_39_0.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_3_0.md        |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_3_1.md        |  6 [32m+++[m
+ fpa-site/docs/14. Framework Handbook_3_2.md        |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_40_0.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_40_1.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_40_2.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_41_0.md       |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_41_1.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_42_0.md       |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_42_1.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_43_0.md       |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_44_0.md       |  5 [32m+++[m
+ fpa-site/docs/14. Framework Handbook_45_0.md       |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_46_0.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_47_0.md       |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_47_1.md       |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_47_2.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_48_0.md       |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_48_1.md       |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_48_2.md       |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_49_0.md       |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_4_0.md        |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_50_0.md       | 15 [32m+++++++[m
+ fpa-site/docs/14. Framework Handbook_51_0.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_52_0.md       |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_52_1.md       |  6 [32m+++[m
+ fpa-site/docs/14. Framework Handbook_52_2.md       |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_53_0.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_54_0.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_54_1.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_55_0.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_55_1.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_56_0.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_56_1.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_56_2.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_56_3.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_56_4.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_56_5.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_57_0.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_58_0.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_59_0.md       |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_59_1.md       |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_5_0.md        |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_5_1.md        |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_60_0.md       |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_60_1.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_61_0.md       |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_62_0.md       |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_62_1.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_63_0.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_64_0.md       |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_64_1.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_65_0.md       |  5 [32m+++[m
+ fpa-site/docs/14. Framework Handbook_65_1.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_65_2.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_65_3.md       |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_66_0.md       |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_66_1.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_66_2.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_66_3.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_67_0.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_68_0.md       |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_69_0.md       |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_69_1.md       |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_69_2.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_6_0.md        |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_6_1.md        |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_70_0.md       |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_70_1.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_71_0.md       |  5 [32m+++[m
+ fpa-site/docs/14. Framework Handbook_72_0.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_73_0.md       |  8 [32m++++[m
+ fpa-site/docs/14. Framework Handbook_74_0.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_75_0.md       |  6 [32m+++[m
+ fpa-site/docs/14. Framework Handbook_76_0.md       |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_76_1.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_76_2.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_76_3.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_76_4.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_76_5.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_76_6.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_77_0.md       |  7 [32m++++[m
+ fpa-site/docs/14. Framework Handbook_77_1.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_78_0.md       |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_79_0.md       |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_7_0.md        |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_7_1.md        |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_7_2.md        |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_7_3.md        |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_7_4.md        |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_7_5.md        |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_80_0.md       |  5 [32m+++[m
+ fpa-site/docs/14. Framework Handbook_80_1.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_81_0.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_82_0.md       |  5 [32m+++[m
+ fpa-site/docs/14. Framework Handbook_82_1.md       |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_82_2.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_83_0.md       |  6 [32m+++[m
+ fpa-site/docs/14. Framework Handbook_83_1.md       |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_84_0.md       |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_84_1.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_85_0.md       |  5 [32m+++[m
+ fpa-site/docs/14. Framework Handbook_85_1.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_86_0.md       |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_87_0.md       |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_88_0.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_89_0.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_89_1.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_89_2.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_8_0.md        |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_90_0.md       |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_90_1.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_91_0.md       |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_91_1.md       |  1 [32m+[m
+ fpa-site/docs/14. Framework Handbook_92_0.md       |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_93_0.md       |  5 [32m+++[m
+ fpa-site/docs/14. Framework Handbook_94_0.md       |  3 [32m++[m
+ fpa-site/docs/14. Framework Handbook_95_0.md       | 13 [32m++++++[m
+ fpa-site/docs/14. Framework Handbook_96_0.md       |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_96_1.md       |  6 [32m+++[m
+ fpa-site/docs/14. Framework Handbook_96_2.md       |  4 [32m++[m
+ fpa-site/docs/14. Framework Handbook_97_0.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_98_0.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_98_1.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_99_0.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_99_1.md       |  2 [32m+[m
+ fpa-site/docs/14. Framework Handbook_9_0.md        |  1 [32m+[m
+ fpa-site/docs/15. SOP Checklist  Short_0_0.md      |  5 [32m+++[m
+ fpa-site/docs/15. SOP Checklist  Short_1_0.md      |  5 [32m+++[m
+ fpa-site/docs/15. SOP Checklist  Short_2_0.md      | 11 [32m+++++[m
+ fpa-site/docs/15. SOP Checklist  Short_3_0.md      | 15 [32m+++++++[m
+ fpa-site/docs/15. SOP Checklist  Short_4_0.md      |  4 [32m++[m
+ fpa-site/docs/15. SOP Checklist  Short_5_0.md      |  5 [32m+++[m
+ fpa-site/docs/15. SOP Checklist  Short_6_0.md      |  3 [32m++[m
+ fpa-site/docs/15. SOP Checklist_0_0.md             | 23 [32m+++++++++++[m
+ fpa-site/docs/15. SOP Checklist_0_1.md             |  7 [32m++++[m
+ fpa-site/docs/15. SOP Checklist_1_0.md             |  1 [32m+[m
+ fpa-site/docs/15. SOP Checklist_2_0.md             |  2 [32m+[m
+ fpa-site/docs/15. SOP Checklist_2_1.md             |  1 [32m+[m
+ fpa-site/docs/15. SOP Checklist_2_10.md            |  1 [32m+[m
+ fpa-site/docs/15. SOP Checklist_2_2.md             |  1 [32m+[m
+ fpa-site/docs/15. SOP Checklist_2_3.md             |  1 [32m+[m
+ fpa-site/docs/15. SOP Checklist_2_4.md             |  1 [32m+[m
+ fpa-site/docs/15. SOP Checklist_2_5.md             |  1 [32m+[m
+ fpa-site/docs/15. SOP Checklist_2_6.md             |  1 [32m+[m
+ fpa-site/docs/15. SOP Checklist_2_7.md             |  1 [32m+[m
+ fpa-site/docs/15. SOP Checklist_2_8.md             |  1 [32m+[m
+ fpa-site/docs/15. SOP Checklist_2_9.md             |  1 [32m+[m
+ fpa-site/docs/15. SOP Checklist_3_0.md             |  2 [32m+[m
+ fpa-site/docs/15. SOP Checklist_3_1.md             |  2 [32m+[m
+ fpa-site/docs/15. SOP Checklist_3_2.md             |  2 [32m+[m
+ fpa-site/docs/15. SOP Checklist_3_3.md             |  2 [32m+[m
+ fpa-site/docs/15. SOP Checklist_4_0.md             |  2 [32m+[m
+ fpa-site/docs/15. SOP Checklist_4_1.md             |  2 [32m+[m
+ fpa-site/docs/15. SOP Checklist_4_2.md             |  1 [32m+[m
+ fpa-site/docs/15. SOP Checklist_4_3.md             |  1 [32m+[m
+ fpa-site/docs/15. SOP Checklist_4_4.md             |  1 [32m+[m
+ fpa-site/docs/15. SOP Checklist_4_5.md             |  2 [32m+[m
+ fpa-site/docs/15. SOP Checklist_5_0.md             |  3 [32m++[m
+ fpa-site/docs/15. SOP Checklist_5_1.md             |  6 [32m+++[m
+ fpa-site/docs/15. SOP Checklist_6_0.md             |  6 [32m+++[m
+ fpa-site/docs/15. SOP Checklist_7_0.md             |  6 [32m+++[m
+ fpa-site/docs/15. SOP Checklist_8_0.md             | 26 [32m++++++++++++[m
+ .../docs/16. Resilient Communication  Short_0_0.md |  5 [32m+++[m
+ .../16. Resilient Communication  Short_10_0.md     |  4 [32m++[m
+ .../16. Resilient Communication  Short_11_0.md     |  6 [32m+++[m
+ .../16. Resilient Communication  Short_12_0.md     |  3 [32m++[m
+ .../docs/16. Resilient Communication  Short_1_0.md |  2 [32m+[m
+ .../docs/16. Resilient Communication  Short_2_0.md | 10 [32m+++++[m
+ .../docs/16. Resilient Communication  Short_3_0.md |  6 [32m+++[m
+ .../docs/16. Resilient Communication  Short_4_0.md |  6 [32m+++[m
+ .../docs/16. Resilient Communication  Short_5_0.md |  8 [32m++++[m
+ .../docs/16. Resilient Communication  Short_6_0.md |  4 [32m++[m
+ .../docs/16. Resilient Communication  Short_7_0.md |  7 [32m++++[m
+ .../docs/16. Resilient Communication  Short_8_0.md |  4 [32m++[m
+ .../docs/16. Resilient Communication  Short_9_0.md |  7 [32m++++[m
+ fpa-site/docs/16. Resilient Communication_0_0.md   | 18 [32m+++++++++[m
+ fpa-site/docs/16. Resilient Communication_10_0.md  |  2 [32m+[m
+ fpa-site/docs/16. Resilient Communication_10_1.md  |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_10_2.md  |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_10_3.md  |  2 [32m+[m
+ fpa-site/docs/16. Resilient Communication_10_4.md  |  4 [32m++[m
+ fpa-site/docs/16. Resilient Communication_11_0.md  |  7 [32m++++[m
+ fpa-site/docs/16. Resilient Communication_1_0.md   |  2 [32m+[m
+ fpa-site/docs/16. Resilient Communication_2_0.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_2_1.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_2_10.md  |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_2_11.md  |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_2_2.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_2_3.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_2_4.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_2_5.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_2_6.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_2_7.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_2_8.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_2_9.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_3_0.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_3_1.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_3_2.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_3_3.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_3_4.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_3_5.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_3_6.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_3_7.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_3_8.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_4_0.md   |  2 [32m+[m
+ fpa-site/docs/16. Resilient Communication_4_1.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_4_2.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_4_3.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_4_4.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_4_5.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_4_6.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_4_7.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_4_8.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_5_0.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_5_1.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_5_2.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_5_3.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_5_4.md   |  2 [32m+[m
+ fpa-site/docs/16. Resilient Communication_5_5.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_6_0.md   |  2 [32m+[m
+ fpa-site/docs/16. Resilient Communication_6_1.md   |  2 [32m+[m
+ fpa-site/docs/16. Resilient Communication_6_2.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_6_3.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_6_4.md   |  2 [32m+[m
+ fpa-site/docs/16. Resilient Communication_6_5.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_7_0.md   |  3 [32m++[m
+ fpa-site/docs/16. Resilient Communication_7_1.md   |  4 [32m++[m
+ fpa-site/docs/16. Resilient Communication_7_10.md  |  2 [32m+[m
+ fpa-site/docs/16. Resilient Communication_7_11.md  |  3 [32m++[m
+ fpa-site/docs/16. Resilient Communication_7_12.md  |  2 [32m+[m
+ fpa-site/docs/16. Resilient Communication_7_13.md  |  2 [32m+[m
+ fpa-site/docs/16. Resilient Communication_7_14.md  |  3 [32m++[m
+ fpa-site/docs/16. Resilient Communication_7_15.md  |  2 [32m+[m
+ fpa-site/docs/16. Resilient Communication_7_16.md  |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_7_2.md   |  3 [32m++[m
+ fpa-site/docs/16. Resilient Communication_7_3.md   |  2 [32m+[m
+ fpa-site/docs/16. Resilient Communication_7_4.md   |  2 [32m+[m
+ fpa-site/docs/16. Resilient Communication_7_5.md   |  2 [32m+[m
+ fpa-site/docs/16. Resilient Communication_7_6.md   |  3 [32m++[m
+ fpa-site/docs/16. Resilient Communication_7_7.md   |  2 [32m+[m
+ fpa-site/docs/16. Resilient Communication_7_8.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_7_9.md   |  2 [32m+[m
+ fpa-site/docs/16. Resilient Communication_8_0.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_8_1.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_8_10.md  |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_8_11.md  |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_8_12.md  |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_8_13.md  |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_8_14.md  |  2 [32m+[m
+ fpa-site/docs/16. Resilient Communication_8_15.md  |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_8_2.md   |  3 [32m++[m
+ fpa-site/docs/16. Resilient Communication_8_3.md   |  3 [32m++[m
+ fpa-site/docs/16. Resilient Communication_8_4.md   |  2 [32m+[m
+ fpa-site/docs/16. Resilient Communication_8_5.md   |  2 [32m+[m
+ fpa-site/docs/16. Resilient Communication_8_6.md   |  3 [32m++[m
+ fpa-site/docs/16. Resilient Communication_8_7.md   |  2 [32m+[m
+ fpa-site/docs/16. Resilient Communication_8_8.md   |  2 [32m+[m
+ fpa-site/docs/16. Resilient Communication_8_9.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_9_0.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_9_1.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_9_10.md  |  2 [32m+[m
+ fpa-site/docs/16. Resilient Communication_9_11.md  |  2 [32m+[m
+ fpa-site/docs/16. Resilient Communication_9_12.md  |  2 [32m+[m
+ fpa-site/docs/16. Resilient Communication_9_2.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_9_3.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_9_4.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_9_5.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_9_6.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_9_7.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_9_8.md   |  1 [32m+[m
+ fpa-site/docs/16. Resilient Communication_9_9.md   |  2 [32m+[m
+ fpa-site/docs/17. Outreach  Short_0_0.md           |  5 [32m+++[m
+ fpa-site/docs/17. Outreach  Short_10_0.md          |  3 [32m++[m
+ fpa-site/docs/17. Outreach  Short_1_0.md           |  2 [32m+[m
+ fpa-site/docs/17. Outreach  Short_2_0.md           | 11 [32m+++++[m
+ fpa-site/docs/17. Outreach  Short_3_0.md           |  6 [32m+++[m
+ fpa-site/docs/17. Outreach  Short_4_0.md           |  9 [32m+++++[m
+ fpa-site/docs/17. Outreach  Short_5_0.md           | 11 [32m+++++[m
+ fpa-site/docs/17. Outreach  Short_6_0.md           |  8 [32m++++[m
+ fpa-site/docs/17. Outreach  Short_7_0.md           |  4 [32m++[m
+ fpa-site/docs/17. Outreach  Short_8_0.md           |  7 [32m++++[m
+ fpa-site/docs/17. Outreach  Short_9_0.md           |  6 [32m+++[m
+ fpa-site/docs/17. Outreach_0_0.md                  | 18 [32m+++++++++[m
+ fpa-site/docs/17. Outreach_10_0.md                 |  1 [32m+[m
+ fpa-site/docs/17. Outreach_10_1.md                 |  1 [32m+[m
+ fpa-site/docs/17. Outreach_10_10.md                |  1 [32m+[m
+ fpa-site/docs/17. Outreach_10_11.md                |  1 [32m+[m
+ fpa-site/docs/17. Outreach_10_12.md                |  1 [32m+[m
+ fpa-site/docs/17. Outreach_10_2.md                 |  1 [32m+[m
+ fpa-site/docs/17. Outreach_10_3.md                 |  1 [32m+[m
+ fpa-site/docs/17. Outreach_10_4.md                 |  1 [32m+[m
+ fpa-site/docs/17. Outreach_10_5.md                 |  1 [32m+[m
+ fpa-site/docs/17. Outreach_10_6.md                 |  1 [32m+[m
+ fpa-site/docs/17. Outreach_10_7.md                 |  1 [32m+[m
+ fpa-site/docs/17. Outreach_10_8.md                 |  1 [32m+[m
+ fpa-site/docs/17. Outreach_10_9.md                 |  1 [32m+[m
+ fpa-site/docs/17. Outreach_11_0.md                 |  1 [32m+[m
+ fpa-site/docs/17. Outreach_11_1.md                 |  1 [32m+[m
+ fpa-site/docs/17. Outreach_11_2.md                 |  1 [32m+[m
+ fpa-site/docs/17. Outreach_11_3.md                 |  1 [32m+[m
+ fpa-site/docs/17. Outreach_11_4.md                 |  1 [32m+[m
+ fpa-site/docs/17. Outreach_11_5.md                 |  1 [32m+[m
+ fpa-site/docs/17. Outreach_11_6.md                 |  1 [32m+[m
+ fpa-site/docs/17. Outreach_11_7.md                 |  1 [32m+[m
+ fpa-site/docs/17. Outreach_11_8.md                 |  2 [32m+[m
+ fpa-site/docs/17. Outreach_12_0.md                 |  1 [32m+[m
+ fpa-site/docs/17. Outreach_12_1.md                 |  1 [32m+[m
+ fpa-site/docs/17. Outreach_12_2.md                 |  1 [32m+[m
+ fpa-site/docs/17. Outreach_12_3.md                 |  1 [32m+[m
+ fpa-site/docs/17. Outreach_12_4.md                 |  1 [32m+[m
+ fpa-site/docs/17. Outreach_12_5.md                 |  1 [32m+[m
+ fpa-site/docs/17. Outreach_12_6.md                 |  1 [32m+[m
+ fpa-site/docs/17. Outreach_12_7.md                 |  1 [32m+[m
+ fpa-site/docs/17. Outreach_12_8.md                 |  2 [32m+[m
+ fpa-site/docs/17. Outreach_12_9.md                 |  2 [32m+[m
+ fpa-site/docs/17. Outreach_13_0.md                 |  5 [32m+++[m
+ fpa-site/docs/17. Outreach_13_1.md                 |  1 [32m+[m
+ fpa-site/docs/17. Outreach_13_2.md                 |  2 [32m+[m
+ fpa-site/docs/17. Outreach_13_3.md                 |  4 [32m++[m
+ fpa-site/docs/17. Outreach_14_0.md                 |  7 [32m++++[m
+ fpa-site/docs/17. Outreach_1_0.md                  |  5 [32m+++[m
+ fpa-site/docs/17. Outreach_1_1.md                  |  6 [32m+++[m
+ fpa-site/docs/17. Outreach_2_0.md                  |  2 [32m+[m
+ fpa-site/docs/17. Outreach_2_1.md                  |  4 [32m++[m
+ fpa-site/docs/17. Outreach_2_2.md                  |  6 [32m+++[m
+ fpa-site/docs/17. Outreach_3_0.md                  |  3 [32m++[m
+ fpa-site/docs/17. Outreach_3_1.md                  |  1 [32m+[m
+ fpa-site/docs/17. Outreach_3_2.md                  |  1 [32m+[m
+ fpa-site/docs/17. Outreach_3_3.md                  |  2 [32m+[m
+ fpa-site/docs/17. Outreach_3_4.md                  |  3 [32m++[m
+ fpa-site/docs/17. Outreach_4_0.md                  |  2 [32m+[m
+ fpa-site/docs/17. Outreach_4_1.md                  |  1 [32m+[m
+ fpa-site/docs/17. Outreach_4_2.md                  |  2 [32m+[m
+ fpa-site/docs/17. Outreach_5_0.md                  |  5 [32m+++[m
+ fpa-site/docs/17. Outreach_6_0.md                  |  1 [32m+[m
+ fpa-site/docs/17. Outreach_6_1.md                  |  1 [32m+[m
+ fpa-site/docs/17. Outreach_6_2.md                  |  1 [32m+[m
+ fpa-site/docs/17. Outreach_6_3.md                  |  1 [32m+[m
+ fpa-site/docs/17. Outreach_6_4.md                  |  1 [32m+[m
+ fpa-site/docs/17. Outreach_6_5.md                  |  1 [32m+[m
+ fpa-site/docs/17. Outreach_6_6.md                  |  2 [32m+[m
+ fpa-site/docs/17. Outreach_7_0.md                  |  2 [32m+[m
+ fpa-site/docs/17. Outreach_7_1.md                  |  1 [32m+[m
+ fpa-site/docs/17. Outreach_7_10.md                 |  1 [32m+[m
+ fpa-site/docs/17. Outreach_7_11.md                 |  1 [32m+[m
+ fpa-site/docs/17. Outreach_7_12.md                 |  2 [32m+[m
+ fpa-site/docs/17. Outreach_7_13.md                 |  3 [32m++[m
+ fpa-site/docs/17. Outreach_7_14.md                 |  2 [32m+[m
+ fpa-site/docs/17. Outreach_7_2.md                  |  1 [32m+[m
+ fpa-site/docs/17. Outreach_7_3.md                  |  2 [32m+[m
+ fpa-site/docs/17. Outreach_7_4.md                  |  2 [32m+[m
+ fpa-site/docs/17. Outreach_7_5.md                  |  2 [32m+[m
+ fpa-site/docs/17. Outreach_7_6.md                  |  1 [32m+[m
+ fpa-site/docs/17. Outreach_7_7.md                  |  1 [32m+[m
+ fpa-site/docs/17. Outreach_7_8.md                  |  1 [32m+[m
+ fpa-site/docs/17. Outreach_7_9.md                  |  1 [32m+[m
+ fpa-site/docs/17. Outreach_8_0.md                  |  2 [32m+[m
+ fpa-site/docs/17. Outreach_8_1.md                  |  2 [32m+[m
+ fpa-site/docs/17. Outreach_8_2.md                  |  1 [32m+[m
+ fpa-site/docs/17. Outreach_8_3.md                  |  1 [32m+[m
+ fpa-site/docs/17. Outreach_8_4.md                  |  1 [32m+[m
+ fpa-site/docs/17. Outreach_8_5.md                  |  1 [32m+[m
+ fpa-site/docs/17. Outreach_8_6.md                  |  1 [32m+[m
+ fpa-site/docs/17. Outreach_8_7.md                  |  1 [32m+[m
+ fpa-site/docs/17. Outreach_8_8.md                  |  2 [32m+[m
+ fpa-site/docs/17. Outreach_9_0.md                  |  2 [32m+[m
+ fpa-site/docs/17. Outreach_9_1.md                  |  1 [32m+[m
+ fpa-site/docs/17. Outreach_9_10.md                 |  1 [32m+[m
+ fpa-site/docs/17. Outreach_9_11.md                 |  1 [32m+[m
+ fpa-site/docs/17. Outreach_9_12.md                 |  1 [32m+[m
+ fpa-site/docs/17. Outreach_9_13.md                 |  1 [32m+[m
+ fpa-site/docs/17. Outreach_9_2.md                  |  1 [32m+[m
+ fpa-site/docs/17. Outreach_9_3.md                  |  1 [32m+[m
+ fpa-site/docs/17. Outreach_9_4.md                  |  1 [32m+[m
+ fpa-site/docs/17. Outreach_9_5.md                  |  1 [32m+[m
+ fpa-site/docs/17. Outreach_9_6.md                  |  1 [32m+[m
+ fpa-site/docs/17. Outreach_9_7.md                  |  1 [32m+[m
+ fpa-site/docs/17. Outreach_9_8.md                  |  1 [32m+[m
+ fpa-site/docs/17. Outreach_9_9.md                  |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict  Short_0_0.md   |  5 [32m+++[m
+ fpa-site/docs/18. Culture Conflict  Short_1_0.md   |  2 [32m+[m
+ fpa-site/docs/18. Culture Conflict  Short_2_0.md   | 11 [32m+++++[m
+ fpa-site/docs/18. Culture Conflict  Short_3_0.md   |  8 [32m++++[m
+ fpa-site/docs/18. Culture Conflict  Short_4_0.md   |  7 [32m++++[m
+ fpa-site/docs/18. Culture Conflict  Short_5_0.md   |  8 [32m++++[m
+ fpa-site/docs/18. Culture Conflict  Short_6_0.md   |  6 [32m+++[m
+ fpa-site/docs/18. Culture Conflict  Short_7_0.md   |  4 [32m++[m
+ fpa-site/docs/18. Culture Conflict  Short_8_0.md   |  5 [32m+++[m
+ fpa-site/docs/18. Culture Conflict  Short_9_0.md   |  3 [32m++[m
+ fpa-site/docs/18. Culture Conflict_0_0.md          | 19 [32m+++++++++[m
+ fpa-site/docs/18. Culture Conflict_0_1.md          |  5 [32m+++[m
+ fpa-site/docs/18. Culture Conflict_0_10.md         |  3 [32m++[m
+ fpa-site/docs/18. Culture Conflict_0_100.md        |  5 [32m+++[m
+ fpa-site/docs/18. Culture Conflict_0_11.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_12.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_13.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_14.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_15.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_16.md         |  3 [32m++[m
+ fpa-site/docs/18. Culture Conflict_0_17.md         |  3 [32m++[m
+ fpa-site/docs/18. Culture Conflict_0_18.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_19.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_2.md          |  4 [32m++[m
+ fpa-site/docs/18. Culture Conflict_0_20.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_21.md         |  3 [32m++[m
+ fpa-site/docs/18. Culture Conflict_0_22.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_23.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_24.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_25.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_26.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_27.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_28.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_29.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_3.md          |  2 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_30.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_31.md         |  5 [32m+++[m
+ fpa-site/docs/18. Culture Conflict_0_32.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_33.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_34.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_35.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_36.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_37.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_38.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_39.md         |  2 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_4.md          |  2 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_40.md         |  2 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_41.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_42.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_43.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_44.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_45.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_46.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_47.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_48.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_49.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_5.md          |  2 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_50.md         |  3 [32m++[m
+ fpa-site/docs/18. Culture Conflict_0_51.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_52.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_53.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_54.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_55.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_56.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_57.md         |  2 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_58.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_59.md         |  2 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_6.md          |  4 [32m++[m
+ fpa-site/docs/18. Culture Conflict_0_60.md         |  4 [32m++[m
+ fpa-site/docs/18. Culture Conflict_0_61.md         |  3 [32m++[m
+ fpa-site/docs/18. Culture Conflict_0_62.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_63.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_64.md         |  2 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_65.md         |  3 [32m++[m
+ fpa-site/docs/18. Culture Conflict_0_66.md         |  2 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_67.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_68.md         |  2 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_69.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_7.md          |  2 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_70.md         |  3 [32m++[m
+ fpa-site/docs/18. Culture Conflict_0_71.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_72.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_73.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_74.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_75.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_76.md         |  2 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_77.md         |  4 [32m++[m
+ fpa-site/docs/18. Culture Conflict_0_78.md         |  2 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_79.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_8.md          |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_80.md         |  2 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_81.md         |  3 [32m++[m
+ fpa-site/docs/18. Culture Conflict_0_82.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_83.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_84.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_85.md         |  3 [32m++[m
+ fpa-site/docs/18. Culture Conflict_0_86.md         |  4 [32m++[m
+ fpa-site/docs/18. Culture Conflict_0_87.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_88.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_89.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_9.md          |  3 [32m++[m
+ fpa-site/docs/18. Culture Conflict_0_90.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_91.md         |  2 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_92.md         |  4 [32m++[m
+ fpa-site/docs/18. Culture Conflict_0_93.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_94.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_95.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_96.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_97.md         |  1 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_98.md         |  2 [32m+[m
+ fpa-site/docs/18. Culture Conflict_0_99.md         |  8 [32m++++[m
+ fpa-site/docs/18. Culture Conflict_1_0.md          | 10 [32m+++++[m
+ .../19. Gear List & Endorsements  Short_0_0.md     |  5 [32m+++[m
+ .../19. Gear List & Endorsements  Short_1_0.md     |  2 [32m+[m
+ .../19. Gear List & Endorsements  Short_2_0.md     | 11 [32m+++++[m
+ .../19. Gear List & Endorsements  Short_3_0.md     |  9 [32m+++++[m
+ .../19. Gear List & Endorsements  Short_4_0.md     |  6 [32m+++[m
+ .../19. Gear List & Endorsements  Short_5_0.md     |  4 [32m++[m
+ .../19. Gear List & Endorsements  Short_6_0.md     |  6 [32m+++[m
+ .../19. Gear List & Endorsements  Short_7_0.md     |  7 [32m++++[m
+ .../19. Gear List & Endorsements  Short_8_0.md     |  5 [32m+++[m
+ .../19. Gear List & Endorsements  Short_9_0.md     |  3 [32m++[m
+ fpa-site/docs/19. Gear List & Endorsements_0_0.md  | 19 [32m+++++++++[m
+ fpa-site/docs/19. Gear List & Endorsements_10_0.md |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_10_1.md |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_10_2.md |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_10_3.md |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_10_4.md |  2 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_11_0.md |  2 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_11_1.md |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_11_2.md |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_11_3.md |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_11_4.md |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_11_5.md |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_11_6.md |  2 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_12_0.md |  7 [32m++++[m
+ fpa-site/docs/19. Gear List & Endorsements_12_1.md |  4 [32m++[m
+ fpa-site/docs/19. Gear List & Endorsements_12_2.md |  4 [32m++[m
+ fpa-site/docs/19. Gear List & Endorsements_12_3.md |  7 [32m++++[m
+ fpa-site/docs/19. Gear List & Endorsements_12_4.md |  6 [32m+++[m
+ fpa-site/docs/19. Gear List & Endorsements_12_5.md | 11 [32m+++++[m
+ fpa-site/docs/19. Gear List & Endorsements_12_6.md |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_13_0.md | 13 [32m++++++[m
+ fpa-site/docs/19. Gear List & Endorsements_13_1.md | 16 [32m++++++++[m
+ fpa-site/docs/19. Gear List & Endorsements_13_2.md | 11 [32m+++++[m
+ fpa-site/docs/19. Gear List & Endorsements_13_3.md | 16 [32m++++++++[m
+ fpa-site/docs/19. Gear List & Endorsements_13_4.md |  5 [32m+++[m
+ fpa-site/docs/19. Gear List & Endorsements_14_0.md |  5 [32m+++[m
+ fpa-site/docs/19. Gear List & Endorsements_14_1.md |  3 [32m++[m
+ fpa-site/docs/19. Gear List & Endorsements_14_2.md |  3 [32m++[m
+ fpa-site/docs/19. Gear List & Endorsements_14_3.md |  4 [32m++[m
+ fpa-site/docs/19. Gear List & Endorsements_14_4.md |  6 [32m+++[m
+ fpa-site/docs/19. Gear List & Endorsements_15_0.md |  6 [32m+++[m
+ fpa-site/docs/19. Gear List & Endorsements_1_0.md  |  2 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_1_1.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_2_0.md  |  4 [32m++[m
+ fpa-site/docs/19. Gear List & Endorsements_2_1.md  |  3 [32m++[m
+ fpa-site/docs/19. Gear List & Endorsements_3_0.md  |  2 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_3_1.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_3_2.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_3_3.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_3_4.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_3_5.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_3_6.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_3_7.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_3_8.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_3_9.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_4_0.md  |  2 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_4_1.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_4_2.md  |  2 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_4_3.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_4_4.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_5_0.md  |  2 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_5_1.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_5_2.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_5_3.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_5_4.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_5_5.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_6_0.md  |  2 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_6_1.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_6_2.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_6_3.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_6_4.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_6_5.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_7_0.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_7_1.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_7_2.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_7_3.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_7_4.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_7_5.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_7_6.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_8_0.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_8_1.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_8_2.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_8_3.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_8_4.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_8_5.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_8_6.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_9_0.md  |  2 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_9_1.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_9_2.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_9_3.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_9_4.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_9_5.md  |  1 [32m+[m
+ fpa-site/docs/19. Gear List & Endorsements_9_6.md  |  2 [32m+[m
+ ...rategic Plan Overview (3-Phase Approach)_0_0.md |  1 [32m+[m
+ ...rategic Plan Overview (3-Phase Approach)_0_1.md |  1 [32m+[m
+ ...rategic Plan Overview (3-Phase Approach)_0_2.md |  1 [32m+[m
+ fpa-site/docs/2.10 Test My Plan Program_0_0.md     |  1 [32m+[m
+ fpa-site/docs/2.10 Test My Plan Program_0_1.md     |  1 [32m+[m
+ fpa-site/docs/2.10 Test My Plan Program_0_2.md     |  1 [32m+[m
+ fpa-site/docs/2.10 Test My Plan Program_0_3.md     |  1 [32m+[m
+ fpa-site/docs/2.10 Test My Plan Program_0_4.md     |  1 [32m+[m
+ .../2.11 Resource Management and Logistics_0_0.md  |  1 [32m+[m
+ .../2.11 Resource Management and Logistics_0_1.md  |  1 [32m+[m
+ .../2.11 Resource Management and Logistics_0_2.md  |  1 [32m+[m
+ .../2.11 Resource Management and Logistics_0_3.md  |  1 [32m+[m
+ .../2.11 Resource Management and Logistics_0_4.md  |  1 [32m+[m
+ .../2.12 Emergency Activation Protocols_0_0.md     |  1 [32m+[m
+ .../2.12 Emergency Activation Protocols_0_1.md     |  1 [32m+[m
+ .../2.12 Emergency Activation Protocols_0_2.md     |  1 [32m+[m
+ .../2.12 Emergency Activation Protocols_0_3.md     |  1 [32m+[m
+ .../2.12 Emergency Activation Protocols_0_4.md     |  1 [32m+[m
+ .../2.13 Rally Points and Evacuation Plans_0_0.md  |  1 [32m+[m
+ .../2.13 Rally Points and Evacuation Plans_0_1.md  |  1 [32m+[m
+ .../2.13 Rally Points and Evacuation Plans_0_2.md  |  1 [32m+[m
+ .../2.13 Rally Points and Evacuation Plans_0_3.md  |  1 [32m+[m
+ .../2.13 Rally Points and Evacuation Plans_0_4.md  |  1 [32m+[m
+ fpa-site/docs/2.14 Mutual Aid Among Members_0_0.md |  1 [32m+[m
+ fpa-site/docs/2.14 Mutual Aid Among Members_0_1.md |  1 [32m+[m
+ fpa-site/docs/2.14 Mutual Aid Among Members_0_2.md |  1 [32m+[m
+ fpa-site/docs/2.14 Mutual Aid Among Members_0_3.md |  1 [32m+[m
+ fpa-site/docs/2.14 Mutual Aid Among Members_0_4.md |  1 [32m+[m
+ .../2.15 Assisting Non-Members in Crisis_0_0.md    |  1 [32m+[m
+ .../2.15 Assisting Non-Members in Crisis_0_1.md    |  1 [32m+[m
+ .../2.15 Assisting Non-Members in Crisis_0_2.md    |  1 [32m+[m
+ .../2.15 Assisting Non-Members in Crisis_0_3.md    |  2 [32m+[m
+ .../2.15 Assisting Non-Members in Crisis_0_4.md    |  2 [32m+[m
+ .../2.15 Assisting Non-Members in Crisis_0_5.md    |  1 [32m+[m
+ .../2.15 Assisting Non-Members in Crisis_0_6.md    |  2 [32m+[m
+ .../2.15 Assisting Non-Members in Crisis_0_7.md    |  2 [32m+[m
+ .../2.15 Assisting Non-Members in Crisis_0_8.md    |  1 [32m+[m
+ ...6 Intelligence and Information Gathering_0_0.md |  1 [32m+[m
+ ...6 Intelligence and Information Gathering_0_1.md |  1 [32m+[m
+ ...6 Intelligence and Information Gathering_0_2.md |  1 [32m+[m
+ ...6 Intelligence and Information Gathering_0_3.md |  1 [32m+[m
+ ...6 Intelligence and Information Gathering_0_4.md |  1 [32m+[m
+ ...rdination Structure and Chain of Command_0_0.md |  1 [32m+[m
+ ...rdination Structure and Chain of Command_0_1.md |  1 [32m+[m
+ ...rdination Structure and Chain of Command_0_2.md |  1 [32m+[m
+ ...rdination Structure and Chain of Command_0_3.md |  1 [32m+[m
+ ...rdination Structure and Chain of Command_0_4.md |  1 [32m+[m
+ ...rdination Structure and Chain of Command_0_5.md |  1 [32m+[m
+ .../2.18 Continuous Improvement and AARs_0_0.md    |  1 [32m+[m
+ .../2.18 Continuous Improvement and AARs_0_1.md    |  1 [32m+[m
+ .../2.18 Continuous Improvement and AARs_0_2.md    |  1 [32m+[m
+ .../2.18 Continuous Improvement and AARs_0_3.md    |  1 [32m+[m
+ .../2.18 Continuous Improvement and AARs_0_4.md    |  1 [32m+[m
+ ...2.19 Alliances and External Coordination_0_0.md |  1 [32m+[m
+ ...2.19 Alliances and External Coordination_0_1.md |  1 [32m+[m
+ ...2.19 Alliances and External Coordination_0_2.md |  1 [32m+[m
+ ...2.19 Alliances and External Coordination_0_3.md |  1 [32m+[m
+ ...2.19 Alliances and External Coordination_0_4.md |  1 [32m+[m
+ ...hase 1 Early Organization & Preparedness_0_0.md |  4 [32m++[m
+ ...hase 1 Early Organization & Preparedness_0_1.md |  3 [32m++[m
+ ...hase 1 Early Organization & Preparedness_0_2.md |  2 [32m+[m
+ ...hase 1 Early Organization & Preparedness_0_3.md |  1 [32m+[m
+ ...20 Psychological Preparedness and Morale_0_0.md |  1 [32m+[m
+ ...20 Psychological Preparedness and Morale_0_1.md |  1 [32m+[m
+ ...20 Psychological Preparedness and Morale_0_2.md |  3 [32m++[m
+ ...20 Psychological Preparedness and Morale_0_3.md |  2 [32m+[m
+ ...20 Psychological Preparedness and Morale_0_4.md |  3 [32m++[m
+ ...20 Psychological Preparedness and Morale_0_5.md |  2 [32m+[m
+ ...20 Psychological Preparedness and Morale_0_6.md |  1 [32m+[m
+ ...ase 2 Network Expansion & Communications_0_0.md |  1 [32m+[m
+ ...ase 2 Network Expansion & Communications_0_1.md |  1 [32m+[m
+ ...ase 2 Network Expansion & Communications_0_2.md |  1 [32m+[m
+ ...ase 2 Network Expansion & Communications_0_3.md |  1 [32m+[m
+ ... Phase 3 Outreach & Community Resilience_0_0.md |  1 [32m+[m
+ ... Phase 3 Outreach & Community Resilience_0_1.md |  1 [32m+[m
+ ... Phase 3 Outreach & Community Resilience_0_2.md |  1 [32m+[m
+ ... Phase 3 Outreach & Community Resilience_0_3.md |  1 [32m+[m
+ .../2.5 Standard Operating Procedures (SOP)_0_0.md |  3 [32m++[m
+ .../2.5 Standard Operating Procedures (SOP)_0_1.md |  3 [32m++[m
+ .../2.5 Standard Operating Procedures (SOP)_0_2.md |  3 [32m++[m
+ .../2.5 Standard Operating Procedures (SOP)_0_3.md |  1 [32m+[m
+ ....6 Operational Security (OPSEC) Measures_0_0.md |  1 [32m+[m
+ ....6 Operational Security (OPSEC) Measures_0_1.md |  1 [32m+[m
+ ....6 Operational Security (OPSEC) Measures_0_2.md |  1 [32m+[m
+ ....6 Operational Security (OPSEC) Measures_0_3.md |  1 [32m+[m
+ ....6 Operational Security (OPSEC) Measures_0_4.md |  1 [32m+[m
+ ....6 Operational Security (OPSEC) Measures_0_5.md |  1 [32m+[m
+ .../docs/2.7 Physical Security Measures_0_0.md     |  1 [32m+[m
+ .../docs/2.7 Physical Security Measures_0_1.md     |  1 [32m+[m
+ .../docs/2.7 Physical Security Measures_0_2.md     |  1 [32m+[m
+ .../docs/2.7 Physical Security Measures_0_3.md     |  1 [32m+[m
+ ... Training and Skills Development Program_0_0.md |  1 [32m+[m
+ ... Training and Skills Development Program_0_1.md |  1 [32m+[m
+ ... Training and Skills Development Program_0_2.md |  1 [32m+[m
+ ... Training and Skills Development Program_0_3.md |  1 [32m+[m
+ fpa-site/docs/2.9 Drills and Simulations_0_0.md    |  3 [32m++[m
+ fpa-site/docs/2.9 Drills and Simulations_0_1.md    |  2 [32m+[m
+ fpa-site/docs/2.9 Drills and Simulations_0_2.md    |  2 [32m+[m
+ fpa-site/docs/2.9 Drills and Simulations_0_3.md    |  3 [32m++[m
+ fpa-site/docs/2.9 Drills and Simulations_0_4.md    |  1 [32m+[m
+ .... FPA Alignment & Trust Protocols  Short_0_0.md |  5 [32m+++[m
+ ... FPA Alignment & Trust Protocols  Short_10_0.md |  3 [32m++[m
+ .... FPA Alignment & Trust Protocols  Short_1_0.md |  2 [32m+[m
+ .... FPA Alignment & Trust Protocols  Short_2_0.md | 11 [32m+++++[m
+ .... FPA Alignment & Trust Protocols  Short_3_0.md |  9 [32m+++++[m
+ .... FPA Alignment & Trust Protocols  Short_4_0.md | 15 [32m+++++++[m
+ .... FPA Alignment & Trust Protocols  Short_5_0.md |  7 [32m++++[m
+ .... FPA Alignment & Trust Protocols  Short_6_0.md |  8 [32m++++[m
+ .... FPA Alignment & Trust Protocols  Short_7_0.md |  4 [32m++[m
+ .... FPA Alignment & Trust Protocols  Short_8_0.md |  7 [32m++++[m
+ .... FPA Alignment & Trust Protocols  Short_9_0.md |  6 [32m+++[m
+ .../20. FPA Alignment & Trust Protocols_0_0.md     | 18 [32m+++++++++[m
+ .../20. FPA Alignment & Trust Protocols_10_0.md    |  5 [32m+++[m
+ .../20. FPA Alignment & Trust Protocols_11_0.md    |  3 [32m++[m
+ .../20. FPA Alignment & Trust Protocols_12_0.md    |  2 [32m+[m
+ .../20. FPA Alignment & Trust Protocols_13_0.md    | 13 [32m++++++[m
+ .../20. FPA Alignment & Trust Protocols_1_0.md     |  6 [32m+++[m
+ .../20. FPA Alignment & Trust Protocols_2_0.md     |  2 [32m+[m
+ .../20. FPA Alignment & Trust Protocols_3_0.md     |  6 [32m+++[m
+ .../20. FPA Alignment & Trust Protocols_4_0.md     |  6 [32m+++[m
+ .../20. FPA Alignment & Trust Protocols_5_0.md     |  9 [32m+++++[m
+ .../20. FPA Alignment & Trust Protocols_6_0.md     |  7 [32m++++[m
+ .../20. FPA Alignment & Trust Protocols_7_0.md     |  6 [32m+++[m
+ .../20. FPA Alignment & Trust Protocols_8_0.md     |  9 [32m+++++[m
+ .../20. FPA Alignment & Trust Protocols_9_0.md     |  8 [32m++++[m
+ fpa-site/docs/21. Rank Matrix Short_0_0.md         |  2 [32m+[m
+ fpa-site/docs/21. Rank Matrix Short_1_0.md         | 13 [32m++++++[m
+ fpa-site/docs/21. Rank Matrix Short_2_0.md         |  9 [32m+++++[m
+ fpa-site/docs/21. Rank Matrix Short_3_0.md         |  5 [32m+++[m
+ fpa-site/docs/21. Rank Matrix_0_0.md               |  1 [32m+[m
+ fpa-site/docs/21. Rank Matrix_0_1.md               |  1 [32m+[m
+ fpa-site/docs/21. Rank Matrix_10_0.md              |  7 [32m++++[m
+ fpa-site/docs/21. Rank Matrix_11_0.md              | 13 [32m++++++[m
+ fpa-site/docs/21. Rank Matrix_11_1.md              |  5 [32m+++[m
+ fpa-site/docs/21. Rank Matrix_1_0.md               |  4 [32m++[m
+ fpa-site/docs/21. Rank Matrix_1_1.md               |  7 [32m++++[m
+ fpa-site/docs/21. Rank Matrix_1_2.md               |  3 [32m++[m
+ fpa-site/docs/21. Rank Matrix_1_3.md               |  1 [32m+[m
+ fpa-site/docs/21. Rank Matrix_1_4.md               |  2 [32m+[m
+ fpa-site/docs/21. Rank Matrix_2_0.md               |  1 [32m+[m
+ fpa-site/docs/21. Rank Matrix_3_0.md               |  4 [32m++[m
+ fpa-site/docs/21. Rank Matrix_3_1.md               |  3 [32m++[m
+ fpa-site/docs/21. Rank Matrix_4_0.md               |  2 [32m+[m
+ fpa-site/docs/21. Rank Matrix_4_1.md               |  2 [32m+[m
+ fpa-site/docs/21. Rank Matrix_4_2.md               |  1 [32m+[m
+ fpa-site/docs/21. Rank Matrix_4_3.md               |  1 [32m+[m
+ fpa-site/docs/21. Rank Matrix_4_4.md               |  1 [32m+[m
+ fpa-site/docs/21. Rank Matrix_5_0.md               |  3 [32m++[m
+ fpa-site/docs/21. Rank Matrix_5_1.md               |  2 [32m+[m
+ fpa-site/docs/21. Rank Matrix_5_2.md               |  1 [32m+[m
+ fpa-site/docs/21. Rank Matrix_5_3.md               |  1 [32m+[m
+ fpa-site/docs/21. Rank Matrix_5_4.md               |  1 [32m+[m
+ fpa-site/docs/21. Rank Matrix_5_5.md               |  1 [32m+[m
+ fpa-site/docs/21. Rank Matrix_6_0.md               |  5 [32m+++[m
+ fpa-site/docs/21. Rank Matrix_6_1.md               |  3 [32m++[m
+ fpa-site/docs/21. Rank Matrix_6_2.md               |  2 [32m+[m
+ fpa-site/docs/21. Rank Matrix_7_0.md               |  3 [32m++[m
+ fpa-site/docs/21. Rank Matrix_7_1.md               |  3 [32m++[m
+ fpa-site/docs/21. Rank Matrix_7_2.md               |  2 [32m+[m
+ fpa-site/docs/21. Rank Matrix_8_0.md               |  9 [32m+++++[m
+ fpa-site/docs/21. Rank Matrix_8_1.md               |  8 [32m++++[m
+ fpa-site/docs/21. Rank Matrix_8_2.md               |  9 [32m+++++[m
+ fpa-site/docs/21. Rank Matrix_8_3.md               |  3 [32m++[m
+ fpa-site/docs/21. Rank Matrix_8_4.md               |  1 [32m+[m
+ fpa-site/docs/21. Rank Matrix_9_0.md               |  1 [32m+[m
+ .../3.1 Membership Purpose & Principles_0_0.md     |  1 [32m+[m
+ .../3.10 Local Chapters & Regional Groups_0_0.md   |  1 [32m+[m
+ .../docs/3.11 Decision-Making & Governance_0_0.md  |  1 [32m+[m
+ .../docs/3.12 Conflict Resolution & Support_0_0.md |  1 [32m+[m
+ fpa-site/docs/3.13 Inclusivity & Diversity_0_0.md  |  1 [32m+[m
+ .../3.14 Privacy & Operational Security_0_0.md     |  1 [32m+[m
+ ...5 Roles in Emergency (Phase Transitions)_0_0.md |  1 [32m+[m
+ .../docs/3.16 Resource Sharing & Mutual Aid_0_0.md |  1 [32m+[m
+ .../docs/3.17 Mentorship & Skill Exchange_0_0.md   |  1 [32m+[m
+ .../docs/3.18 Recognition & Achievement_0_0.md     |  1 [32m+[m
+ ...uous Improvement (Feedback & Adaptation)_0_0.md |  1 [32m+[m
+ fpa-site/docs/3.2 Code of Conduct & Ethics_0_0.md  |  1 [32m+[m
+ .../docs/3.20 Membership Continuity Plan_0_0.md    |  1 [32m+[m
+ fpa-site/docs/3.3 Organizational Structure_0_0.md  |  1 [32m+[m
+ fpa-site/docs/3.4 Roles & Specializations_0_0.md   |  1 [32m+[m
+ fpa-site/docs/3.5 Recruitment & Vetting_0_0.md     |  1 [32m+[m
+ fpa-site/docs/3.6 Onboarding & Orientation_0_0.md  |  1 [32m+[m
+ .../docs/3.7 Training & Drills for Members_0_0.md  |  1 [32m+[m
+ .../docs/3.8 Member Engagement & Meetings_0_0.md   |  1 [32m+[m
+ .../docs/3.9 Member Contributions & Dues_0_0.md    |  5 [32m+++[m
+ .../4.1 Communications Strategy Overview_0_0.md    |  1 [32m+[m
+ .../4.10 Satellite Communication Devices_0_0.md    |  1 [32m+[m
+ .../4.10 Satellite Communication Devices_0_1.md    |  1 [32m+[m
+ .../4.11 Internet and Phone (Everyday Use)_0_0.md  |  1 [32m+[m
+ .../4.12 Mesh Networking (Off-Grid Data)_0_0.md    |  1 [32m+[m
+ .../4.12 Mesh Networking (Off-Grid Data)_0_1.md    |  1 [32m+[m
+ .../4.13 Reticulum & Alternative Networks_0_0.md   |  1 [32m+[m
+ ...4.14 Sneakernet & Physical Message Relay_0_0.md |  1 [32m+[m
+ ...4.14 Sneakernet & Physical Message Relay_0_1.md |  1 [32m+[m
+ ...4.15 Communication Security & Encryption_0_0.md |  1 [32m+[m
+ ...4.15 Communication Security & Encryption_0_1.md |  1 [32m+[m
+ .../docs/4.16 Brevity Codes & Protocols_0_0.md     |  1 [32m+[m
+ .../docs/4.16 Brevity Codes & Protocols_0_1.md     |  1 [32m+[m
+ fpa-site/docs/4.17 Regular Nets and Drills_0_0.md  |  1 [32m+[m
+ fpa-site/docs/4.17 Regular Nets and Drills_0_1.md  |  1 [32m+[m
+ .../4.18 Listening & Information Gathering_0_0.md  |  1 [32m+[m
+ .../4.18 Listening & Information Gathering_0_1.md  |  1 [32m+[m
+ fpa-site/docs/4.19 Multi-Modal Redundancy_0_0.md   |  1 [32m+[m
+ fpa-site/docs/4.19 Multi-Modal Redundancy_0_1.md   |  1 [32m+[m
+ ...4.2 Communication Phases & Contingencies_0_0.md |  1 [32m+[m
+ .../4.20 Communication Gear Maintenance_0_0.md     |  1 [32m+[m
+ .../4.20 Communication Gear Maintenance_0_1.md     |  1 [32m+[m
+ fpa-site/docs/4.21 Team Communication Roles_0_0.md |  1 [32m+[m
+ fpa-site/docs/4.21 Team Communication Roles_0_1.md |  1 [32m+[m
+ .../4.22 Inter-Group Coordination Comms_0_0.md     |  1 [32m+[m
+ .../4.22 Inter-Group Coordination Comms_0_1.md     |  1 [32m+[m
+ .../docs/4.23 Signaling (Non-Electronic)_0_0.md    |  1 [32m+[m
+ .../docs/4.23 Signaling (Non-Electronic)_0_1.md    |  1 [32m+[m
+ fpa-site/docs/4.24 Communication Etiquette_0_0.md  |  1 [32m+[m
+ fpa-site/docs/4.24 Communication Etiquette_0_1.md  |  1 [32m+[m
+ fpa-site/docs/4.25 Information Verification_0_0.md |  1 [32m+[m
+ fpa-site/docs/4.25 Information Verification_0_1.md |  1 [32m+[m
+ fpa-site/docs/4.26 Distress Signaling_0_0.md       |  1 [32m+[m
+ fpa-site/docs/4.26 Distress Signaling_0_1.md       |  1 [32m+[m
+ fpa-site/docs/4.27 Logging Communication_0_0.md    |  1 [32m+[m
+ fpa-site/docs/4.27 Logging Communication_0_1.md    |  1 [32m+[m
+ fpa-site/docs/4.28 Language and Translation_0_0.md |  1 [32m+[m
+ fpa-site/docs/4.28 Language and Translation_0_1.md |  1 [32m+[m
+ ...4.29 Adaptation to Infrastructure Status_0_0.md |  1 [32m+[m
+ ...4.29 Adaptation to Infrastructure Status_0_1.md |  1 [32m+[m
+ ...tion Plan (Phase 1 \342\200\223 Normal)_0_0.md" |  1 [32m+[m
+ ...n Plan (Phase 2 \342\200\223 Degrading)_0_0.md" |  1 [32m+[m
+ ...on Plan (Phase 3 \342\200\223 Blackout)_0_0.md" |  1 [32m+[m
+ ...on Plan (Phase 3 \342\200\223 Blackout)_0_1.md" |  1 [32m+[m
+ fpa-site/docs/4.4 Contact Trees & Check-ins_0_0.md |  1 [32m+[m
+ .../docs/4.5 Radio Communication Basics_0_0.md     |  1 [32m+[m
+ fpa-site/docs/4.6 Amateur (Ham) Radio_0_0.md       |  1 [32m+[m
+ fpa-site/docs/4.7 FRSGMRS Radios_0_0.md            |  1 [32m+[m
+ fpa-site/docs/4.8 MURS Radio_0_0.md                |  1 [32m+[m
+ fpa-site/docs/4.9 Citizens Band (CB) Radio_0_0.md  |  1 [32m+[m
+ .../docs/5 flagship notes for today Full_0_0.md    |  5 [32m+++[m
+ .../docs/5 flagship notes for today Full_10_0.md   |  6 [32m+++[m
+ .../docs/5 flagship notes for today Full_1_0.md    |  3 [32m++[m
+ .../docs/5 flagship notes for today Full_1_1.md    |  3 [32m++[m
+ .../docs/5 flagship notes for today Full_1_2.md    |  2 [32m+[m
+ .../docs/5 flagship notes for today Full_2_0.md    |  5 [32m+++[m
+ .../docs/5 flagship notes for today Full_3_0.md    |  1 [32m+[m
+ .../docs/5 flagship notes for today Full_4_0.md    |  2 [32m+[m
+ .../docs/5 flagship notes for today Full_5_0.md    |  1 [32m+[m
+ .../docs/5 flagship notes for today Full_6_0.md    |  3 [32m++[m
+ .../docs/5 flagship notes for today Full_7_0.md    |  1 [32m+[m
+ .../docs/5 flagship notes for today Full_8_0.md    |  3 [32m++[m
+ .../docs/5 flagship notes for today Full_9_0.md    |  2 [32m+[m
+ .../docs/5.1 AI in Preparedness Overview_0_0.md    |  1 [32m+[m
+ .../5.10 Ethical Considerations of AI Usage_0_0.md |  1 [32m+[m
+ .../5.10 Ethical Considerations of AI Usage_0_1.md |  1 [32m+[m
+ fpa-site/docs/5.11 Offline AI Tools_0_0.md         |  1 [32m+[m
+ fpa-site/docs/5.11 Offline AI Tools_0_1.md         |  1 [32m+[m
+ .../5.12 AI-Assisted Knowledge Management_0_0.md   |  1 [32m+[m
+ .../5.12 AI-Assisted Knowledge Management_0_1.md   |  1 [32m+[m
+ .../docs/5.13 Drones and Robotics with AI_0_0.md   |  1 [32m+[m
+ .../docs/5.13 Drones and Robotics with AI_0_1.md   |  1 [32m+[m
+ ...5.14 Limitations and Backup Plans for AI_0_0.md |  1 [32m+[m
+ ...5.14 Limitations and Backup Plans for AI_0_1.md |  1 [32m+[m
+ ...AI-Based Risk Assessment & Early Warning_0_0.md |  1 [32m+[m
+ ...AI-Based Risk Assessment & Early Warning_0_1.md |  1 [32m+[m
+ ...Logistics & Resource Optimization via AI_0_0.md |  1 [32m+[m
+ ...Logistics & Resource Optimization via AI_0_1.md |  1 [32m+[m
+ fpa-site/docs/5.4 Decision Support Systems_0_0.md  |  1 [32m+[m
+ fpa-site/docs/5.4 Decision Support Systems_0_1.md  |  1 [32m+[m
+ fpa-site/docs/5.5 Training Simulations & AI_0_0.md |  1 [32m+[m
+ fpa-site/docs/5.5 Training Simulations & AI_0_1.md |  1 [32m+[m
+ ...n Communications (Translation & Routing)_0_0.md |  1 [32m+[m
+ ...n Communications (Translation & Routing)_0_1.md |  1 [32m+[m
+ ...nalysis & Intelligence Gathering with AI_0_0.md |  1 [32m+[m
+ ...nalysis & Intelligence Gathering with AI_0_1.md |  1 [32m+[m
+ .../5.8 Personalized Preparedness Coaching_0_0.md  |  1 [32m+[m
+ .../5.8 Personalized Preparedness Coaching_0_1.md  |  1 [32m+[m
+ ...d Monitoring Systems (Security & Safety)_0_0.md |  1 [32m+[m
+ ...d Monitoring Systems (Security & Safety)_0_1.md |  1 [32m+[m
+ .../docs/6.1 Prepping Innovations History_0_0.md   |  1 [32m+[m
+ .../docs/6.1 Prepping Innovations History_0_1.md   |  1 [32m+[m
+ ...onomous Reconnaissance (Drones & Robots)_0_0.md |  1 [32m+[m
+ ...onomous Reconnaissance (Drones & Robots)_0_1.md |  1 [32m+[m
+ ...e Fabrication (3D Printing & Makerspace)_0_0.md |  1 [32m+[m
+ ...e Fabrication (3D Printing & Makerspace)_0_1.md |  1 [32m+[m
+ .../docs/6.12 Community Resilience Programs_0_0.md |  1 [32m+[m
+ .../docs/6.12 Community Resilience Programs_0_1.md |  1 [32m+[m
+ fpa-site/docs/6.13 Real-Time Crisis Mapping_0_0.md |  1 [32m+[m
+ fpa-site/docs/6.13 Real-Time Crisis Mapping_0_1.md |  1 [32m+[m
+ .../6.14 Low-Cost & Fair Tech Solutions_0_0.md     |  1 [32m+[m
+ .../6.14 Low-Cost & Fair Tech Solutions_0_1.md     |  1 [32m+[m
+ .../6.15 Future Outlook & Emerging Tech_0_0.md     |  1 [32m+[m
+ .../6.15 Future Outlook & Emerging Tech_0_1.md     |  1 [32m+[m
+ fpa-site/docs/6.2 FPA Innovation Philosophy_0_0.md |  1 [32m+[m
+ fpa-site/docs/6.2 FPA Innovation Philosophy_0_1.md |  1 [32m+[m
+ ...net \342\200\223 One-Way Info Broadcast_0_0.md" |  1 [32m+[m
+ ...net \342\200\223 One-Way Info Broadcast_0_1.md" |  1 [32m+[m
+ ...net \342\200\223 Community Mesh Network_0_0.md" |  1 [32m+[m
+ ...net \342\200\223 Community Mesh Network_0_1.md" |  1 [32m+[m
+ ...ernet vs Realnet (Complementary Systems)_0_0.md |  1 [32m+[m
+ ...ernet vs Realnet (Complementary Systems)_0_1.md |  1 [32m+[m
+ ...Data Reception (Outernet Implementation)_0_0.md |  1 [32m+[m
+ ...Data Reception (Outernet Implementation)_0_1.md |  1 [32m+[m
+ ...Mesh Networking (Realnet Implementation)_0_0.md |  1 [32m+[m
+ ...Mesh Networking (Realnet Implementation)_0_1.md |  1 [32m+[m
+ .../docs/6.8 Digital Modes on Ham Radio_0_0.md     |  1 [32m+[m
+ .../docs/6.8 Digital Modes on Ham Radio_0_1.md     |  1 [32m+[m
+ ...9 Data Compression & Transfer Techniques_0_0.md |  1 [32m+[m
+ ...9 Data Compression & Transfer Techniques_0_1.md |  1 [32m+[m
+ .../7.1 Knowledge Preparedness Importance_0_0.md   |  1 [32m+[m
+ .../7.1 Knowledge Preparedness Importance_0_1.md   |  1 [32m+[m
+ .../docs/7.10 Lessons Learned Repository_0_0.md    |  1 [32m+[m
+ .../docs/7.10 Lessons Learned Repository_0_1.md    |  1 [32m+[m
+ .../docs/7.11 Security of Knowledge Assets_0_0.md  |  1 [32m+[m
+ .../docs/7.11 Security of Knowledge Assets_0_1.md  |  1 [32m+[m
+ fpa-site/docs/7.12 Access in Emergencies_0_0.md    |  4 [32m++[m
+ fpa-site/docs/7.12 Access in Emergencies_0_1.md    |  3 [32m++[m
+ fpa-site/docs/7.12 Access in Emergencies_0_2.md    |  1 [32m+[m
+ ...ill Database (Member Skills & Expertise)_0_0.md |  1 [32m+[m
+ ...ill Database (Member Skills & Expertise)_0_1.md |  1 [32m+[m
+ .../docs/7.14 Knowledge Sharing Workshops_0_0.md   |  1 [32m+[m
+ .../docs/7.14 Knowledge Sharing Workshops_0_1.md   |  1 [32m+[m
+ ...15 Info Security for Operational Privacy_0_0.md |  1 [32m+[m
+ ...15 Info Security for Operational Privacy_0_1.md |  1 [32m+[m
+ .../docs/7.16 Philosophy of Gear Selection_0_0.md  |  1 [32m+[m
+ .../docs/7.16 Philosophy of Gear Selection_0_1.md  |  1 [32m+[m
+ fpa-site/docs/7.17 Standardization of Gear_0_0.md  |  1 [32m+[m
+ fpa-site/docs/7.17 Standardization of Gear_0_1.md  |  1 [32m+[m
+ .../7.18 Personal Gear vs Community Gear_0_0.md    |  1 [32m+[m
+ .../7.18 Personal Gear vs Community Gear_0_1.md    |  1 [32m+[m
+ .../7.19 Everyday Carry (EDC) Essentials_0_0.md    | 11 [32m+++++[m
+ .../7.19 Everyday Carry (EDC) Essentials_0_1.md    |  4 [32m++[m
+ fpa-site/docs/7.2 FPA Knowledge Vault_0_0.md       |  1 [32m+[m
+ fpa-site/docs/7.2 FPA Knowledge Vault_0_1.md       |  1 [32m+[m
+ .../7.20 Go Bag  Bug-Out Bag (72-hour Kit)_0_0.md  |  9 [32m+++++[m
+ .../7.20 Go Bag  Bug-Out Bag (72-hour Kit)_0_1.md  |  6 [32m+++[m
+ .../7.20 Go Bag  Bug-Out Bag (72-hour Kit)_0_2.md  |  2 [32m+[m
+ fpa-site/docs/7.21 Get-Home Bag_0_0.md             |  6 [32m+++[m
+ fpa-site/docs/7.21 Get-Home Bag_0_1.md             |  4 [32m++[m
+ fpa-site/docs/7.22 Vehicle Emergency Kit_0_0.md    |  6 [32m+++[m
+ fpa-site/docs/7.22 Vehicle Emergency Kit_0_1.md    |  4 [32m++[m
+ fpa-site/docs/7.22 Vehicle Emergency Kit_0_2.md    |  2 [32m+[m
+ .../7.23 Home Shelter-in-Place Supplies_0_0.md     |  3 [32m++[m
+ .../7.23 Home Shelter-in-Place Supplies_0_1.md     |  3 [32m++[m
+ .../7.23 Home Shelter-in-Place Supplies_0_2.md     |  6 [32m+++[m
+ .../7.23 Home Shelter-in-Place Supplies_0_3.md     |  6 [32m+++[m
+ fpa-site/docs/7.25 Food Preparation Gear_0_0.md    |  7 [32m++++[m
+ .../7.26 Food Storage & Preservation Gear_0_0.md   |  8 [32m++++[m
+ fpa-site/docs/7.27 Medical & First Aid Gear_0_0.md |  6 [32m+++[m
+ fpa-site/docs/7.27 Medical & First Aid Gear_0_1.md |  3 [32m++[m
+ ....28 Navigation Gear (Maps & Instruments)_0_0.md |  7 [32m++++[m
+ fpa-site/docs/7.29 Lighting & Illumination_0_0.md  |  7 [32m++++[m
+ fpa-site/docs/7.29 Lighting & Illumination_0_1.md  |  2 [32m+[m
+ fpa-site/docs/7.3 Zettelkasten and Linking_0_0.md  |  1 [32m+[m
+ fpa-site/docs/7.3 Zettelkasten and Linking_0_1.md  |  1 [32m+[m
+ fpa-site/docs/7.30 Power & Charging Gear_0_0.md    |  6 [32m+++[m
+ fpa-site/docs/7.30 Power & Charging Gear_0_1.md    |  2 [32m+[m
+ fpa-site/docs/7.31 Shelter & Bedding Gear_0_0.md   |  5 [32m+++[m
+ fpa-site/docs/7.31 Shelter & Bedding Gear_0_1.md   |  3 [32m++[m
+ .../7.32 Clothing & Protective Equipment_0_0.md    |  6 [32m+++[m
+ .../7.32 Clothing & Protective Equipment_0_1.md    |  3 [32m++[m
+ fpa-site/docs/7.33 Tools & Repair Kits_0_0.md      |  8 [32m++++[m
+ fpa-site/docs/7.33 Tools & Repair Kits_0_1.md      |  4 [32m++[m
+ fpa-site/docs/7.34 Fire-making & Fuel Gear_0_0.md  |  7 [32m++++[m
+ fpa-site/docs/7.34 Fire-making & Fuel Gear_0_1.md  |  2 [32m+[m
+ fpa-site/docs/7.35 Signaling Devices_0_0.md        |  6 [32m+++[m
+ fpa-site/docs/7.35 Signaling Devices_0_1.md        |  3 [32m++[m
+ ...unication Devices (Radios & Electronics)_0_0.md |  5 [32m+++[m
+ ...unication Devices (Radios & Electronics)_0_1.md |  4 [32m++[m
+ .../docs/7.37 Security & Self-Defense Gear_0_0.md  |  4 [32m++[m
+ .../docs/7.37 Security & Self-Defense Gear_0_1.md  |  4 [32m++[m
+ .../7.38 Multi-use Items (Versatile Gear)_0_0.md   |  7 [32m++++[m
+ .../7.38 Multi-use Items (Versatile Gear)_0_1.md   |  4 [32m++[m
+ fpa-site/docs/7.39 Cache & Stash Supplies_0_0.md   |  6 [32m+++[m
+ fpa-site/docs/7.39 Cache & Stash Supplies_0_1.md   |  1 [32m+[m
+ ... Platforms (Tools for Knowledge Sharing)_0_0.md |  1 [32m+[m
+ ... Platforms (Tools for Knowledge Sharing)_0_1.md |  1 [32m+[m
+ .../7.40 Maintenance Schedule & Gear Upkeep_0_0.md |  4 [32m++[m
+ .../7.40 Maintenance Schedule & Gear Upkeep_0_1.md |  4 [32m++[m
+ fpa-site/docs/7.41 FPA Approved Gear List_0_0.md   |  9 [32m+++++[m
+ fpa-site/docs/7.41 FPA Approved Gear List_0_1.md   |  2 [32m+[m
+ fpa-site/docs/7.42 Field Testing & Reviews_0_0.md  |  4 [32m++[m
+ fpa-site/docs/7.42 Field Testing & Reviews_0_1.md  |  4 [32m++[m
+ ....43 Minimalist Kit vs. Comprehensive Kit_0_0.md |  2 [32m+[m
+ ....43 Minimalist Kit vs. Comprehensive Kit_0_1.md |  3 [32m++[m
+ ....43 Minimalist Kit vs. Comprehensive Kit_0_2.md |  1 [32m+[m
+ .../7.44 Phase-Specific Gear Adjustments_0_0.md    |  3 [32m++[m
+ .../7.44 Phase-Specific Gear Adjustments_0_1.md    |  2 [32m+[m
+ .../7.44 Phase-Specific Gear Adjustments_0_2.md    |  1 [32m+[m
+ ... Gear for Special Needs & Family Members_0_0.md |  4 [32m++[m
+ ... Gear for Special Needs & Family Members_0_1.md |  4 [32m++[m
+ .../docs/7.5 Backup and Redundancy of Data_0_0.md  |  1 [32m+[m
+ .../docs/7.5 Backup and Redundancy of Data_0_1.md  |  1 [32m+[m
+ .../docs/7.6 Offline Knowledge Repositories_0_0.md |  1 [32m+[m
+ .../docs/7.6 Offline Knowledge Repositories_0_1.md |  1 [32m+[m
+ .../docs/7.7 Physical Libraries & Printing_0_0.md  |  1 [32m+[m
+ .../docs/7.7 Physical Libraries & Printing_0_1.md  |  1 [32m+[m
+ .../docs/7.8 Training Resources Archive_0_0.md     |  1 [32m+[m
+ .../docs/7.8 Training Resources Archive_0_1.md     |  1 [32m+[m
+ fpa-site/docs/7.9 Map & Navigation Data_0_0.md     |  1 [32m+[m
+ fpa-site/docs/7.9 Map & Navigation Data_0_1.md     |  1 [32m+[m
+ ...row\342\200\224Why Fair Funding Works 1_0_0.md" |  1 [32m+[m
+ ...ow\342\200\224Why Fair Funding Works 1_10_0.md" |  7 [32m++++[m
+ ...ow\342\200\224Why Fair Funding Works 1_11_0.md" |  1 [32m+[m
+ ...row\342\200\224Why Fair Funding Works 1_1_0.md" |  3 [32m++[m
+ ...row\342\200\224Why Fair Funding Works 1_2_0.md" |  4 [32m++[m
+ ...row\342\200\224Why Fair Funding Works 1_3_0.md" | 10 [32m+++++[m
+ ...row\342\200\224Why Fair Funding Works 1_4_0.md" |  2 [32m+[m
+ ...row\342\200\224Why Fair Funding Works 1_5_0.md" |  2 [32m+[m
+ ...row\342\200\224Why Fair Funding Works 1_6_0.md" |  2 [32m+[m
+ ...row\342\200\224Why Fair Funding Works 1_7_0.md" |  3 [32m++[m
+ ...row\342\200\224Why Fair Funding Works 1_8_0.md" | 10 [32m+++++[m
+ ...row\342\200\224Why Fair Funding Works 1_9_0.md" |  4 [32m++[m
+ fpa-site/docs/Offline-First Resilience,_0_0.md     |  1 [32m+[m
+ fpa-site/docs/Offline-First Resilience,_10_0.md    |  1 [32m+[m
+ fpa-site/docs/Offline-First Resilience,_1_0.md     |  4 [32m++[m
+ fpa-site/docs/Offline-First Resilience,_2_0.md     |  2 [32m+[m
+ fpa-site/docs/Offline-First Resilience,_3_0.md     |  2 [32m+[m
+ fpa-site/docs/Offline-First Resilience,_4_0.md     |  4 [32m++[m
+ fpa-site/docs/Offline-First Resilience,_5_0.md     |  3 [32m++[m
+ fpa-site/docs/Offline-First Resilience,_6_0.md     |  3 [32m++[m
+ fpa-site/docs/Offline-First Resilience,_7_0.md     |  4 [32m++[m
+ fpa-site/docs/Offline-First Resilience,_8_0.md     |  5 [32m+++[m
+ fpa-site/docs/Offline-First Resilience,_9_0.md     |  2 [32m+[m
+ fpa-site/docs/Rank Matrix_0_0.md                   |  1 [32m+[m
+ fpa-site/docs/Rank Matrix_0_1.md                   |  1 [32m+[m
+ fpa-site/docs/Rank Matrix_10_0.md                  |  7 [32m++++[m
+ fpa-site/docs/Rank Matrix_11_0.md                  | 13 [32m++++++[m
+ fpa-site/docs/Rank Matrix_11_1.md                  |  5 [32m+++[m
+ fpa-site/docs/Rank Matrix_1_0.md                   |  4 [32m++[m
+ fpa-site/docs/Rank Matrix_1_1.md                   |  7 [32m++++[m
+ fpa-site/docs/Rank Matrix_1_2.md                   |  3 [32m++[m
+ fpa-site/docs/Rank Matrix_1_3.md                   |  1 [32m+[m
+ fpa-site/docs/Rank Matrix_1_4.md                   |  2 [32m+[m
+ fpa-site/docs/Rank Matrix_2_0.md                   |  1 [32m+[m
+ fpa-site/docs/Rank Matrix_3_0.md                   |  4 [32m++[m
+ fpa-site/docs/Rank Matrix_3_1.md                   |  3 [32m++[m
+ fpa-site/docs/Rank Matrix_4_0.md                   |  2 [32m+[m
+ fpa-site/docs/Rank Matrix_4_1.md                   |  2 [32m+[m
+ fpa-site/docs/Rank Matrix_4_2.md                   |  1 [32m+[m
+ fpa-site/docs/Rank Matrix_4_3.md                   |  1 [32m+[m
+ fpa-site/docs/Rank Matrix_4_4.md                   |  1 [32m+[m
+ fpa-site/docs/Rank Matrix_5_0.md                   |  3 [32m++[m
+ fpa-site/docs/Rank Matrix_5_1.md                   |  2 [32m+[m
+ fpa-site/docs/Rank Matrix_5_2.md                   |  1 [32m+[m
+ fpa-site/docs/Rank Matrix_5_3.md                   |  1 [32m+[m
+ fpa-site/docs/Rank Matrix_5_4.md                   |  1 [32m+[m
+ fpa-site/docs/Rank Matrix_5_5.md                   |  1 [32m+[m
+ fpa-site/docs/Rank Matrix_6_0.md                   |  5 [32m+++[m
+ fpa-site/docs/Rank Matrix_6_1.md                   |  3 [32m++[m
+ fpa-site/docs/Rank Matrix_6_2.md                   |  2 [32m+[m
+ fpa-site/docs/Rank Matrix_7_0.md                   |  3 [32m++[m
+ fpa-site/docs/Rank Matrix_7_1.md                   |  3 [32m++[m
+ fpa-site/docs/Rank Matrix_7_2.md                   |  2 [32m+[m
+ fpa-site/docs/Rank Matrix_8_0.md                   |  9 [32m+++++[m
+ fpa-site/docs/Rank Matrix_8_1.md                   |  8 [32m++++[m
+ fpa-site/docs/Rank Matrix_8_2.md                   |  9 [32m+++++[m
+ fpa-site/docs/Rank Matrix_8_3.md                   |  3 [32m++[m
+ fpa-site/docs/Rank Matrix_8_4.md                   |  1 [32m+[m
+ fpa-site/docs/Rank Matrix_9_0.md                   |  1 [32m+[m
+ ...lized Readiness Beats Generic Checklists_0_0.md |  2 [32m+[m
+ ...lized Readiness Beats Generic Checklists_1_0.md |  6 [32m+++[m
+ ...lized Readiness Beats Generic Checklists_2_0.md |  6 [32m+++[m
+ ...lized Readiness Beats Generic Checklists_3_0.md |  6 [32m+++[m
+ ...lized Readiness Beats Generic Checklists_3_1.md |  7 [32m++++[m
+ ...lized Readiness Beats Generic Checklists_4_0.md |  4 [32m++[m
+ ...lized Readiness Beats Generic Checklists_5_0.md |  7 [32m++++[m
+ ...lized Readiness Beats Generic Checklists_6_0.md |  4 [32m++[m
+ ...ing, and Closing, Your Preparedness Gaps_0_0.md |  1 [32m+[m
+ ...ng, and Closing, Your Preparedness Gaps_10_0.md |  7 [32m++++[m
+ ...ng, and Closing, Your Preparedness Gaps_11_0.md | 11 [32m+++++[m
+ ...ng, and Closing, Your Preparedness Gaps_12_0.md |  8 [32m++++[m
+ ...ng, and Closing, Your Preparedness Gaps_13_0.md | 13 [32m++++++[m
+ ...ng, and Closing, Your Preparedness Gaps_14_0.md | 12 [32m++++++[m
+ ...ng, and Closing, Your Preparedness Gaps_15_0.md |  8 [32m++++[m
+ ...ng, and Closing, Your Preparedness Gaps_16_0.md |  7 [32m++++[m
+ ...ng, and Closing, Your Preparedness Gaps_17_0.md |  6 [32m+++[m
+ ...ing, and Closing, Your Preparedness Gaps_1_0.md |  2 [32m+[m
+ ...ing, and Closing, Your Preparedness Gaps_2_0.md |  3 [32m++[m
+ ...ing, and Closing, Your Preparedness Gaps_3_0.md |  3 [32m++[m
+ ...ing, and Closing, Your Preparedness Gaps_4_0.md | 10 [32m+++++[m
+ ...ing, and Closing, Your Preparedness Gaps_5_0.md |  3 [32m++[m
+ ...ing, and Closing, Your Preparedness Gaps_5_1.md |  3 [32m++[m
+ ...ing, and Closing, Your Preparedness Gaps_6_0.md |  4 [32m++[m
+ ...ing, and Closing, Your Preparedness Gaps_7_0.md |  5 [32m+++[m
+ ...ing, and Closing, Your Preparedness Gaps_8_0.md |  7 [32m++++[m
+ ...ing, and Closing, Your Preparedness Gaps_9_0.md |  1 [32m+[m
+ ...ut Verify, Inside the FPA Trust Doctrine_0_0.md |  3 [32m++[m
+ ...ut Verify, Inside the FPA Trust Doctrine_1_0.md |  2 [32m+[m
+ ...ut Verify, Inside the FPA Trust Doctrine_2_0.md |  5 [32m+++[m
+ ...ut Verify, Inside the FPA Trust Doctrine_2_1.md |  3 [32m++[m
+ ...ut Verify, Inside the FPA Trust Doctrine_3_0.md | 18 [32m+++++++++[m
+ ...ut Verify, Inside the FPA Trust Doctrine_4_0.md |  6 [32m+++[m
+ ...ut Verify, Inside the FPA Trust Doctrine_5_0.md | 14 [32m+++++++[m
+ ...ut Verify, Inside the FPA Trust Doctrine_6_0.md | 12 [32m++++++[m
+ ...ut Verify, Inside the FPA Trust Doctrine_7_0.md |  4 [32m++[m
+ ...ut Verify, Inside the FPA Trust Doctrine_8_0.md |  1 [32m+[m
+ fpa-site/mkdocs.yml                                |  7 [32m++++[m
+ 2645 files changed, 8098 insertions(+)

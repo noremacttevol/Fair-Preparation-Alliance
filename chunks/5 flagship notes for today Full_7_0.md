@@ -1,0 +1,1 @@
+Quote the 2017 hurricane ham-radio AAR sections where volunteers passed hospital status traffic after fiber cuts. [ARRL](https://www.arrl.org/files/file/Public%20Service/ARES/2017%20Hurricane%20Season%20AAR.pdf?utm_source=chatgpt.com)

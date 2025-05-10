@@ -1,0 +1,7 @@
+2. **Personal Preparedness Tasks:** Points for developing personal/family emergency plans, assembling survival kits, and maintaining personal readiness (e.g. updating your plan annually).  
+3. **Communication Operations:** Points for communication-related activities, such as acquiring and learning to use radios, checking into emergency nets, making contact with other members via HAM/GMRS, etc.  
+4. **Drill Participation:** Points for taking part in organized drills and simulations (blackout drills, evacuation exercises, etc.) as a team member.  
+5. **Drill & Mission Leadership:** Additional points for planning or leading drills and missions. Leading a neighborhood exercise or coordinating an operation earns more AP than just participating.  
+6. **Field Exercises & Scenarios:** Points for completing scenario challenges (e.g. 24-hour off-grid “blackout” challenge, wilderness survival weekend, EMP simulation). These test field readiness in realistic conditions.  
+7. **Gear Preparedness & Validation:** Points for acquiring recommended gear and demonstrating its use or hardening gear against threats. For example, building an EMP-proof case for electronics, or testing backup power generators earns AP.  
+8. **Mentorship & Peer Support:** Points for mentoring other members (e.g. guiding a new member through making their plan, or helping someone study for their HAM exam). Also includes reviewing/vetting peers’ emergency plans or setups and providing constructive feedback.

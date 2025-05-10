@@ -1,0 +1,4 @@
+- **Maria 2017:** ARRL/Red Cross teams restored message flow in Puerto Rico hospitals via HF relays 00. FPA-combined.  
+- **Community drills:** An Ohio FPA squad used Realnet radios to coordinate food runs during a 12-hour blackout—no panic, no missed meds 00. FPA-combined.  
+- **Academic backing:** NIOSH finds retention jumps when training is competency-mapped and repeatedly drilled—exactly the function of our Skill Wheel + Pulse Tests 00. FPA-combined.  
+---
