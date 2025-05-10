@@ -1,0 +1,46 @@
+# 🎖 Rank Matrix – E & O Progression → Canonical Alignment
+
+> This maps each rank (E1–E10, O1–O10) to its required terms, SOPs, audits, and glossary links.
+
+---
+
+## 🧍 Enlisted Progression – E1 to E10
+
+| Rank | Focus | Canonical Tools                                               |
+| ---------------------- | ---------------------------- | ------------------------------------------------------------- |
+| E1 – Recruit | Self-audit, baseline quiz | `[[TERM:TMP (Test My Plan)]]`, `[[TERM:Skill Wheel]]`         |
+| E2 – Basic | Comm check-in | `[[TERM:Comm Pulse Check]]`, `[[TERM:Manual Drill]]`          |
+| E3 – Signal-Ready | Grid-down comms | `[[TERM:Gear Pool]]`, `[[TERM:OpCheck]]`                      |
+| E4 – Redundancy Runner | Backup power + water plan | `[[TERM:Offline Stack]]`                                      |
+| E5 – WaveRider | HAM license + SOP broadcast | `[[TERM:Signal Stack]]`, `[[TERM:Offline Cache Node]]`        |
+| E6 – Protocol Holder | Print SOPs, squad print node | `[[TERM:SOP Frame]]`, `[[TERM:Squad Wheel]]`                  |
+| E7 – Team Mentor | Training juniors | `[[TERM:Knowledge Transfer Vector]]`, `[[TERM:FPAKM]]`        |
+| E8 – Trust Steward | Firewall operator | `[[TERM:Trust Firewall Protocol]]`, `[[TERM:Trust_Firewall]]` |
+| E9 – Systems Leader | DR plan builder | `[[TERM:Fallback Logic Layer]]`, `[[TERM:Action Gradient]]`   |
+| E10 – Builder | Help form new squads | `[[TERM:Doctrine of Continuity]]`, squad creation SOPs        |
+
+---
+
+## 🧭 Officer Progression – O1 to O10
+
+| Rank | Mission Scope | Anchor Terms |
+|------|----------------|--------------|
+| O1 – Squad Leader | 5–15 person team | `[[TERM:Squad Wheel]]`, `[[TERM:Quick Sync SOP]]` |
+| O2 – Region Node | Multi-squad coordination | `[[TERM:FPA Chatbot]]`, AI checklists |
+| O3 – Policy Layer | SOP refinement | `[[TERM:Compass]]`, `[[TERM:Trust Doctrine]]` |
+| O4+ | Specialized tracks | SOP-linked per path (Medical, Comms, Logistics) |
+
+---
+
+> Use this matrix to trace term impact and SOP priority per rank.
+
+
+
+---
+
+## 🔁 May 1 Additions
+- `[[TERM:Quick Sync SOP]]` → E6 (Team Coordinators)
+- `[[TERM:Knowledge Transfer Vector]]` → E7 (Mentorship Layer)
+- `[[TERM:Trust Firewall Protocol]]`, `[[TERM:Trust Escalation Chain]]` → E8–E9
+- `[[TERM:Offline Cache Node]]` → E5 (Grid-down Resilience)
+- `[[TERM:Gear Pool]]` → E3–E6 Squad Logistics
