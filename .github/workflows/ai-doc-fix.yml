@@ -1,3 +1,5 @@
+permissions:
+  contents: write
 ﻿name: ai-doc-fix
 on:
   push:                     # every commit
