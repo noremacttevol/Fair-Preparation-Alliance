@@ -10,19 +10,18 @@ concurrency:
 
 jobs:
   rewrite:
-    runs-on: ubuntu-latest
     if: ${{ ! contains(github.event.head_commit.message, '[AI fix]') }}
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 2    # fetch history to enable git diff
-      - name: Set up Python
-        uses: actions/setup-python@v4
+          fetch-depth: 2            # allow git diff with previous commit
+      - uses: actions/setup-python@v4
         with:
           python-version: '3.11'
-      - name: Install dependencies
+      - name: Install deps
         run: pip install openai==0.28.1 tiktoken
-      - name: Run documentation fixer
+      - name: Run AI doc fixer
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python .github/scripts/ai_doc_fix.py
