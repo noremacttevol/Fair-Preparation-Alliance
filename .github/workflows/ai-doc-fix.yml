@@ -1,42 +1,28 @@
 name: ai-doc-fix
-
 on:
   push:
-    paths:
-      - '**/*.md'
+    paths: ["**/*.md"]
   workflow_dispatch:
 
-permissions:
-  contents: write
+concurrency:
+  group: docs-fix-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   rewrite:
     runs-on: ubuntu-latest
+    if: ${{ ! contains(github.event.head_commit.message, '[AI fix]') }}
     steps:
-      - uses: actions/checkout@v4           # depth-1 is OK
-
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 2    # fetch history to enable git diff
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
           python-version: '3.11'
-
-      # classic OpenAI SDK + tiktoken tokenizer
       - name: Install dependencies
-        run: |
-          pip install openai==0.28.1
-          pip install tiktoken==0.5.1
-
-      - name: Run AI doc fixer
+        run: pip install openai==0.28.1 tiktoken
+      - name: Run documentation fixer
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python .github/scripts/ai_doc_fix.py
-
-      - name: Commit changes
-        run: |
-          git config --global user.name  'FPA-AI-Bot'
-          git config --global user.email 'bot@noreply.fpa'
-          git add -A
-          if ! git diff --cached --quiet; then
-            git commit -m "chore: AI terminology & style sweep"
-            git push
-          else
-            echo "No changes to commit."
