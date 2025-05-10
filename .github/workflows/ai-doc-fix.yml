@@ -1,9 +1,13 @@
+▼▼▼ COPY FROM HERE ▼▼▼
 name: AI Documentation Fixer
-
 on:
   push:
-    branches:
-      - main
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ai-doc-fix-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   auto_fix_docs:
@@ -11,22 +15,17 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    concurrency:
-      group: ai-doc-fix-${{ github.ref }}
-      cancel-in-progress: true
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 2
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - uses: actions/setup-python@v4
         with:
           python-version: '3.11'
-      - name: Install Python dependencies
+      - name: Install deps
         run: pip install --no-cache-dir openai tiktoken
-      - name: Run AI documentation fixer
+      - name: Run AI doc fixer
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python .github/scripts/ai_doc_fix.py
+▲▲▲ STOP COPYING ▲▲▲
