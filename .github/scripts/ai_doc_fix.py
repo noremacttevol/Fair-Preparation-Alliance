@@ -1,51 +1,52 @@
-import os, pathlib, subprocess, time, openai, math, random
+import os, pathlib, subprocess, time, openai, textwrap, tiktoken
 
-# ── CONFIG ──────────────────────────────────────────────────────────────────
+# ── CONFIG ────────────────────────────────────────────────────────────────
 GLOSSARY_PATH = "1.3 Full/13. Dictionary (w_ Q&A + Links).md"
 MODEL         = "gpt-4o-mini"
+TOKEN_LIMIT   = 12000           # chunk if file exceeds this
 TEMP          = 0.2
-SLEEP_SEC     = 1          # base pause → ≈60 req/min  ≪ 200 k TPM
+SLEEP_SEC     = 1
 MAX_RETRIES   = 3
-openai.api_key               = os.environ["OPENAI_API_KEY"]
-openai.api_request_timeout   = 120       # client‑side cut‑off
-
-GITHUB_SHA = os.getenv("GITHUB_SHA")     # set by actions/checkout
-# ────────────────────────────────────────────────────────────────────────────
+openai.api_key             = os.environ["OPENAI_API_KEY"]
+openai.api_request_timeout = 120
+ENC = tiktoken.encoding_for_model("gpt-4o-mini")
+GITHUB_SHA = os.getenv("GITHUB_SHA")
+# ──────────────────────────────────────────────────────────────────────────
 
 def load(path):
-    with open(path, encoding="utf-8") as f:
-        return f.read()
+    with open(path, encoding="utf-8") as f: return f.read()
 
-def git_list_md():
-    """Return changed .md files; fallback to all .md once on shallow clone."""
+# ── git helpers (quotePath-safe) ──────────────────────────────────────────
+def git(*args):
+    return subprocess.check_output(
+        ["git","-c","core.quotePath=false",*args], text=True, stderr=subprocess.DEVNULL
+    )
+
+def md_in_commit():
     try:
-        out = subprocess.check_output(
-            ["git","-c","core.quotePath=false",
-             "diff-tree","--no-commit-id","--name-only","-r",GITHUB_SHA],
-            text=True)
-        files = [p for p in out.splitlines() if p.endswith(".md")]
-        if files:
-            return files
-    except subprocess.CalledProcessError:
-        pass
-    print("No diff available; processing all Markdown files.")
-    out = subprocess.check_output(
-        ["git","-c","core.quotePath=false","ls-files","*.md"], text=True)
-    return out.splitlines()
+        out = git("diff-tree","--no-commit-id","--name-only","-r",GITHUB_SHA)
+        lst = [p for p in out.splitlines() if p.endswith(".md")]
+        if lst: return lst
+    except subprocess.CalledProcessError: pass
+    print("No diff -> processing all Markdown once")
+    return git("ls-files","*.md").splitlines()
+# ──────────────────────────────────────────────────────────────────────────
 
-def chat_fix(src, glossary):
-    prompt = f"""You are the FPA style bot.
-Glossary below lists approved terms. Enforce them exactly.
+def token_len(txt:str)->int: return len(ENC.encode(txt))
 
---- BEGIN GLOSSARY ---
-{glossary}
---- END GLOSSARY ---
+def split_md(text:str)->list[str]:
+    """split at headings or every 1k lines"""
+    blocks, buf = [], []
+    for line in text.splitlines(keepends=True):
+        if line.lstrip().startswith("#") and buf:
+            blocks.append("".join(buf)); buf=[]
+        buf.append(line)
+        if len(buf)>1000: blocks.append("".join(buf)); buf=[]
+    if buf: blocks.append("".join(buf))
+    return blocks
 
---- BEGIN FILE ---
-{src}
---- END FILE ---
-"""
-    for attempt in range(1, MAX_RETRIES + 1):
+def gpt(prompt:str)->str:
+    for attempt in range(1, MAX_RETRIES+1):
         try:
             rsp = openai.ChatCompletion.create(
                 model=MODEL,
@@ -53,30 +54,44 @@ Glossary below lists approved terms. Enforce them exactly.
                 temperature=TEMP,
             )
             return rsp.choices[0].message.content.strip()
-        except openai.error.RateLimitError as e:
-            wait = SLEEP_SEC * (2 ** (attempt-1))
-            print(f"rate‑limit ▶ retry {attempt}/{MAX_RETRIES} in {wait:.1f}s")
-            time.sleep(wait)
-        except openai.error.Timeout:
-            wait = SLEEP_SEC * (2 ** (attempt-1))
+        except (openai.error.Timeout, openai.error.RateLimitError):
+            wait=SLEEP_SEC*(2**(attempt-1))
             print(f"timeout ▶ retry {attempt}/{MAX_RETRIES} in {wait:.1f}s")
             time.sleep(wait)
     raise RuntimeError("Max retries exceeded")
 
+def rewrite(path, glossary):
+    try: src = load(path)
+    except UnicodeDecodeError: print("skip ▶",path); return
+    chunks = [src] if token_len(src)<=TOKEN_LIMIT else split_md(src)
+    outs=[]
+    for idx,chunk in enumerate(chunks,1):
+        prompt = textwrap.dedent(f"""\
+            You are the FPA style bot.
+            Glossary below lists approved terms. Enforce them exactly.
+
+            --- BEGIN GLOSSARY ---
+            {glossary}
+            --- END GLOSSARY ---
+
+            --- BEGIN FILE (part {idx}/{len(chunks)}) ---
+            {chunk}
+            --- END FILE ---
+        """)
+        try:
+            outs.append(gpt(prompt))
+            time.sleep(SLEEP_SEC)
+        except RuntimeError:
+            print(f"skip ▶ {path} (timeout)"); return
+    cleaned="".join(outs)
+    if cleaned!=src:
+        print("updated ▶",path)
+        with open(path,"w",encoding="utf-8") as f: f.write(cleaned)
+
 def main():
     glossary = load(GLOSSARY_PATH)
-    for md in git_list_md():
-        if pathlib.Path(md).as_posix() == GLOSSARY_PATH:
-            continue
-        try:
-            src = load(md)
-        except UnicodeDecodeError:
-            print("skip ▶", md); continue
-        cleaned = chat_fix(src, glossary)
-        if cleaned != src:
-            print("updated ▶", md)
-            with open(md,"w",encoding="utf-8") as f: f.write(cleaned)
-        time.sleep(SLEEP_SEC)  # steady‑state throttle
+    for md in md_in_commit():
+        if pathlib.Path(md).as_posix()==GLOSSARY_PATH: continue
+        rewrite(md, glossary)
 
-if __name__ == "__main__":
-    main()
+if __name__=="__main__": main()
