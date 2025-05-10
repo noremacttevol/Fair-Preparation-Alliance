@@ -1,7 +1,7 @@
 ﻿import os, sys, glob, json, openai, textwrap, pathlib
 
 # --- config ---
-GLOSSARY_PATH = "FPA Mk1Mod3/13. Dictionary (w_ Q&A + Links).md"
+GLOSSARY_PATH = "1.3 Full/13. Dictionary (w_ Q&A + Links).md"
 MODEL = "gpt-4o-mini"               # cheap + good; change if you like
 TEMPERATURE = 0.2                   # keep it deterministic
 # --------------
