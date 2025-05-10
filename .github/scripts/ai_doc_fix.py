@@ -1,112 +1,177 @@
-import os, pathlib, subprocess, time, openai, tiktoken
+import os
+import sys
+import subprocess
+import openai
+import tiktoken
 
-# --- Config -------------------------------------------------------------------
-GLOSSARY_PATH = "1.3 Full/13. Dictionary (w_ Q&A + Links).md"
-MODEL          = "gpt-4o-mini"
-FALLBACK_MODEL = "gpt-3.5-turbo-16k"   # optional fallback
-TEMPERATURE    = 0.2
-MAX_RETRIES    = 3
-SLEEP_BASE     = 2          # base for exponential back-off
-CHUNK_TOKENS   = 6000       # max tokens per chunk
-LARGE_FILE_TOK = 10000      # treat files above this as “large”
-# ------------------------------------------------------------------------------
+# Configuration
+MODEL = "gpt-4o-mini"
+GLOSSARY_FILE = "1.3 Full/13. Dictionary (w_ Q&A + Links).md"
+COMMIT_MESSAGE = "[AI fix] Update docs via GPT"
 
-openai.api_key               = os.getenv("OPENAI_API_KEY")
-openai.api_request_timeout   = 60
-GITHUB_SHA                   = os.getenv("GITHUB_SHA", "")
-
-# ---------- helpers -----------------------------------------------------------
-def load(path):  return pathlib.Path(path).read_text(encoding="utf-8")
-def save(path, txt): pathlib.Path(path).write_text(txt, encoding="utf-8")
-
-def token_len(txt, model=MODEL):
-    try: enc = tiktoken.encoding_for_model(model)
-    except Exception: enc = tiktoken.get_encoding("cl100k_base")
-    return len(enc.encode(txt))
-
-def chunk(text, max_tok=CHUNK_TOK):
-    paras, out, cur, tok = text.split("\n\n"), [], "", 0
-    for p in paras:
-        ptok = token_len(p)
-        if cur and tok + ptok > max_tok:
-            out.append(cur.strip()); cur, tok = "", 0
-        cur += p + "\n\n"; tok += ptok
-    if cur: out.append(cur.strip())
-    return out
-
-def git_md_files():
+def get_changed_files():
+    """Get list of changed files in last commit (only .md). Fallback to all .md if diff fails."""
     try:
-        diff = subprocess.check_output(
-            ["git","-c","core.quotePath=false",
-             "diff-tree","--no-commit-id","--name-only","-r",GITHUB_SHA],
-            text=True).splitlines()
-        files = [f for f in diff if f.endswith(".md")]
-        if files: return files
+        result = subprocess.run(["git", "diff", "HEAD~1", "--name-only"], check=True, capture_output=True, text=True)
+        files = [f.strip() for f in result.stdout.splitlines() if f.strip()]
     except subprocess.CalledProcessError:
-        pass
-    print("No diff; processing all .md files.")
-    return subprocess.check_output(
-        ["git","-c","core.quotePath=false","ls-files","*.md"],
-        text=True).splitlines()
+        # If git diff fails (e.g., initial commit), include all .md files
+        files = []
+        for root, dirs, fs in os.walk("."):
+            if root.startswith("./.git") or "/.git/" in root:
+                continue
+            for fname in fs:
+                if fname.lower().endswith(".md"):
+                    rel_path = os.path.join(root, fname)
+                    rel_path = rel_path.lstrip("./")  # normalize to relative path
+                    files.append(rel_path)
+    md_files = [f for f in files if f.lower().endswith(".md")]
+    return md_files
 
-def call_openai(msgs, model):
-    for n in range(1, MAX_RETRIES+1):
-        try:
-            r = openai.ChatCompletion.create(model=model, messages=msgs,
-                                             temperature=TEMPERATURE)
-            return r.choices[0].message.content.strip()
-        except (openai.error.RateLimitError,
-                openai.error.Timeout,
-                openai.error.APIError) as e:
-            if n == MAX_RETRIES: raise
-            wait = SLEEP_BASE * 2**(n-1)
-            print(f"{e.__class__.__name__} ▶ retry {n}/{MAX_RETRIES} in {wait}s")
-            time.sleep(wait)
-
-# ---------- main --------------------------------------------------------------
-glossary = load(GLOSSARY_PATH)
-system = ("You are an expert docs editor. Use the glossary to enforce terminology, "
-          "keep markdown structure, fix grammar, and preserve meaning.")
-
-for md in git_md_files():
-    if pathlib.Path(md).as_posix() == GLOSSARY_PATH: continue
-    try: src = load(md)
-    except Exception as e: print(f"skip ▶ {md}: {e}"); continue
-    if not src.strip(): continue
-
-    model = MODEL
-    pieces = [src]
-    if token_len(src) > LARGE_FILE_TOK:
-        print(f"{md} is large; chunking")
-        pieces = chunk(src)
-    new = ""
-    for i, piece in enumerate(pieces, 1):
-        msgs = [
-            {"role":"system","content":system},
-            {"role":"user","content":f"Glossary:\n{glossary}\n\nDocument:\n{piece}"}
-        ]
-        try:
-            out = call_openai(msgs, model)
-        except openai.error.Timeout:
-            # fallback to smaller model once
-            if model != FALLBACK_MODEL:
-                model = FALLBACK_MODEL
-                out = call_openai(msgs, model)
+def process_file(filepath, glossary_text):
+    """Run GPT-4o-mini to improve a Markdown file's style/terminology. Returns True if file was modified."""
+    # Skip the glossary file itself
+    if os.path.normpath(filepath) == os.path.normpath(GLOSSARY_FILE) or os.path.basename(filepath) == os.path.basename(GLOSSARY_FILE):
+        print(f"Skipping glossary file: {filepath}")
+        return False
+    # Read file content (skip if not UTF-8 decodable)
+    try:
+        with open(filepath, "r", encoding="utf-8") as f:
+            text = f.read()
+    except Exception as e:
+        print(f"Failed to read {filepath}: {e}")
+        return False
+    original_text = text
+    # Initialize tokenizer for the model
+    try:
+        enc = tiktoken.encoding_for_model(MODEL)
+    except Exception:
+        enc = tiktoken.get_encoding("cl100k_base")
+    # Tokenize content and glossary
+    doc_tokens = enc.encode(text)
+    glossary_tokens = enc.encode(glossary_text) if glossary_text else []
+    # Determine chunk size for document content (to handle large files)
+    max_chunk_tokens = 2500  # max tokens per document chunk
+    if len(doc_tokens) <= max_chunk_tokens:
+        doc_chunks = [text]
+    else:
+        # Split text by blank lines to keep paragraphs intact
+        paragraphs = text.split("\n\n")
+        doc_chunks = []
+        current_chunk = ""
+        current_tokens = 0
+        for para in paragraphs:
+            para_text = para.strip()
+            # Encode paragraph (preserve paragraph break)
+            if para_text == "":
+                para_tokens = enc.encode("\n\n")
             else:
-                print(f"timeout ▶ skip chunk {i} of {md}")
-                out = piece
-        new += out.strip()+"\n\n"
-        time.sleep(1)
+                para_tokens = enc.encode(para_text + "\n\n")
+            # If adding this paragraph exceeds chunk limit, start a new chunk
+            if current_chunk and current_tokens + len(para_tokens) > max_chunk_tokens:
+                doc_chunks.append(current_chunk)
+                current_chunk = ""
+                current_tokens = 0
+            # If paragraph itself is larger than chunk limit, split it further
+            if len(para_tokens) > max_chunk_tokens:
+                for i in range(0, len(para_tokens), max_chunk_tokens):
+                    part_tokens = para_tokens[i:i+max_chunk_tokens]
+                    part_text = enc.decode(part_tokens)
+                    doc_chunks.append(part_text)
+                current_chunk = ""
+                current_tokens = 0
+            else:
+                # Add paragraph to current chunk
+                part_text = enc.decode(para_tokens)
+                current_chunk += part_text
+                current_tokens += len(para_tokens)
+        if current_chunk:
+            doc_chunks.append(current_chunk)
+    # Process each chunk with OpenAI API
+    new_content_parts = []
+    for chunk in doc_chunks:
+        system_prompt = (
+            "You are an expert documentation editor. "
+            "Improve the following documentation for clarity, style, and terminology. "
+            "Use the provided glossary to ensure consistent terminology. "
+            "Preserve all Markdown formatting and content structure."
+        )
+        user_prompt = f"Glossary:\n{glossary_text}\n\nDocumentation:\n{chunk}\n\nPlease rewrite the documentation content accordingly."
+        messages = [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt}
+        ]
+        # Call OpenAI API with retry logic for robustness
+        response_text = None
+        for attempt in range(3):
+            try:
+                response = openai.ChatCompletion.create(model=MODEL, messages=messages, temperature=0)
+                response_text = response["choices"][0]["message"]["content"]
+                break  # success
+            except Exception as e:
+                print(f"OpenAI API call failed for chunk of {filepath} (attempt {attempt+1}): {e}", file=sys.stderr)
+                if attempt < 2:
+                    import time
+                    time.sleep(5)  # wait before retry
+        if response_text is None:
+            # All attempts failed for this chunk
+            print(f"Skipping file {filepath} due to repeated API failures.", file=sys.stderr)
+            return False
+        new_content_parts.append(response_text)
+    # Combine all chunk responses
+    new_content = "".join(new_content_parts)
+    if new_content.strip() == original_text.strip():
+        # No meaningful change
+        print(f"No changes made to {filepath}")
+        return False
+    # Write the updated content back to the file
+    try:
+        with open(filepath, "w", encoding="utf-8", newline="") as f:
+            f.write(new_content)
+    except Exception as e:
+        print(f"Failed to write changes to {filepath}: {e}", file=sys.stderr)
+        return False
+    print(f"File updated: {filepath}")
+    return True
 
-    if new.strip() != src.strip():
-        save(md, new); print(f"updated ▶ {md}")
+def main():
+    changed_files = get_changed_files()
+    if not changed_files:
+        print("No Markdown files to process. Exiting.")
+        return
+    # Load glossary content if available
+    glossary_text = ""
+    try:
+        with open(GLOSSARY_FILE, "r", encoding="utf-8") as gf:
+            glossary_text = gf.read()
+    except Exception as e:
+        glossary_text = ""
+        print("Glossary file not found or not readable, proceeding without glossary.")
+    any_changes = False
+    for file in changed_files:
+        if file.lower().endswith(".md"):
+            if process_file(file, glossary_text):
+                any_changes = True
+    # Commit and push changes if any were made
+    if any_changes:
+        try:
+            subprocess.run(["git", "config", "--local", "user.name", "github-actions[bot]"], check=True)
+            subprocess.run(["git", "config", "--local", "user.email", "github-actions[bot]@users.noreply.github.com"], check=True)
+        except Exception as e:
+            print(f"Git config warning: {e}", file=sys.stderr)
+        try:
+            subprocess.run(["git", "add", "-A"], check=True)
+            subprocess.run(["git", "commit", "-m", COMMIT_MESSAGE], check=True)
+        except subprocess.CalledProcessError:
+            # Nothing to commit (no changes)
+            print("No changes to commit after processing.")
+            return
+        try:
+            subprocess.run(["git", "push"], check=True)
+        except Exception as e:
+            print(f"Git push failed: {e}", file=sys.stderr)
+    else:
+        print("No documentation changes to commit.")
 
-# commit if anything changed
-subprocess.run(["git","add","*.md"])
-if subprocess.run(["git","diff","--cached","--quiet"]).returncode != 0:
-    subprocess.run(["git","config","user.name","github-actions"])
-    subprocess.run(["git","config","user.email","github-actions@github.com"])
-    subprocess.run(["git","commit","-m","[AI fix] Update docs via GPT"])
-    subprocess.run(["git","push"])
-else:
-    print("No changes to commit.")
+if __name__ == "__main__":
+    main()
