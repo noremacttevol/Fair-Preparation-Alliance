@@ -1,4 +1,4 @@
-﻿import os, glob, pathlib, openai
+import os, glob, pathlib, openai
 
 # --- config ---------------------------------------------------------------
 GLOSSARY_PATH = "1.3 Full/13. Dictionary (w_ Q&A + Links).md"
@@ -13,7 +13,6 @@ def load_glossary() -> str:
         return f.read()
 
 def rewrite_file(md_path: str, glossary: str) -> None:
-    # read file; skip if not UTF-8
     try:
         with open(md_path, "r", encoding="utf-8") as f:
             original = f.read()
@@ -22,7 +21,7 @@ def rewrite_file(md_path: str, glossary: str) -> None:
         return
 
     prompt = f"""You are the FPA style bot.
-Glossary below shows approved terms. Enforce them exactly.
+Glossary below lists approved terms. Enforce them exactly (case-insensitive).
 Keep Markdown structure; don’t touch code blocks.
 
 --- BEGIN GLOSSARY ---
@@ -34,11 +33,10 @@ Keep Markdown structure; don’t touch code blocks.
 --- END FILE ---
 """
 
-    resp = openai.chat.completions.create(
+    resp = openai.ChatCompletion.create(
         model       = MODEL,
         messages    = [{"role": "user", "content": prompt}],
         temperature = TEMPERATURE,
-        max_tokens  = 4000,
     )
 
     cleaned = resp.choices[0].message.content.strip()
