@@ -20,8 +20,9 @@ jobs:
         with:
           python-version: '3.11'
 
+      # ↓ pin version to 1.22.0 (stable on GitHub runners)
       - name: Install dependencies
-        run: pip install openai==1.25.0
+        run: pip install openai==1.22.0
 
       - name: Run AI doc fixer
         env:
