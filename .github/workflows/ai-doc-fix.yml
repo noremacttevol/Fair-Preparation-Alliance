@@ -1,3 +1,4 @@
+▼▼▼ COPY FROM THIS LINE ▼▼▼
 name: ai-doc-fix
 
 on:
@@ -20,9 +21,8 @@ jobs:
         with:
           python-version: '3.11'
 
-      # ↓ pin version to 1.22.0 (stable on GitHub runners)
       - name: Install dependencies
-        run: pip install openai==1.22.0
+        run: pip install openai==1.18.1
 
       - name: Run AI doc fixer
         env:
@@ -39,3 +39,4 @@ jobs:
             git push
           else
             echo "No changes to commit."
+▲▲▲ STOP COPYING AT THIS LINE ▲▲▲
