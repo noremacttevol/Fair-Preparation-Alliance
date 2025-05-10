@@ -1,0 +1,1 @@
+Checklists are static; life isn’t. By turning preparedness into a living, breathing **Skill Wheel**, FPA members see their blind spots, fix them, and then teach forward—fulfilling our charter to build a transparent, decentralized force that protects humanity, one slice at a time.

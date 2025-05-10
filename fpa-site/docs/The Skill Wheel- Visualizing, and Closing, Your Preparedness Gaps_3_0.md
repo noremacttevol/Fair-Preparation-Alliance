@@ -1,0 +1,3 @@
+- Adult-learning studies confirm experiential, feedback-rich visuals improve knowledge retention by up to 25 % over text-only formats ([Wiley Online Library](https://onlinelibrary.wiley.com/doi/full/10.1002/ace.20539?utm_source=chatgpt.com "Expanding Experiential Learning in Contemporary Adult Education ...")).  
+- A Harvard Business Review analysis found teams that use live data wheels iterate twice as fast on skill gaps because progress is instantly visible ([Harvard Business Review](https://hbr.org/2022/07/a-better-way-to-put-your-data-to-work?utm_source=chatgpt.com "A Better Way to Put Your Data to Work - Harvard Business Review")).  
+---

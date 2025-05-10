@@ -1,0 +1,4 @@
+- **Open Algorithm** – Weightings published; members can propose adjustments at the quarterly Governance Forum.  
+- **Skill Wheel Sync** – TMP gaps feed straight into the Skill Wheel so progress is visible and gamified—not fear-based.  
+- **Privacy First** – Answers stay client-side until the member opts-in to share aggregated stats for community Pulse Tests.  
+---

@@ -1,0 +1,1 @@
+Fair funding isn’t charity—it’s infrastructure. By capping revenue, lowering dues in stride, and broadcasting every penny, FPA turns _pricing_ itself into proof of our charter: decentralization, transparency, and member-powered resilience. Grow the circle, drop the cost, and let the numbers speak for themselves.

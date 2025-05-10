@@ -1,0 +1,2 @@
+| **5** | **Dynamic Pricing That Gets Cheaper as We Grow—Why Fair Funding Works**                    | Adds to nonprofit pricing best-practice literature [Stanford Social Innovation Review](https://ssir.org/articles/entry/nine_tips_to_better_nonprofit_pricing?utm_source=chatgpt.com).                                                                                             |  
+---

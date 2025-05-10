@@ -1,0 +1,6 @@
+|Pain Point|Evidence|Why TMP Solves It|
+|---|---|---|
+|“One-size-fits-all” lists ignore local risk|FEMA itself calls its own kit list “only a starting point” that must be tailored to every family [NIST](https://www.nist.gov/community-resilience/planning-guide?utm_source=chatgpt.com)|TMP’s onboarding asks about your hazards, household size, pets, and mobility needs.|
+|Communities that skip risk-based planning pay the highest recovery costs|NIST’s Community Resilience Guide shows cookie-cutter plans lengthen recovery timelines and inflate rebuild budgets [Deloitte United States](https://www2.deloitte.com/us/en/insights/industry/public-sector/automation-and-generative-ai-in-government/leveraging-ai-in-emergency-management-and-crisis-response.html?utm_source=chatgpt.com)|TMP weights factors that most affect survival—supplies 30 %, plans 25 %, skills 20 %, comms 15 %, home safety 10 %.|
+|At-risk groups are under-served by blanket messaging|Deloitte’s 2023 brief urges agencies to personalize guidance with AI [American Red Cross](https://www.redcross.org/get-help/how-to-prepare-for-emergencies/teaching-kids-about-emergency-preparedness/how-schools-can-prepare-for-emergencies.html?srsltid=AfmBOooAYcWS3JBMA5r8ID4N_j_v_UU1N_Qt5fYz4R9Wacm74omGJ3Rg&utm_source=chatgpt.com)|TMP delivers a ranked to-do list and gear links matched to your answers.|  
+---

@@ -1,0 +1,1 @@
+Re-tell the April 2025 Puerto Rico blackout from a family’s perspective; phones dead, only a $30 handheld on Realnet Channel 1 brings news. [ABC News](https://abcnews.go.com/International/puerto-rico-plunged-darkness-island-wide-blackout-hits/story?id=120884304)

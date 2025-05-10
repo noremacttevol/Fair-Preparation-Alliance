@@ -1,0 +1,4 @@
+- Gartner warns that algorithmic surge models erode trust when members can’t see the math ([Consumer Goods Technology](https://consumergoods.com/dynamic-pricing-risks-eroding-consumer-trust-gartner?utm_source=chatgpt.com "Dynamic Pricing Risks Eroding Consumer Trust: Gartner")).  
+- Wendy’s 2025 “surge menu” preview triggered immediate social backlash and brand-risk headlines ([Food & Wine](https://www.foodandwine.com/why-dynamic-pricing-is-a-bad-idea-for-wendys-8602616?utm_source=chatgpt.com "Wendy's Still Plans to Introduce Dynamic Pricing in 2025 - Here's Why It May Not Be a Great Idea")).  
+- Financial Times notes consumers hate opaque price jumps and reward brands that cap or explain changes ([Financial Times](https://www.ft.com/content/202bb768-667a-4f6e-ac71-ba22f9d091b8?utm_source=chatgpt.com "Why everyone hates dynamic pricing")).  
+---

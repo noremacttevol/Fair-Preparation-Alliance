@@ -1,0 +1,2 @@
+FPA anticipated this in the **Offline-First Resilience System**: every critical tool must work with zero internet by default [Reddit](https://www.reddit.com/r/amateurradio/comments/16sndpl/a_more_practicalpersonal_example_of_emergency/?utm_source=chatgpt.com).  
+---

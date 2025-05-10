@@ -1,0 +1,2 @@
+Our next article will show how Realnet check-ins feed the **Skill Wheel**, letting members progress from E-1 Listener to E-3 Relay Operator and beyond—all transparent in the Mk1 Mod 3 rank matrix Why_FPA_MK1MOD2_Public.  
+---
