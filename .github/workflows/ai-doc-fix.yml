@@ -1,4 +1,4 @@
-name: ai-doc-fix
+ name: ai-doc-fix
 
 on:
   push:
