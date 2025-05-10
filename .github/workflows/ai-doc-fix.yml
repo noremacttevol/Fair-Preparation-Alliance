@@ -11,20 +11,35 @@ concurrency:
 
 jobs:
   auto_fix_docs:
+    # Skip the run if the previous commit was made by the bot itself
     if: ${{ !contains(github.event.head_commit.message, '[AI fix]') }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
     steps:
+      # 1️⃣  Pull the repo
       - uses: actions/checkout@v3
         with:
           fetch-depth: 2
+
+      # 2️⃣  Set up Python 3.11
       - uses: actions/setup-python@v4
         with:
           python-version: '3.11'
+
+      # 3️⃣  Install deps
       - name: Install deps
         run: pip install --no-cache-dir openai tiktoken
+
+      # 4️⃣  Existing AI doc fixer
       - name: Run AI doc fixer
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python .github/scripts/ai_doc_fix.py
+
+      # 5️⃣  🔍 NEW: Term-audit (classifies unknown WikiLinks as KEEP / MAP / DROP)
+      - name: Run term audit
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python .github/scripts/term_audit.py
