@@ -1,4 +1,3 @@
-▼▼▼ COPY FROM THIS LINE ▼▼▼
 name: ai-doc-fix
 
 on:
@@ -13,10 +12,8 @@ permissions:
 jobs:
   rewrite:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
@@ -39,4 +36,3 @@ jobs:
             git push
           else
             echo "No changes to commit."
-▲▲▲ STOP COPYING AT THIS LINE ▲▲▲
