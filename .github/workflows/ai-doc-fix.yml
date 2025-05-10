@@ -1,10 +1,13 @@
+name: ai-doc-fix
+
+on:
+  push:
+    paths:
+      - '**/*.md'
+  workflow_dispatch:
+
 permissions:
   contents: write
-﻿name: ai-doc-fix
-on:
-  push:                     # every commit
-    paths: ["**/*.md"]
-  workflow_dispatch:        # or manual button
 
 jobs:
   rewrite:
@@ -13,12 +16,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: '3.11'
 
-      - name: Install deps
+      - name: Install dependencies
         run: pip install openai==1.25.0
 
       - name: Run AI doc fixer
@@ -28,12 +30,11 @@ jobs:
 
       - name: Commit changes
         run: |
-          git config --global user.name  "FPA-AI-Bot"
-          git config --global user.email "bot@noreply.fpa"
+          git config --global user.name  'FPA-AI-Bot'
+          git config --global user.email 'bot@noreply.fpa'
           git add -A
           if ! git diff --cached --quiet; then
             git commit -m "chore: AI terminology & style sweep"
             git push
           else
             echo "No changes to commit."
-          fi
