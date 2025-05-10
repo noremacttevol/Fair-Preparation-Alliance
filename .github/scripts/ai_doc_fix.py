@@ -1,4 +1,3 @@
-▼▼▼ COPY FROM THIS LINE ▼▼▼
 import os, pathlib, subprocess, time, openai
 
 # --- config ---------------------------------------------------------------
@@ -75,4 +74,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-▲▲▲ STOP COPYING AT THIS LINE ▲▲▲
