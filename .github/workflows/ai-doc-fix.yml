@@ -13,15 +13,17 @@ jobs:
   rewrite:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4           # depth-1 is OK
 
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      # classic SDK – no proxies bug
+      # classic OpenAI SDK + tiktoken tokenizer
       - name: Install dependencies
-        run: pip install openai==0.28.1
+        run: |
+          pip install openai==0.28.1
+          pip install tiktoken==0.5.1
 
       - name: Run AI doc fixer
         env:
