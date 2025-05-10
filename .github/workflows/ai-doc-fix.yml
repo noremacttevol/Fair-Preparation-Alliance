@@ -1,27 +1,32 @@
-name: ai-doc-fix
+name: AI Documentation Fixer
+
 on:
   push:
-    paths: ["**/*.md"]
-  workflow_dispatch:
-
-concurrency:
-  group: docs-fix-${{ github.ref }}
-  cancel-in-progress: true
+    branches:
+      - main
 
 jobs:
-  rewrite:
-    if: ${{ ! contains(github.event.head_commit.message, '[AI fix]') }}
+  auto_fix_docs:
+    if: ${{ !contains(github.event.head_commit.message, '[AI fix]') }}
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: ai-doc-fix-${{ github.ref }}
+      cancel-in-progress: true
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
         with:
-          fetch-depth: 2            # allow git diff with previous commit
-      - uses: actions/setup-python@v4
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 2
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
           python-version: '3.11'
-      - name: Install deps
-        run: pip install openai==0.28.1 tiktoken
-      - name: Run AI doc fixer
+      - name: Install Python dependencies
+        run: pip install --no-cache-dir openai tiktoken
+      - name: Run AI documentation fixer
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python .github/scripts/ai_doc_fix.py
