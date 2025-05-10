@@ -19,9 +19,9 @@ jobs:
         with:
           python-version: '3.11'
 
-      # install a stable OpenAI SDK that works on Actions
+      # classic SDK – no proxies bug
       - name: Install dependencies
-        run: pip install openai==1.18.0
+        run: pip install openai==0.28.1
 
       - name: Run AI doc fixer
         env:
