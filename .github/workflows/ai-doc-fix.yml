@@ -1,3 +1,37 @@
-﻿name: placeholder
-on: workflow_dispatch     # manual trigger
-jobs: {}
+﻿name: ai-doc-fix
+on:
+  push:                     # every commit
+    paths: ["**/*.md"]
+  workflow_dispatch:        # or manual button
+
+jobs:
+  rewrite:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: pip install openai==1.25.0
+
+      - name: Run AI doc fixer
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python .github/scripts/ai_doc_fix.py
+
+      - name: Commit changes
+        run: |
+          git config --global user.name  "FPA-AI-Bot"
+          git config --global user.email "bot@noreply.fpa"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: AI terminology & style sweep"
+            git push
+          else
+            echo "No changes to commit."
+          fi
