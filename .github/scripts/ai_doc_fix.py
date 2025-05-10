@@ -1,15 +1,24 @@
-import os, time, glob, pathlib, openai, subprocess
+import os, pathlib, openai, subprocess
 
 GLOSSARY_PATH = "1.3 Full/13. Dictionary (w_ Q&A + Links).md"
 MODEL = "gpt-4o-mini"
 TEMPERATURE = 0.2
-SLEEP_SEC = 2  # wait after every call to stay under 200k TPM
 
 openai.api_key = os.environ["OPENAI_API_KEY"]
 
 def load(path):
     with open(path, encoding="utf-8") as f:
         return f.read()
+
+def git_changed_md():
+    """return list of .md files in the current commit"""
+    base = subprocess.check_output(
+        ["git", "rev-parse", "HEAD^"], text=True
+    ).strip()
+    files = subprocess.check_output(
+        ["git", "diff", "--name-only", base, "HEAD"], text=True
+    ).splitlines()
+    return [f for f in files if f.endswith(".md")]
 
 def rewrite(p, glossary):
     try:
@@ -33,11 +42,10 @@ def rewrite(p, glossary):
         print("updated ▶", p)
         with open(p, "w", encoding="utf-8") as f:
             f.write(out)
-    time.sleep(SLEEP_SEC)
 
 def main():
     glossary = load(GLOSSARY_PATH)
-    for md in glob.glob("**/*.md", recursive=True):
+    for md in git_changed_md():
         if pathlib.Path(md).as_posix() == GLOSSARY_PATH:
             continue
         rewrite(md, glossary)
