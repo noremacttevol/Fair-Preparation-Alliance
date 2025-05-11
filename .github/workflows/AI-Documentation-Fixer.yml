@@ -1,0 +1,100 @@
+name: AI Documentation Fixer
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ai-doc-fix-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  auto_fix_docs:
+    if: ${{ !contains(github.event.head_commit.message, '[AI fix]') }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      # 1. Checkout repo
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+
+      # 2. Python
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      # 3. Deps
+      - name: Install deps
+        run: pip install --no-cache-dir openai tiktoken
+
+      # 4. Your existing AI doc fixer
+      - name: Run AI doc fixer
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python .github/scripts/ai_doc_fix.py
+
+      # 5. 🔍 NEW: term audit — entire script inline
+      - name: Run term audit
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          python - <<'PY'
+          import os, re, json, pathlib, collections, subprocess, sys, textwrap
+          ROOT = pathlib.Path('.').resolve()
+          DICT = ROOT / "00_Core" / "13. Dictionary (Q&A + Links).md"
+          openai_key = os.getenv("OPENAI_API_KEY")
+          known = {}
+          if DICT.exists():
+              for ln in DICT.read_text(encoding="utf8").splitlines():
+                  if "—" in ln:
+                      known[ln.split("—")[0].strip()] = 1
+          wiki = re.compile(r"\[\[([^\]]+?)\]\]")
+          hits = collections.Counter()
+          for md in ROOT.rglob("*.md"):
+              if "99_Archive" in md.parts or md == DICT:
+                  continue
+              for t in wiki.findall(md.read_text(errors="ignore")):
+                  t=t.strip()
+                  if t and t not in known: hits[t]+=1
+          if not hits:
+              print("No new terms")
+              sys.exit(0)
+          import openai; openai.api_key=openai_key
+          prompt = ("Classify each TERM as KEEP / MAP / DROP. "
+                    "If KEEP give 1-line def. If MAP give canonical term. "
+                    "Return JSON list.\n\n"
+                    f"KNOWN: {', '.join(list(known)[:2000])}\n\n"
+                    f"TERMS: {', '.join(hits)}")
+          resp = openai.ChatCompletion.create(
+              model="gpt-4o-mini",
+              messages=[{"role":"system","content":prompt}],
+              temperature=0
+          ).choices[0].message.content.strip()
+          try: decisions=json.loads(resp)
+          except: print("Bad JSON"); sys.exit(1)
+          edits=False
+          DICT.parent.mkdir(parents=True, exist_ok=True)
+          dfile = DICT.open("a", encoding="utf8")
+          for row in decisions:
+              term=row["term"]; act=row["action"].upper()
+              if act=="KEEP":
+                  dfile.write(f"{term} — {row.get('definition','TBD')}  |  avoid: n/a\n")
+                  edits=True
+              elif act=="MAP":
+                  canon=row.get("canonical") or row.get("definition") or term
+                  for md in ROOT.rglob("*.md"):
+                      if "99_Archive" in md.parts or md==DICT: continue
+                      txt=md.read_text(encoding='utf8')
+                      new=txt.replace(f"[[{term}]]", f"[[{canon}]]")
+                      if new!=txt:
+                          md.write_text(new,encoding='utf8'); edits=True
+          dfile.close()
+          if edits:
+              subprocess.run('git config user.name  "vault-bot"',shell=True)
+              subprocess.run('git config user.email "actions@github"',shell=True)
+              subprocess.run('git add .',shell=True)
+              subprocess.run('git commit -m "[AI fix] term audit"',shell=True)
+          PY
