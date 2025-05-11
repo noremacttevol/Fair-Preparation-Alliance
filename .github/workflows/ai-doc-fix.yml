@@ -2,9 +2,7 @@ name: AI Documentation Fixer + Term Audit
 
 on:
   push:
-    branches: [main]
-  workflow_dispatch:
-
+ 
 concurrency:
   group: ai-doc-fix-${{ github.ref }}
   cancel-in-progress: true
