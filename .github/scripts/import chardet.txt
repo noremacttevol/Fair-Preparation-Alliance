@@ -1,0 +1,6 @@
+import chardet
+
+with open("c:/Obsidian_Main_Vault/FPA/README.md", "rb") as file:
+    raw_data = file.read()
+    result = chardet.detect(raw_data)
+    print(result)

@@ -1,0 +1,7 @@
+FPA/
+├─ 00_Core/        ← high-level doctrine, mission, glossary
+├─ 10_Gear/        ← radios, tools, kits
+├─ 20_Training/    ← procedures, drills, SOP
+├─ 30_Plans/       ← disaster scenarios, regional playbooks
+├─ .git_backup
+└─ 99_Archive/     ← old drafts, reference dumps

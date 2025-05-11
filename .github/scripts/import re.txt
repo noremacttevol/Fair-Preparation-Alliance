@@ -1,0 +1,80 @@
+import re
+from pathlib import Path
+from collections import Counter
+import openai
+
+# Configuration
+VAULT_PATH = Path(".")
+OUTPUT_PATH = Path("00_Core")
+EXCLUDED_FOLDERS = {"chunks", "fpa-site"}
+READ_ONLY_FOLDERS = {"Zettelkasten"}
+CANDIDATE_GLOSSARY_FILE = OUTPUT_PATH / "12. Candidate-Glossary.md"
+TERM_MAPPING_REPORT_FILE = OUTPUT_PATH / "14. Term-Mapping-Report.md"
+
+# OpenAI API setup
+openai.api_key = "your_openai_api_key"
+
+def extract_terms(text):
+    """Extract potential terms from text using regex."""
+    words = re.findall(r'\b[A-Za-z][A-Za-z0-9_-]*\b', text)
+    return [word.lower() for word in words if len(word) > 2]
+
+def generate_definition(term):
+    """Generate a one-line definition for a term using OpenAI."""
+    try:
+        response = openai.ChatCompletion.create(
+            model="gpt-4",
+            messages=[
+                {"role": "system", "content": "You are a helpful assistant defining terms."},
+                {"role": "user", "content": f"Define the term '{term}' in one sentence."}
+            ]
+        )
+        return response['choices'][0]['message']['content'].strip()
+    except Exception as e:
+        return f"Definition unavailable (error: {e})"
+
+def scan_vault():
+    """Scan the vault for terms and generate reports."""
+    term_counter = Counter()
+    term_files = {}
+
+    print("Scanning vault...")
+    for file in VAULT_PATH.rglob("*.md"):
+        if any(folder in file.parts for folder in EXCLUDED_FOLDERS):
+            continue
+
+        folder = file.parts[0]
+        read_only = folder in READ_ONLY_FOLDERS
+
+        with file.open(encoding="utf-8") as f:
+            content = f.read()
+            terms = extract_terms(content)
+            term_counter.update(terms)
+
+            for term in terms:
+                if term not in term_files:
+                    term_files[term] = file.relative_to(VAULT_PATH)
+
+    print("Generating Candidate-Glossary.md...")
+    OUTPUT_PATH.mkdir(parents=True, exist_ok=True)
+    with CANDIDATE_GLOSSARY_FILE.open("w", encoding="utf-8") as f:
+        f.write("# Candidate Glossary\n\n")
+        f.write("| Term | Count | First File | Definition |\n")
+        f.write("|------|-------|------------|------------|\n")
+        for term, count in term_counter.most_common():
+            definition = generate_definition(term)
+            f.write(f"| {term} | {count} | {term_files[term]} | {definition} |\n")
+
+    print("Generating Term-Mapping-Report.md...")
+    with TERM_MAPPING_REPORT_FILE.open("w", encoding="utf-8") as f:
+        f.write("# Term Mapping Report\n\n")
+        f.write("| Weird Term | Suggested Canonical | Reason |\n")
+        f.write("|------------|---------------------|--------|\n")
+        for term in term_counter:
+            # Placeholder for mapping logic
+            f.write(f"| {term} | TBD | Placeholder reason |\n")
+
+    print("Term discovery complete.")
+
+if __name__ == "__main__":
+    scan_vault()
