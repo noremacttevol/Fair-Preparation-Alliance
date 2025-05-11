@@ -17,12 +17,16 @@ jobs:
       contents: write
     steps:
       # 1.  Check out repo
-      - uses: actions/checkout@v3
-        with: { fetch-depth: 2 }
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
 
       # 2.  Python
-      - uses: actions/setup-python@v4
-        with: { python-version: '3.11' }
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
 
       # 3.  Deps
       - name: Install deps
@@ -30,12 +34,14 @@ jobs:
 
       # 4.  Existing linter
       - name: Run AI doc fixer
-        env: { OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }} }
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python .github/scripts/ai_doc_fix.py
 
       # 5.  🔍 Term-audit (self-contained)
       - name: Run term audit
-        env: { OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }} }
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           python - <<'PY'
           import os, re, json, pathlib, collections, subprocess, sys
@@ -54,7 +60,8 @@ jobs:
           wiki = re.compile(r'\[\[([^\]]+?)\]\]')
           hits = collections.Counter()
           for md in ROOT.rglob('*.md'):
-              if '99_Archive' in md.parts or md == DICT: continue
+              if '99_Archive' in md.parts or md == DICT:
+                  continue
               for term in wiki.findall(md.read_text(errors='ignore')):
                   term = term.strip()
                   if term and term not in known:
@@ -94,7 +101,8 @@ jobs:
                   elif act == 'MAP':
                       canon = row.get('canonical') or row.get('definition') or term
                       for md in ROOT.rglob('*.md'):
-                          if '99_Archive' in md.parts or md == DICT: continue
+                          if '99_Archive' in md.parts or md == DICT:
+                              continue
                           txt = md.read_text(encoding='utf8')
                           new = txt.replace(f'[[{term}]]', f'[[{canon}]]')
                           if new != txt:
