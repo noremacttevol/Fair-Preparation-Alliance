@@ -1,0 +1,2 @@
+- U.S. summer demand records keep breaking—ERCOT hit historic peaks during the 2024 heatwave [Reuters](https://www.reuters.com/business/energy/texas-power-demand-set-break-record-during-heat-wave-grid-operator-says-2024-08-20/?utm_source=chatgpt.com).  
+- AI data-center expansion could push consumption to double-digit shares of national load [Utility Dive](https://www.utilitydive.com/news/sustainable-ai-requires-close-collaboration-between-data-centers-grid-st/747014/).

@@ -1,0 +1,2 @@
+During a routine fiber cut in rural America, 911 calls failed and residents lost service all night . If a simple backhoe can isolate a county, imagine a regional grid failure. Traditional guidance—“wait for text alerts”—assumes towers, power, and backbone fiber all survive. Our doctrine rejects that single-point-of-failure model .  
+---

@@ -1,0 +1,3 @@
+- **Durable knowledge cards**: Waterproof, modular pages covering water, first aid, navigation .  
+- **USB “seed drives”:** Encrypted archives of docs travel by hand between squad meet-ups (the classic sneakernet) 00. FPA-combined.  
+---

@@ -1,0 +1,23 @@
+site_name: Fair Preparation Alliance Docs
+
+# ----------  add below  ----------
+theme:
+  name: material
+
+plugins:
+  - search          # enables doc search bar
+
+nav:
+  - Home: index.md
+  - Compass Guide:
+      - Overview: compass_0.md
+      - Field SOPs: compass_1.md
+  - Trust Doctrine:
+      - Definition: trust_doctrine_0.md
+      - Alignment & Firewall: trust_doctrine_1.md
+  - Gear Lists:
+      - National Kit: gear_0.md
+      - Regional Kit: gear_1.md
+      - Local Kit: gear_2.md
+  - ORP Plan: orp_master_plan_0.md
+# ----------  stop here ----------

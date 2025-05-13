@@ -1,0 +1,3 @@
+- **Realnet:** nightly 7.200 MHz voice net + Faraday-cage build guide.  
+- **Outernet:** local 30-minute podcast loops queued on USB sticks for community playback.  
+- **Print fallback:** the SHTF Bible quick-reference manual.

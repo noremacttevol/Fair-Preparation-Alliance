@@ -1,0 +1,8 @@
+|**E-6: Specialist**|- Complete 24-hour off-grid “blackout” scenario (maintain comms, power)|1500|Mentor approval|Core|+500|1|
+|**E-7: Leader**|- Plan and lead a small-team drill under austere conditions|2100|Peer vote (team signoff)|Core|+600|2|
+|**E-8: Mentor**|- Mentor at least one junior member (guide through E-1 to E-5)- Review/vet emergency plans for peers|2800|Peer vote (mentees/peers confirm)|Core|+700|2|
+|**E-9: Instructor**|- Run an advanced training course or multi-team exercise for members- Design and build an EMP-shielded gear solution (demonstrate it works)|3600|Board signoff (committee evaluation)|Core|+800|3|
+|**E-10: Master**|- Organize and lead a large-scale/public preparedness drill or event (multi-team or community level)|4500|Board signoff (leadership approval)|Core|+900|3|
+|_E-10 Prestige: Custom__“Prestige Member”_|- **Prestige Project:** Design and execute a unique mission, program, badge or gear innovation benefiting the Alliance (requires proposal & completion)- **Custom Title** awarded upon success (e.g. “Master Medic” or “Chief Engineer”)|5000|Full membership vote (to confer prestige title)|Prestige|+500|4|
+|**O-1: Team Leader**|- Serve as leader of a local team/squad; coordinate team missions & training|5000|Full vote (peers elect)|Officer|+500|4|
+|**O-2: Unit Leader**|- Oversee multiple teams (unit); coordinate joint operations between squads|6000|Peer vote (unit members)|Officer|+1000|2|

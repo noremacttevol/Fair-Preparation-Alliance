@@ -1,0 +1,5 @@
+1. **Everybody feels the risk.** Federal reports link aging infrastructure and extreme weather to longer, costlier outages, urging immediate resilience upgrades [U.S. Department of Energy](https://www.energy.gov/sites/default/files/2024-08/EXEC-2023-003585%20-%20Congressional%20Report%20on%20Preventing%20Outages%20and%20Enhancing%20the%20Resilience%20of%20the%20Electric%20Grid_sb-S1_7.1.pdf?utm_source=chatgpt.com).  
+2. **We already have the assets.** Realnet weekly nets, Outernet content seeds, and the printable SHTF Bible are all Mk1 Mod 3 deliverables—no vaporware.  
+3. **Story bridges to the rest.** Once readers grasp Realnet radios, the next logical breadcrumb is the Skill Wheel rank path tied to on-air drills.  
+4. **Media-friendly proof points.** Amateur-radio after-action reports show successful message relays during hurricanes when cellular failed [ARRL](https://www.arrl.org/files/file/Public%20Service/ARES/2017%20Hurricane%20Season%20AAR.pdf?utm_source=chatgpt.com).  
+---

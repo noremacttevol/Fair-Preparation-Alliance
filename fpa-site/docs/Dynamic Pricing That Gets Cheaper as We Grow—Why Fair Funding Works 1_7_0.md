@@ -1,0 +1,3 @@
+- Oxford Journal research links visible, rules-based pricing to higher perceived fairness even when prices differ ([SAGE Journals](https://journals.sagepub.com/doi/10.1177/13567667221095583?utm_source=chatgpt.com "The influence of dynamic pricing on consumer trust, value, and ...")).  
+- Forbes 2024 warns hidden dynamic algorithms hurt trust but applauds “rule-based caps” as a fix ([Forbes](https://www.forbes.com/sites/sushmadaggubati/2024/10/15/unlocking-profit-and-building-customer-trust-with-dynamic-pricing/?utm_source=chatgpt.com "Unlocking Profit And Building Customer Trust With Dynamic Pricing")).  
+---
