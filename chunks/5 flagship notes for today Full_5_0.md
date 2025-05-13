@@ -1,0 +1,1 @@
+Summarize FEMA’s own communication-gap warnings when networks collapse. [FEMA University](https://training.fema.gov/emiweb/is/is242b/student%20manual/sm_03.pdf)

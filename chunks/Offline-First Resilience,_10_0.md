@@ -1,0 +1,1 @@
+Staying informed shouldn’t depend on fragile infrastructure. By weaving **Realnet, Outernet, and print** into one mesh of human-powered reliability, FPA gives every member—and the communities they love—the confidence that someone, somewhere, will still be on the air when the lights go out.

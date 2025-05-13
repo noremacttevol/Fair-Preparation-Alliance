@@ -1,0 +1,1 @@
+Ship the **Trust Doctrine** article and backing features first; nothing else proves FPA’s promise faster. With a live ledger, badge firewall, and community veto in plain sight, every new feature (Dynamic Pricing, Skill Wheel…) inherits a foundation members can believe in—and verify.

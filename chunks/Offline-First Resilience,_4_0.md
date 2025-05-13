@@ -1,0 +1,4 @@
+- **Frequency:** 7.200 MHz voice net, clear-channel after sunset .  
+- **Hardware:** Handheld or mobile HAM rigs stored in Faraday cages when not in use .  
+- **Practice:** Weekly “Pulse Tests” log check-ins and relay drills to keep skill rust away.  
+> _Why radio?_ In Hurricane Maria, volunteer operators moved hospital-status traffic and family messages when 98 % of conventional comms were down [ARRL](https://www.arrl.org/files/file/Public%20Service/ARES/2017%20Hurricane%20Season%20AAR.pdf?utm_source=chatgpt.com)[WTOP News](https://wtop.com/national/2017/09/puerto-rico-bound-ham-radio-operators-relay-hurricane-survivor-info/?utm_source=chatgpt.com).

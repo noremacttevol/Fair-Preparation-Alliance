@@ -1,0 +1,2 @@
+- Humble Bundle’s flexible model has moved over $240 million to charity while maintaining company margins ([Vizologi](https://vizologi.com/business-strategy-canvas/the-humble-bundle-business-model-canvas/ "What is The Humble Bundle's business model? | Vizologi")).  
+- Medium case studies show top 3 % of pay-what-you-want buyers offset low contributions, keeping revenue stable ([Medium](https://medium.com/%40tmorkes/pay-what-you-want-the-ultimate-sales-strategy-4030c63c5798?utm_source=chatgpt.com "Pay What You Want: The Ultimate Sales Strategy | by Tom Morkes")).

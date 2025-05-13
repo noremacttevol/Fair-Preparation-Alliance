@@ -9,7 +9,8 @@ in 00_Core/13. Dictionary (Q&A + Links).md
 """
 
 import os, re, json, subprocess, pathlib, collections, sys
-<<<<<<< HEAD
+ HEAD
+ HEAD
 import openai
 
 ROOT   = pathlib.Path(__file__).resolve().parents[2]   # repo root
@@ -53,7 +54,8 @@ def main():
         ]
     )
     print(response['choices'][0]['message']['content'])
-=======
+
+a3bdbb3b49c522f3786f21b881a21bec4a7d78c2
 ROOT   = pathlib.Path(__file__).resolve().parents[2]   # repo root
 DICT   = ROOT / "00_Core" / "13. Dictionary (Q&A + Links).md"
 OPENAI = os.getenv("OPENAI_API_KEY")
@@ -145,7 +147,10 @@ def main():
         shell('git commit -m "[AI fix] term audit"')
     else:
         print("✓ Term audit found nothing to change")
->>>>>>> 2dfe4d7fd85a387b60d4f509c05f0ba1efc17d3f
+ HEAD
+ 2dfe4d7fd85a387b60d4f509c05f0ba1efc17d3f
+
+a3bdbb3b49c522f3786f21b881a21bec4a7d78c2
 
 if __name__ == "__main__":
     main()

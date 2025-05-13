@@ -1,0 +1,4 @@
+- A Pacific Northwest National Lab gap-analysis showed visual heat-maps cut skill audit time by 40 % for emergency managers ([PNNL](https://www.pnnl.gov/main/publications/external/technical_reports/pnnl-19782.pdf?utm_source=chatgpt.com "[PDF] Gap Assessment in the Emergency Response Community")).  
+- Pre-training gap studies in healthcare found practitioners who saw a spider-chart of their weaknesses improved post-test scores by 22 % more than the text-only group ([PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC7796807/?utm_source=chatgpt.com "The importance of pre-training gap analyses and the identification of ...")).  
+- Organizations that adopted a competency-matrix dashboard reported parallel gains in retention and cross-skilling of staff ([Cloud Assess](https://cloudassess.com/blog/competency-matrix/?utm_source=chatgpt.com "How to Create a Competency Matrix + FREE Template - Cloud Assess")).  
+---

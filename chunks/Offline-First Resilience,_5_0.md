@@ -1,0 +1,3 @@
+- **30-minute bulletin loops:** Pre-recorded regional podcasts on USB sticks replayed over low-power FM or LoRa, covering weather, aid points, and FPA updates.  
+- **Ad-hoc mesh nodes:** Battery-backed Wi-Fi or LoRa repeaters pass text packets peer-to-peer—no servers required [CDC](https://www.cdc.gov/niosh/docs/2023-134/pdfs/2023-134revised062023.pdf?utm_source=chatgpt.com).  
+- **Content parity:** Every Outernet loop carries the same vetted data you would see in-app, keeping doctrine consistent.
